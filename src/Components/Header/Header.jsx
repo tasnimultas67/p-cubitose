@@ -33,7 +33,7 @@ export default function Header() {
 
   return (
     <header className="bg-themeColor">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between py-2 lg:px-8" aria-label="Global">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between py-2 w-11/12" aria-label="Global">
         {/* Website Logo */}
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
@@ -45,7 +45,7 @@ export default function Header() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
@@ -53,7 +53,7 @@ export default function Header() {
           </button>
         </div>
         {/* Website Menu  */}
-        <div className='flex gap-10 items-center'>
+        <div className='hidden lg:flex gap-10 items-center'>
           {/* Menu */}
           <Popover.Group className="hidden lg:flex lg:gap-x-12">
             <NavLink to="/" className="text-sm leading-6 text-white uppercase">
