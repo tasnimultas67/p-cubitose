@@ -42,7 +42,7 @@ const Portfolios = () => {
                     >
                         {
                             portfolios.map(portfolio => <SwiperSlide key={portfolio.id}>
-                            <div className='relative overflow-hidden w-full h-[30rem] rounded-md bg-white bg-clip-border group/p1 cursor-pointer'>
+                            <div className='relative overflow-hidden w-full h-[30rem] rounded-md bg-white bg-clip-border group/p1 cursor-pointer shadow-2xl'>
                                     <img alt="Portfolio Cover Image" src={portfolio.img} className="absolute inset-0 h-full w-full object-cover group-hover/p1:scale-125 duration-300 ease-in-out" loading="lazy" />
                                     <div className="absolute to-bg-black-10 bg-gradient-to-t from-black/80 via-black/10 pt-32  sm:pt-48  lg:pt-64  h-full w-full flex items-end ">
                                         <div className="p-5">
