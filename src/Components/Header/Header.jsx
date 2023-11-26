@@ -32,8 +32,8 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-themeColor">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between py-2 w-11/12" aria-label="Global">
+    <header className="bg-themeColor z-[1000]">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between py-2 w-11/12 z-[1000]" aria-label="Global">
         {/* Website Logo */}
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
