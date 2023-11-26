@@ -24,7 +24,7 @@ const Portfolios = () => {
                         </div>
                         {/* Explore more Button */}
                         <div className="text-right ">
-                            <Link to="#"><button className="py-2 px-4 bg-themeColor text-white rounded-md">Explore More</button></Link>
+                            <Link to="#"><button className="py-2 px-5 bg-themeColor text-white rounded-md">Explore More</button></Link>
                         </div>
                     </div>
                 </div>
