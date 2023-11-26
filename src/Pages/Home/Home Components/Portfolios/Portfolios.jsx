@@ -17,7 +17,7 @@ const Portfolios = () => {
         <>
             <div className="bg-white py-28">
                 <div className="w-11/12 m-auto">
-                    <div className="grid grid-cols-3 items-center pb-28">
+                    <div className="grid grid-cols-3 items-center pb-20">
                         {/* Section Title */}
                         <div className="col-span-2">
                             <h1 className="text-black text-6xl font-semibold ">We are experts in bringing brands to life digitally.</h1>
