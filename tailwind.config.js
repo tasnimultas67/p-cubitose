@@ -8,6 +8,7 @@ export default {
     extend: {
       colors: {
         'themeColor': '#1954ed',
+        'grayColor': '#767676',
       }
     },
   },

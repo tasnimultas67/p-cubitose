@@ -36,10 +36,10 @@ export default function Header() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between py-2 w-11/12 z-[1000]" aria-label="Global">
         {/* Website Logo */}
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <Link to="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <img className="h-14 w-auto" src="/white-logo.png" alt="cubitose logo" />
-          </a>
+          </Link>
         </div>
         {/* Website Mobile Menu bar */}
         <div className="flex lg:hidden">
@@ -109,7 +109,7 @@ export default function Header() {
                 </Popover.Panel>
               </Transition>
             </Popover>
-            <NavLink to="#" className="text-sm leading-6 text-white uppercase">
+            <NavLink to="/about-us" className="text-sm leading-6 text-white uppercase">
               About Us
             </NavLink>
             <NavLink to="#" className="text-sm leading-6 text-white uppercase">
