@@ -16,15 +16,15 @@ const teams = [
 const OurTeam = () => {
     return (
         <div>
-            <div className="grid grid-cols-3">
+            <div className="grid grid-cols-1 lg:grid-cols-3">
                 
                 <div className="col-span-2 mt-20">
                     <p className="text-lg">We believe the best solutions lay at the intersection of intelligent design and strong engineering. Our team works continually to protect and instill this vision in every process, project and team member.</p>
                 </div>
-                <div></div>
+                <div className="hidden lg:block"></div>
             </div>
             {/* Team */}
-            <div className="grid grid-cols-3 gap-14 mt-14">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-14 mt-14">
                 {
                     teams.map(team => <div key={team.id}>
                         <div className="group/team overflow-hidden">
