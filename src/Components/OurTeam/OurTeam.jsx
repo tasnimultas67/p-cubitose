@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 
 const teams = [
-    { "id": "team1", "name": "Taif Ahmed Tanbin", "profileImg": "https://i.ibb.co/PzGddnn/Tanbin.webp", "position": "Founder & CEO, Graphics Designer", "facebook": "taif.tanbin", "twitter": "taif.tanbin", "instagram": "taif.tanbin", "website": "#" },
+    { "id": "team1", "name": "Taif Ahmed Tanbin", "profileImg": "https://i.ibb.co/PzGddnn/Tanbin.webp", "position": "Graphics Designer", "facebook": "taif.tanbin", "twitter": "taif.tanbin", "instagram": "taif.tanbin", "website": "#" },
     
-    { "id": "team2", "name": "Mushfiqur Rahman Emon", "profileImg": "https://i.ibb.co/r57nW4z/Mushfiqur.webp", "position": "Founder & CEO, Digital Marketer", "facebook": "musfiqurrahman933", "twitter": "#", "instagram": "muhammadmushfiqur", "website": "#" },
+    { "id": "team2", "name": "Mushfiqur Rahman Emon", "profileImg": "https://i.ibb.co/r57nW4z/Mushfiqur.webp", "position": "Digital Marketer", "facebook": "musfiqurrahman933", "twitter": "#", "instagram": "muhammadmushfiqur", "website": "#" },
     
-    {"id": "team3", "name": "Tasnimul Haque", "profileImg": "https://i.ibb.co/xqxD7Nv/Tasnimul-Haque.webp", "position": "Founder & CEO, Web Developer", "facebook": "tasnimulh.tas", "twitter": "tasnimultas", "instagram": "_tasnimul_haque", "website":"https://devtasnimul.netlify.app/"},
+    { "id": "team3", "name": "Tasnimul Haque", "profileImg": "https://i.ibb.co/xqxD7Nv/Tasnimul-Haque.webp", "position": "Web Developer", "facebook": "tasnimulh.tas", "twitter": "tasnimultas", "instagram": "_tasnimul_haque", "website": "https://devtasnimul.netlify.app/" },
+    
+    {"id": "team4", "name": "Farhad Hosen Prince", "profileImg": "https://i.ibb.co/bJ6hz5D/Prince.webp", "position": "UI/UX Designer", "facebook": "farhad.prince.77", "twitter": "", "instagram": "napaextra__f_", "website":"#"},
 ]
 // https://www.facebook.com/tasnimulh.tas/
 // https://twitter.com/tasnimultas
@@ -22,7 +24,7 @@ const OurTeam = () => {
                 <div></div>
             </div>
             {/* Team */}
-            <div className="grid grid-cols-3 gap-10 mt-14">
+            <div className="grid grid-cols-3 gap-14 mt-14">
                 {
                     teams.map(team => <div key={team.id}>
                         <div className="group/team overflow-hidden">

@@ -3,7 +3,7 @@ import OurTeam from "../../Components/OurTeam/OurTeam";
 const AboutUs = () => {
     return (
         <>
-            <div className="bg-themeColor/10 py-28">
+            <div className="bg-white py-28">
                 <div className="w-11/12 m-auto">
                     <div>
                         <h1 className="text-grayColor text-5xl leading-tight">We are the <span className="text-black ">first call</span> for every outrageous, unthinkable and unknown <span className="text-black">possibility</span> in the field of digitally immersive experiences — <span className="text-black">all with highly competitive rates.</span></h1>

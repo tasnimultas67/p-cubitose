@@ -100,7 +100,7 @@ export default function Header() {
           </Popover.Group>
           {/* Menu Contact Button */}
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Link to="/contact-us" className="text-sm font-semibold leading-6 text-themeColor bg-white py-2 px-4 rounded-md">
+            <Link to="/contact-us" className="text-sm leading-6 text-themeColor bg-white py-2 px-4 rounded-md uppercase">
               Contact Us <span aria-hidden="true"></span>
             </Link>
           </div>

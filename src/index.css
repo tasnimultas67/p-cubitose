@@ -4,3 +4,8 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
+
+::selection{
+  background-color: #1954ed;
+  color: white;
+}
