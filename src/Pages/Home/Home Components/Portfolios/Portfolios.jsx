@@ -17,13 +17,13 @@ const Portfolios = () => {
         <>
             <div className="bg-white py-28">
                 <div className="w-11/12 m-auto">
-                    <div className="grid grid-cols-3 items-center pb-20">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 items-center pb-20">
                         {/* Section Title */}
                         <div className="col-span-2">
-                            <h1 className="text-black text-6xl font-semibold ">We are experts in bringing brands to life digitally.</h1>
+                            <h1 className="text-black text-3xl lg:text-6xl font-semibold ">We are experts in bringing brands to life digitally.</h1>
                         </div>
                         {/* Explore more Button */}
-                        <div className="text-right ">
+                        <div className="text-left mt-5 lg:mt-0 lg:text-right ">
                             <Link to="#"><button className="py-2 px-5 bg-themeColor text-white rounded-md">Explore More</button></Link>
                         </div>
                     </div>
@@ -42,7 +42,7 @@ const Portfolios = () => {
                     >
                         {
                             portfolios.map(portfolio => <SwiperSlide key={portfolio.id}>
-                            <div className='relative overflow-hidden w-full h-[30rem] rounded-md bg-white bg-clip-border group/p1 cursor-pointer shadow-2xl'>
+                            <div className='relative overflow-hidden w-full h-[22rem] lg:h-[30rem] rounded-md bg-white bg-clip-border group/p1 cursor-pointer shadow-2xl'>
                                     <img alt="Portfolio Cover Image" src={portfolio.img} className="absolute inset-0 h-full w-full object-cover group-hover/p1:scale-125 duration-300 ease-in-out" loading="lazy" />
                                     <div className="absolute to-bg-black-10 bg-gradient-to-t from-black/80 via-black/10 pt-32  sm:pt-48  lg:pt-64  h-full w-full flex items-end ">
                                         <div className="p-5">

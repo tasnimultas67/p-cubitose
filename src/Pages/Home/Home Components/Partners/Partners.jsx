@@ -21,10 +21,10 @@ const Partners = () => {
                 <div className="w-11/12 m-auto">
                     {/* Section Title */}
                     <div>
-                        <h1 className="text-black text-5xl font-semibold max-w-2xl m-auto text-center">Proud to partner with industry-leading companies</h1>
+                        <h1 className="text-black text-2xl lg:text-5xl font-semibold max-w-2xl m-auto text-center">Proud to partner with industry-leading companies</h1>
                     </div>
                     {/* Partners Image */}
-                    <div className="grid grid-cols-6 items-center gap-10 mt-24">
+                    <div className="grid grid-cols-3 lg:grid-cols-6 items-center gap-10 mt-24">
                         {
                             partners.map(partner => <div key={partner.id} className={`${partner.title}`}>
                                 <img className="my-auto mx-auto" src={partner.img} alt="Partner Image" srcSet="" />

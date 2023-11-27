@@ -16,7 +16,7 @@ export default function Hero() {
           />
         </div> */}
         <div className="mx-auto pt-32 pb-20">
-          <div className="w-8/12">
+          <div className="lg:w-8/12">
             <h1 className="text-4xl uppercase font-semibold text-white sm:text-7xl">
               We turn ideas into extraordinary digital products & experiences
             </h1>
