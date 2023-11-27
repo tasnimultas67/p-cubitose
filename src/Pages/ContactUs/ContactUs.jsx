@@ -18,19 +18,19 @@ const ContactUs = () => {
             <div className="bg-white py-28">
                 <div className="w-11/12 m-auto">
                     <div>
-                        <h1 className="text-6xl font-semibold text-black">We’d love to hear from you.</h1>
+                        <h1 className="text-3xl lg:text-6xl font-semibold text-black">We’d love to hear from you.</h1>
                     </div>
-                    <div className="w-9/12 pl-28 mt-8">
+                    <div className="lg:w-9/12 lg:pl-28 mt-8">
                         <p>We’ll reach out to schedule time to understand your challenges and how we can start to overcome them together. And if we’re not the right agency for you, we will do our best to refer you to someone who is.</p>
                     </div>
 
-                    <div className="grid grid-cols-2 mt-20">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 mt-20">
                         <div>
                             <img src="https://i.ibb.co/nQRq55Z/contact-us.webp" alt="Contact Us Image" srcSet="" />
                         </div>
                         {/* Contact Form */}
                         <div>
-                            <form className="px-20" onSubmit={submitForm}>
+                            <form className="lg:px-20 pt-10 lg:pt-0" onSubmit={submitForm}>
                                 <div className="mb-4 flex flex-col gap-6">
                                     {/* Name */}
                                     <div className="relative h-11 w-full">
