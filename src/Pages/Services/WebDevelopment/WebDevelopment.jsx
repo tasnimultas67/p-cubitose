@@ -26,9 +26,9 @@ const WebDevelopment = () => {
                         src="https://i.ibb.co/HptGPFn/Banner-1.webp" alt="Web Development Banner" srcSet="" />
                 </div>
                 {/* Feature process*/}
-                <div className="mt-20">
+                <div className="pt-36 pb-20">
                     <h2 className="text-5xl font-medium text-black">How come we are so proficient at this</h2>
-                    <div className="grid grid-cols-4 gap-10 mt-20">
+                    <div className="grid grid-cols-4 gap-10 mt-28">
                         <div>
                             <h2 className="text-2xl font-semibold text-black mb-3">Reliable</h2>
                             <p>Cubitose develops websites with custom functionality to meet your needs. We take pride in coding back-end solutions that act as the unseen backbone to your website.</p>
