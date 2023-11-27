@@ -4,8 +4,8 @@ import './Footer.css'
 const Footer = () => {
     return (
         <footer className="bg-themeColor pt-28 pb-9">
-            <div className="w-11/12 m-auto mb-20">
-                <div className="grid grid-cols-4 gap-10">
+            <div className="w-10/12 lg:w-11/12 m-auto mb-20">
+                <div className="grid grid-cols-1 lg:grid-cols-4 gap-10">
                     {/* First Column */}
                     <div>
                         <img className="h-14 mb-5" src="/white-logo.png" alt="Footer Logo" srcSet="" />
@@ -43,7 +43,7 @@ const Footer = () => {
                 </div>
             </div>
             {/* Copyright text */}
-            <div>
+            <div className="w-10/12 lg:w-11/12 m-auto">
                 <p className="text-white text-center text-sm">Copyright © 2023 Cubitose. All Rights Reserved. Made with ❤</p>
             </div>
         </footer>
