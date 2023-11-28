@@ -6,9 +6,12 @@ import {
   MegaphoneIcon,
   XMarkIcon,
   PaintBrushIcon,
+  ArrowRightOnRectangleIcon
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon} from '@heroicons/react/20/solid'
 import { Link, NavLink } from 'react-router-dom'
+import { useContext } from 'react'
+import { AuthContext } from '../../providers/AuthProvider'
 
 const services = [
   { name: 'Web Development', description: 'Get a better understanding of your traffic', href: '/services/web-development', icon: CodeBracketIcon },
@@ -21,6 +24,7 @@ function classNames(...classes) {
 }
 
 export default function Header() {
+  const {user, signOutUser} = useContext(AuthContext)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -105,7 +109,8 @@ export default function Header() {
             </Link>
           </div>
           {/* Profile Dropdown */}
-          <Menu as="div" className="relative">
+          {
+            user && <Menu as="div" className="relative">
             <div>
               <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                 <span className="absolute -inset-1.5" />
@@ -139,27 +144,18 @@ export default function Header() {
                 </Menu.Item>
                 <Menu.Item>
                   {({ active }) => (
-                    <a
-                      href="#"
-                      className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                    <button
+                      onClick={signOutUser}
+                      className={classNames(active ? 'bg-gray-100' : '', ' px-4 py-2 text-sm text-gray-700 w-full text-left flex items-center gap-2')}
                     >
-                      Settings
-                    </a>
-                  )}
-                </Menu.Item>
-                <Menu.Item>
-                  {({ active }) => (
-                    <a
-                      href="#"
-                      className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                    >
-                      Sign out
-                    </a>
+                      Sign out <ArrowRightOnRectangleIcon className='h-4 w-4 text-gray-700'></ArrowRightOnRectangleIcon>
+                    </button>
                   )}
                 </Menu.Item>
               </Menu.Items>
             </Transition>
           </Menu>
+          }
         </div>
       </nav>
       {/* Mobile Menu Bar */}

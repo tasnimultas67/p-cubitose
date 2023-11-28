@@ -1,13 +1,36 @@
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
+import { useState } from "react";
 
 export default function Login() {
-    
+
+    const { signInUser } = useContext(AuthContext)
+    const [error, setError] = useState()
+
+    const userLogin = (e) => {
+        e.preventDefault()
+        let form = e.target;
+        let userName = form.email.value;
+        let password = form.password.value;
+        signInUser(userName, password)
+            .then(result => {
+            const loggedUser = result.user;
+                form.reset()
+            })
+            .catch(error => {
+                setError(error.message)
+            })
+        
+        form.reset()
+    }
+
   return (
     <>
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:py-28 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
             className="mx-auto h-10 w-auto"
-            src="/public/favicon.webp"
+            src="/favicon.webp"
             alt="Your Company"
           />
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
@@ -16,7 +39,7 @@ export default function Login() {
         </div>
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form className="space-y-6" action="#" method="POST">
+          <form onSubmit={userLogin} className="space-y-6" action="#" method="POST">
             <div>
               <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
                 Email address
@@ -50,6 +73,10 @@ export default function Login() {
                 />
               </div>
             </div>
+            {/* Error Message */}
+            {error && <div>
+              <p className="text-red-800 text-center">{ error.message}</p>
+            </div>}
 
             <div>
               <button
