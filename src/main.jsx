@@ -11,6 +11,7 @@ import GraphicsDesign from './Pages/Services/GraphicsDesign/GraphicsDesign.jsx'
 import DigitalMarketing from './Pages/Services/DigitalMarketing/DigitalMarketing.jsx'
 import Login from './Pages/Login/Login.jsx'
 import AuthProvider from './providers/AuthProvider.jsx'
+import PortfolioP from './Pages/PortfoliosP/PortfolioP.jsx'
 
 
 const router = createBrowserRouter([
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
         path: '/team-login',
         element: <Login></Login>
+      },
+      {
+        path: '/add-portfolio',
+        element: <PortfolioP></PortfolioP>
       }
       
     ]
