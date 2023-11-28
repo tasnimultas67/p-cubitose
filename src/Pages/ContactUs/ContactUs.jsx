@@ -26,7 +26,7 @@ const ContactUs = () => {
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 mt-20">
                         <div>
-                            <img src="https://i.ibb.co/nQRq55Z/contact-us.webp" alt="Contact Us Image" srcSet="" />
+                            <img src="https://i.ibb.co/nQRq55Z/contact-us.webp" alt="Contact Us Image" srcSet="" loading='lazy'/>
                         </div>
                         {/* Contact Form */}
                         <div>

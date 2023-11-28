@@ -39,9 +39,9 @@ const WebDevelopment = () => {
                 </div>
                 {/* Banner Image */}
                 <div className="mt-20">
-                    <img
+                    <img loading='lazy'
                         className=" h-[30rem] w-full object-cover object-bottom rounded-lg shadow-lg"
-                        src="https://i.ibb.co/HptGPFn/Banner-1.webp" alt="Web Development Banner" srcSet="" />
+                        src="https://i.ibb.co/HptGPFn/Banner-1.webp" alt="Web Development Banner" srcSet=""/>
                 </div>
                 {/* Feature process*/}
                 <div className="pt-36 pb-20">

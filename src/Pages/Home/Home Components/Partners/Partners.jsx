@@ -27,7 +27,7 @@ const Partners = () => {
                     <div className="grid grid-cols-3 lg:grid-cols-6 items-center gap-10 mt-24">
                         {
                             partners.map(partner => <div key={partner.id} className={`${partner.title}`}>
-                                <img className="my-auto mx-auto" src={partner.img} alt="Partner Image" srcSet="" />
+                                <img className="my-auto mx-auto" src={partner.img} alt="Partner Image" srcSet="" loading='lazy'/>
                             </div>)
                         }
                     </div>
