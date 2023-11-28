@@ -6,7 +6,7 @@ const AboutUs = () => {
             <div className="bg-white py-28">
                 <div className="w-11/12 m-auto">
                     <div>
-                        <h1 className="text-grayColor text-3xl lg:text-5xl leading-tight">We are the <span className="text-black ">first call</span> for every outrageous, unthinkable and unknown <span className="text-black">possibility</span> in the field of digitally immersive experiences — <span className="text-black">all with highly competitive rates.</span></h1>
+                        <h1 className="text-grayColor text-3xl lg:text-5xl lg:leading-tight">We are the <span className="text-black ">first call</span> for every outrageous, unthinkable and unknown <span className="text-black">possibility</span> in the field of digitally immersive experiences — <span className="text-black">all with highly competitive rates.</span></h1>
                     </div>
                     <div className="grid grid-cols-1 lg:grid-cols-3 mt-10 lg:mt-0">
                         <div className="hidden lg:block"></div>
