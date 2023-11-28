@@ -9,6 +9,7 @@ import ContactUs from './Pages/ContactUs/ContactUs.jsx'
 import WebDevelopment from './Pages/Services/WebDevelopment/WebDevelopment.jsx'
 import GraphicsDesign from './Pages/Services/GraphicsDesign/GraphicsDesign.jsx'
 import DigitalMarketing from './Pages/Services/DigitalMarketing/DigitalMarketing.jsx'
+import Login from './Pages/Login/Login.jsx'
 
 
 const router = createBrowserRouter([
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: '/services/digital-marketing',
         element: <DigitalMarketing></DigitalMarketing>
+      },
+      {
+        path: '/team-login',
+        element: <Login></Login>
       }
       
     ]
