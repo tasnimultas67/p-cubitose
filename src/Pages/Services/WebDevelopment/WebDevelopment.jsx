@@ -40,7 +40,7 @@ const WebDevelopment = () => {
                 {/* Banner Image */}
                 <div className="mt-20">
                     <img loading='lazy'
-                        className=" h-[30rem] w-full object-cover object-bottom rounded-lg shadow-lg"
+                        className=" h-[30rem] 2xl:h-[35rem] w-full object-cover object-bottom rounded-lg shadow-lg"
                         src="https://i.ibb.co/HptGPFn/Banner-1.webp" alt="Web Development Banner" srcSet=""/>
                 </div>
                 {/* Feature process*/}

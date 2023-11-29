@@ -24,7 +24,7 @@ const OurTeam = () => {
                 <div className="hidden lg:block"></div>
             </div>
             {/* Team */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-14 mt-14">
+            <div className="grid grid-cols-1 lg:grid-cols-3 2xl:grid-cols-4 gap-14 mt-14">
                 {
                     teams.map(team => <div key={team.id}>
                         <div className="group/team overflow-hidden">

@@ -10,7 +10,7 @@ const About = () => {
                     </div>
                     {/* Section Image */}
                     <div className="mt-16">
-                        <img className="rounded-lg shadow-lg h-[20rem] lg:h-96 w-full object-cover" src="https://images.unsplash.com/photo-1627742259899-187f2f92beaf?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" srcSet="" loading='lazy' />
+                        <img className="rounded-lg shadow-lg h-[20rem] lg:h-96 2xl:h-[35rem] w-full object-cover" src="https://images.unsplash.com/photo-1627742259899-187f2f92beaf?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" srcSet="" loading='lazy' />
                     </div>
                 </div>
 
