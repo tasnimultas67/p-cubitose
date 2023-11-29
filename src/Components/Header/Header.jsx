@@ -117,8 +117,8 @@ export default function Header() {
                 <span className="sr-only">Open user menu</span>
                 <img
                   className="h-8 w-8 rounded-full bg-white"
-                  src="../../../public/favicon.webp"
-                  alt=""
+                  src="/favicon.webp"
+                  alt="User Profile Image"
                 />
               </Menu.Button>
             </div>

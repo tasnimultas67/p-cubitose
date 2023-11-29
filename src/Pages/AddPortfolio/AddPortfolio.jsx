@@ -1,7 +1,7 @@
 import { useState, useRef} from 'react';
 import JoditEditor from 'jodit-react';
 
-const PortfolioP = () => {
+const AddPortfolio = () => {
     const editor = useRef(null);
     const [content, setContent] = useState('');
 
@@ -174,4 +174,4 @@ const PortfolioP = () => {
     );
 };
 
-export default PortfolioP;
+export default AddPortfolio;
