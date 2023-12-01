@@ -14,12 +14,14 @@ import AuthProvider from './providers/AuthProvider.jsx'
 import AddPortfolio from './Pages/AddPortfolio/AddPortfolio.jsx'
 import AddCustomerReview from './Pages/AddCustomerReview/AddCustomerReview.jsx'
 import PPortfolios from './Pages/PPortfolios/PPortfolios.jsx'
+import NotFound from './Pages/NotFound/NotFound.jsx'
 
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App></App>,
+    errorElement: <NotFound></NotFound>,
     children: [
       {
         path: "/",
@@ -46,6 +48,7 @@ const router = createBrowserRouter([
         path: '/services/digital-marketing',
         element: <DigitalMarketing></DigitalMarketing>
       },
+      // Services page end
       {
         path: '/team-login',
         element: <Login></Login>
