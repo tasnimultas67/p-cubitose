@@ -15,6 +15,7 @@ import AddPortfolio from './Pages/AddPortfolio/AddPortfolio.jsx'
 import AddCustomerReview from './Pages/AddCustomerReview/AddCustomerReview.jsx'
 import PPortfolios from './Pages/PPortfolios/PPortfolios.jsx'
 import NotFound from './Pages/NotFound/NotFound.jsx'
+import PrivateRoutes from './Routes/PrivateRoutes.jsx'
 
 
 const router = createBrowserRouter([
@@ -55,11 +56,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/add-portfolio',
-        element: <AddPortfolio></AddPortfolio>
+        element: <PrivateRoutes><AddPortfolio></AddPortfolio></PrivateRoutes> 
       },
       {
         path: '/add-customer-review',
-        element: <AddCustomerReview></AddCustomerReview>
+        element: <PrivateRoutes><AddCustomerReview></AddCustomerReview></PrivateRoutes>
       },
       {
         path: '/portfolios',

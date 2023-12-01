@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { ArrowUpRightIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 
