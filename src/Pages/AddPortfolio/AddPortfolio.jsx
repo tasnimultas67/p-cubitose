@@ -5,6 +5,38 @@ const AddPortfolio = () => {
     const editor = useRef(null);
     const [content, setContent] = useState('');
 
+    const handleSubmitPortfolio = e => {
+        e.preventDefault()
+        const form = e.target;
+        const portfolioName = form.portfolio_name.value;
+        const portfolioDetails = content;
+        const portfolioThumbnail = form.portfolio_thumbnail.value;
+        const portfolioLink = form.portfolio_link.value;
+        const portfolioCategory = form.portfolio_category.value;
+        const portfolioYear = form.portfolio_year.value;
+        const portfolioCountry = form.portfolio_country.value;
+        const portfolioClientName = form.client_name.value;
+        const portfolioServiceCategory = form.service_category.value;
+
+        const addPortfolioInfo = { portfolioName, portfolioDetails, portfolioThumbnail, portfolioLink, portfolioCategory, portfolioYear, portfolioCountry, portfolioClientName, portfolioServiceCategory }
+        
+        fetch('http://localhost:5000/portfolio', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(addPortfolioInfo)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    console.log("portfolio added");
+                    form.reset()
+            }
+        })
+
+    }
+
     return (
         <div className="bg-white py-12">
             <div className="w-11/12 m-auto">
@@ -16,7 +48,7 @@ const AddPortfolio = () => {
                     </div>
 
                     <div className="mt-10">
-                        <form className="space-y-6" action="#" method="POST">
+                        <form className="space-y-6" onSubmit={handleSubmitPortfolio} method="POST">
                             {/* Add Portoflio Title*/}
                             <div>
                                 <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900">
