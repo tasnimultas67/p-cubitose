@@ -6,10 +6,10 @@ const AddPortfolio = () => {
     const [content, setContent] = useState('');
 
     return (
-        <div className="bg-white py-28">
+        <div className="bg-white py-12">
             <div className="w-11/12 m-auto">
                 <div className="flex min-h-full flex-1 flex-col justify-center">
-                    <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+                    <div className="">
                         <h2 className="text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
                             Add Portfolio to Cubitose
                         </h2>
@@ -154,6 +154,17 @@ const AddPortfolio = () => {
                                             className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3"
                                             />
                                         </div>
+                                    </div>
+                                    {/* Project Role */}
+                                    <div>
+                                        <label htmlFor="project-role" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Service Category</label>
+                                        <select id="project-role" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" name="service_category" required>
+                                            <option>Select</option>
+                                            <option value="Web-Development">Web Development</option>
+                                            <option value="Web-Design">Web Design</option>
+                                            <option value="Graphics-Design">Graphics Design</option>
+                                            <option value="Digital-Marketing">Digital Marketing</option>
+                                        </select>
                                     </div>
                                     {/* Submit Button */}
                                     <div>

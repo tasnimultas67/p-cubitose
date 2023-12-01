@@ -2,16 +2,26 @@
 
 export default function AddCustomerReview() {
 
-
+    const handleReviewForm = (e) => {
+        e.preventDefault()
+        let form = e.target;
+        let customerName = form.customer_name.value;
+        let customerPosition = form.customer_position.value;
+        let customerReview = form.customer_review.value;
+        let serviceCategory = form.service_category.value;
+        const reviewForm = { customerName, customerPosition, customerReview,serviceCategory }
+        console.log(reviewForm);
+        form.reset()
+}
 
   return (
     <>
-          <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+          <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 lg:w-10/12 m-auto">
               <div className="">
                   <h2 className="text-center text-2xl font-bold leading-9 tracking-tight text-gray-900"> Add Customer Review </h2>
               </div>
               <div className="mt-10">
-                  <form className="space-y-6" action="#" method="POST">
+                  <form className="space-y-6" onSubmit={handleReviewForm} method="POST">
                       {/* Customer Name */}
                       <div>
                         <label htmlFor="name" className="block text-sm font-medium leading-6 text-gray-900">
@@ -49,9 +59,9 @@ export default function AddCustomerReview() {
                               </div>
                               {/* Project Role */}
                                   <div>
-                                    <label htmlFor="project-role" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Project Category</label>
-                                    <select id="project-role" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
-                                        <option selected="">Select</option>
+                                    <label htmlFor="project-role" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Service Category</label>
+                                    <select id="project-role" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" name="service_category" required>
+                                        <option>Select</option>
                                         <option value="Web-Development">Web Development</option>
                                         <option value="Web-Design">Web Design</option>
                                         <option value="Graphics-Design">Graphics Design</option>
