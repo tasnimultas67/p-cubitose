@@ -21,6 +21,8 @@
     "react-messenger-customer-chat": "^0.8.0",
     "react-router-dom": "^6.20.0",
     "sort-by": "^1.2.0",
+    "sweetalert2": "^11.10.1",
+    "sweetalert2-react-content": "^5.0.7",
     "swiper": "^11.0.5"
   },
   "devDependencies": {

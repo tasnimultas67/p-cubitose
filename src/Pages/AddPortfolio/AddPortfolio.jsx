@@ -1,5 +1,6 @@
 import { useState, useRef} from 'react';
 import JoditEditor from 'jodit-react';
+import Swal from 'sweetalert2';
 
 const AddPortfolio = () => {
     const editor = useRef(null);
@@ -30,8 +31,13 @@ const AddPortfolio = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.insertedId) {
-                    console.log("portfolio added");
+                    Swal.fire(
+                    'Good job!',
+                    `Successfully added ${portfolioName} portfolio`,
+                    'success'
+                    )
                     form.reset()
+                    setContent('')
             }
         })
 

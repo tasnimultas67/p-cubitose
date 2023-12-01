@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 
 
 export default function AddCustomerReview() {
@@ -10,8 +11,26 @@ export default function AddCustomerReview() {
         let customerReview = form.customer_review.value;
         let serviceCategory = form.service_category.value;
         const reviewForm = { customerName, customerPosition, customerReview,serviceCategory }
-        console.log(reviewForm);
-        form.reset()
+        // console.log(reviewForm);
+        fetch('http://localhost:5000/review', {
+            method: 'POST',
+            headers: {
+                'content-type':'application/json',
+            },
+            body: JSON.stringify(reviewForm)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    Swal.fire(
+                    'Good job!',
+                    `Successfully added ${customerName}'s review`,
+                    'success'
+                    )
+                    form.reset()
+            }
+        })
+        
 }
 
   return (
