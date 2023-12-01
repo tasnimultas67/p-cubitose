@@ -21,7 +21,7 @@ const AddPortfolio = () => {
 
         const addPortfolioInfo = { portfolioName, portfolioDetails, portfolioThumbnail, portfolioLink, portfolioCategory, portfolioYear, portfolioCountry, portfolioClientName, portfolioServiceCategory }
         
-        fetch('http://localhost:5000/portfolio', {
+        fetch('https://cubitose-backend-production.up.railway.app/portfolio', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

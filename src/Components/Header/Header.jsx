@@ -33,8 +33,8 @@ export default function Header() {
         {/* Website Logo */}
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
-            <img className="h-14 w-auto" src="/white-logo.png" alt="cubitose logo" />
+            <span className="sr-only">Cubitose</span>
+            <img className="h-14 w-auto" src="/white-logo.png" alt="Cubitose logo" />
           </Link>
         </div>
         {/* Website Mobile Menu bar */}
@@ -98,7 +98,7 @@ export default function Header() {
             <NavLink to="/about-us" className="text-sm leading-6 text-white uppercase">
               About Us
             </NavLink>
-            <NavLink to="#" className="text-sm leading-6 text-white uppercase">
+            <NavLink to="/portfolios" className="text-sm leading-6 text-white uppercase">
               Portfolios
             </NavLink>
           </Popover.Group>

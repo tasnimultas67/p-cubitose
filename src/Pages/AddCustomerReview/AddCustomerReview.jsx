@@ -12,7 +12,7 @@ export default function AddCustomerReview() {
         let serviceCategory = form.service_category.value;
         const reviewForm = { customerName, customerPosition, customerReview,serviceCategory }
         // console.log(reviewForm);
-        fetch('http://localhost:5000/review', {
+        fetch('https://cubitose-backend-production.up.railway.app/review', {
             method: 'POST',
             headers: {
                 'content-type':'application/json',

@@ -13,6 +13,7 @@ import Login from './Pages/Login/Login.jsx'
 import AuthProvider from './providers/AuthProvider.jsx'
 import AddPortfolio from './Pages/AddPortfolio/AddPortfolio.jsx'
 import AddCustomerReview from './Pages/AddCustomerReview/AddCustomerReview.jsx'
+import PPortfolios from './Pages/PPortfolios/PPortfolios.jsx'
 
 
 const router = createBrowserRouter([
@@ -56,6 +57,11 @@ const router = createBrowserRouter([
       {
         path: '/add-customer-review',
         element: <AddCustomerReview></AddCustomerReview>
+      },
+      {
+        path: '/portfolios',
+        element: <PPortfolios></PPortfolios>,
+        loader: () => fetch('https://cubitose-backend-production.up.railway.app/portfolio')
       },
       
     ]
