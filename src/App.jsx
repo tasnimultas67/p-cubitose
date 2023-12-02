@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Outlet, ScrollRestoration, useLocation } from 'react-router-dom'
 import './App.css'
 import Header from './Components/Header/Header'
