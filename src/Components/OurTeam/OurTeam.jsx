@@ -28,7 +28,7 @@ const OurTeam = () => {
                 {
                     teams.map(team => <div key={team.id}>
                         <div className="group/team overflow-hidden">
-                            <div className="overflow-hidden">
+                            <div className="overflow-hidden rounded-md">
                                 <img className="h-[25rem] w-full object-cover object-top rounded-md group-hover/team:scale-125 duration-300 ease-in-out" src={team.profileImg} alt={`${team.name} image`} srcSet="" title={`${team.name} Image`} />
                             </div>
                             <h2 className="text-lg font-semibold mt-5">{team.name}</h2>
