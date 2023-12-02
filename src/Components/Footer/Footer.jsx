@@ -1,6 +1,18 @@
 import { Link } from "react-router-dom";
 import './Footer.css'
 
+const pages = [
+    {"_id": "page1", "pageTitle":"Home", "pageUrl": "/"},
+    {"_id": "page2", "pageTitle":"About Us", "pageUrl": "/about-us"},
+    {"_id": "page3", "pageTitle":"Portfolios", "pageUrl": "/portfolios"},
+    {"_id": "page4", "pageTitle":"Contact us", "pageUrl": "/contact-us"},
+]
+const servicesPages = [
+    {"_id": "service1", "pageTitle":"Web Development", "pageUrl": "/services/web-development"},
+    {"_id": "service2", "pageTitle":"Graphics Design", "pageUrl": "/services/graphics-design"},
+    {"_id": "service3", "pageTitle":"Digital Marketing", "pageUrl": "/services/digital-marketing"},
+]
+
 const Footer = () => {
     return (
         <footer className="bg-themeColor pt-28 pb-9">
@@ -15,19 +27,24 @@ const Footer = () => {
                     {/* Second Column */}
                     <div>
                         <ul className="page-list">
-                            <li className=" text-white"><Link to="#">Home</Link></li>
-                            <li className=" text-white"><Link to="#">About Us</Link></li>
-                            <li className=" text-white"><Link to="#">Portfolios</Link></li>
-                            <li className=" text-white"><Link to="#">Contact Us</Link></li>
+                            {
+                                pages.map(page => <li
+                                    key={page._id}
+                                    className=" text-white"><Link to={page.pageUrl}>{page.pageTitle}</Link></li>)
+                            }
+                            
                         </ul>
                     </div>
                     {/* Third Column */}
                     <div>
                         <h3 className="text-white font-semibold mb-3">Services</h3>
                         <ul className="uppercase text-white page-list">
-                            <li className=" text-white"><Link to="#">Web Development</Link></li>
-                            <li className=" text-white"><Link to="#">Graphics Design</Link></li>
-                            <li className=" text-white"><Link to="#">Digital Marketing</Link></li>
+                            {
+                                servicesPages.map(servicePage => <li
+                                    key={servicePage._id}
+                                    className=" text-white"><Link to={servicePage.pageUrl}>{ servicePage.pageTitle}</Link></li>)
+                            }
+                            
                         </ul>
                     </div>
                     {/* Fourth Column */}
