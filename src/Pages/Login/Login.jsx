@@ -22,7 +22,7 @@ export default function Login() {
           email: user.email,
         };
 
-        fetch("http://localhost:5000/jwt", {
+        fetch("https://cubitose-backend-production.up.railway.app/jwt", {
           method: "POST",
           headers: {
             "content-type": "application/json",
