@@ -31,7 +31,6 @@ export default function Login() {
         })
           .then((res) => res.json())
           .then((data) => {
-            console.log("jwt response", data);
             // Warning: Local Storage is not the best to store acces token
             localStorage.setItem("cubitose-access-token", data.token);
             form.reset();

@@ -9,7 +9,6 @@ const ContactUs = () => {
         let form_url = form.url.value;
         let form_message = form.message.value;
         const formInfo = { form_name, form_email, form_subject, form_url, form_message }
-        console.log(formInfo)
         form.reset()
     }
 
