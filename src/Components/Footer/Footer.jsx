@@ -10,7 +10,7 @@ const pages = [
 const servicesPages = [
     {"_id": "service1", "pageTitle":"Web Development", "pageUrl": "/services/web-development"},
     {"_id": "service2", "pageTitle":"Graphics Design", "pageUrl": "/services/graphics-design"},
-    {"_id": "service3", "pageTitle":"Digital Marketing", "pageUrl": "/services/digital-marketing"},
+    // {"_id": "service3", "pageTitle":"Digital Marketing", "pageUrl": "/services/digital-marketing"},
 ]
 
 const Footer = () => {
