@@ -16,6 +16,8 @@ import PPortfolios from './Pages/PPortfolios/PPortfolios.jsx'
 import NotFound from './Pages/NotFound/NotFound.jsx'
 import PrivateRoutes from './Routes/PrivateRoutes.jsx'
 import Seo from './Pages/Services/Seo/Seo.jsx'
+import Dashboard from './Pages/Dashboard/Dashboard.jsx'
+import DashHome from './Pages/Dashboard/DashHome.jsx'
 
 
 const router = createBrowserRouter([
@@ -54,14 +56,7 @@ const router = createBrowserRouter([
         path: '/team-login',
         element: <Login></Login>
       },
-      {
-        path: '/add-portfolio',
-        element: <PrivateRoutes><AddPortfolio></AddPortfolio></PrivateRoutes> 
-      },
-      {
-        path: '/add-customer-review',
-        element: <PrivateRoutes><AddCustomerReview></AddCustomerReview></PrivateRoutes>
-      },
+      
       {
         path: '/portfolios',
         element: <PPortfolios></PPortfolios>,
@@ -71,7 +66,22 @@ const router = createBrowserRouter([
     ]
   },
   {
-    
+    path: '/dashboard',
+    element: <PrivateRoutes><Dashboard></Dashboard></PrivateRoutes>,
+    children: [
+      {
+        path: '/dashboard',
+        element: <DashHome></DashHome>
+    },
+      {
+        path: '/dashboard/add-portfolio',
+        element: <PrivateRoutes><AddPortfolio></AddPortfolio></PrivateRoutes> 
+      },
+      {
+        path: '/dashboard/add-customer-review',
+        element: <PrivateRoutes><AddCustomerReview></AddCustomerReview></PrivateRoutes>
+      },
+    ]
   }
 ])
 
