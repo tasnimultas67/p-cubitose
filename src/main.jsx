@@ -8,7 +8,6 @@ import AboutUs from './Pages/AboutUs/AboutUs.jsx'
 import ContactUs from './Pages/ContactUs/ContactUs.jsx'
 import WebDevelopment from './Pages/Services/WebDevelopment/WebDevelopment.jsx'
 import GraphicsDesign from './Pages/Services/GraphicsDesign/GraphicsDesign.jsx'
-import DigitalMarketing from './Pages/Services/DigitalMarketing/DigitalMarketing.jsx'
 import Login from './Pages/Login/Login.jsx'
 import AuthProvider from './providers/AuthProvider.jsx'
 import AddPortfolio from './Pages/AddPortfolio/AddPortfolio.jsx'
@@ -16,6 +15,7 @@ import AddCustomerReview from './Pages/AddCustomerReview/AddCustomerReview.jsx'
 import PPortfolios from './Pages/PPortfolios/PPortfolios.jsx'
 import NotFound from './Pages/NotFound/NotFound.jsx'
 import PrivateRoutes from './Routes/PrivateRoutes.jsx'
+import Seo from './Pages/Services/Seo/Seo.jsx'
 
 
 const router = createBrowserRouter([
@@ -46,8 +46,8 @@ const router = createBrowserRouter([
         element: <GraphicsDesign></GraphicsDesign>
       },
       {
-        path: '/services/digital-marketing',
-        element: <DigitalMarketing></DigitalMarketing>
+        path: '/services/search-engine-optimization',
+        element: <Seo></Seo>
       },
       // Services page end
       {
