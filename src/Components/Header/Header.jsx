@@ -32,12 +32,12 @@ const services = [
     href: "/services/graphics-design",
     icon: PaintBrushIcon,
   },
-  // {
-  //   name: "Digital Marketing",
-  //   description: "Your customers’ data will be safe and secure",
-  //   href: "/services/digital-marketing",
-  //   icon: MegaphoneIcon,
-  // },
+  {
+    name: "Search Engine Optimization",
+    description: "Your customers’ data will be safe and secure",
+    href: "/services/search-engine-optimization",
+    icon: MegaphoneIcon,
+  },
 ];
 
 function classNames(...classes) {
