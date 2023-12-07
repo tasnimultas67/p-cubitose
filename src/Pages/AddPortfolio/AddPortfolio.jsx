@@ -18,8 +18,9 @@ const AddPortfolio = () => {
         const portfolioCountry = form.portfolio_country.value;
         const portfolioClientName = form.client_name.value;
         const portfolioServiceCategory = form.service_category.value;
+        const portfolioShortDescription = form.portfolio_shortDescription.value;
 
-        const addPortfolioInfo = { portfolioName, portfolioDetails, portfolioThumbnail, portfolioLink, portfolioCategory, portfolioYear, portfolioCountry, portfolioClientName, portfolioServiceCategory }
+        const addPortfolioInfo = { portfolioName, portfolioDetails, portfolioThumbnail, portfolioLink, portfolioCategory, portfolioYear, portfolioCountry, portfolioClientName, portfolioServiceCategory,portfolioShortDescription }
         
         fetch('https://cubitose-backend-production.up.railway.app/portfolio', {
             method: 'POST',
@@ -44,16 +45,11 @@ const AddPortfolio = () => {
     }
 
     return (
-        <div className="bg-white py-12">
-            <div className="w-11/12 m-auto">
+        <div className="bg-white p-5">
+            <div className="">
                 <div className="flex min-h-full flex-1 flex-col justify-center">
-                    <div className="">
-                        <h2 className="text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-                            Add Portfolio to Cubitose
-                        </h2>
-                    </div>
 
-                    <div className="mt-10">
+                    <div className="">
                         <form className="space-y-6" onSubmit={handleSubmitPortfolio} method="POST">
                             {/* Add Portoflio Title*/}
                             <div>
@@ -75,6 +71,24 @@ const AddPortfolio = () => {
                             <div className="grid grid-cols-1 lg:grid-cols-4 lg:gap-7">
                                 {/* Portfolio Details Editor */}
                                 <div className="col-span-3">
+                                    {/* Portfolio Thumnail */}
+                                    <div className=''>
+                                        <div className="flex items-center justify-between">
+                                            <label htmlFor="Thumbnail" className="block text-sm font-medium leading-6 text-gray-900">
+                                            Portfolio Short Description
+                                            </label>
+                                        </div>
+                                        <div className="mt-2">
+                                            <input
+                                            id="portfolio-shortDescription"
+                                            name="portfolio_shortDescription"
+                                                type="text"
+                                            required
+                                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3"
+                                            />
+                                        </div>
+                                    </div>
+                                    {/* Editor */}
                                     <label>Portfolio Details</label>
                                     <JoditEditor
                                         className='mt-2'

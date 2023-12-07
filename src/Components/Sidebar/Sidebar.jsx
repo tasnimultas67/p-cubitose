@@ -5,14 +5,14 @@ import {CursorArrowRaysIcon, PencilSquareIcon, HeartIcon} from "@heroicons/react
 import { Link } from 'react-router-dom';
 const menus = [
     {name: "Add Portfolio", href: "/dashboard/add-portfolio", icon: CursorArrowRaysIcon},
-    {name: "Manage Portfolio", href: "#", icon: PencilSquareIcon},
+    {name: "Manage Portfolio", href: "/dashboard/manage-portfolio", icon: PencilSquareIcon},
     {name: "Add Review", href: "/dashboard/add-customer-review", icon: HeartIcon},
 ]
 const Sidebar = () => {
     const {user} = useContext(AuthContext)
     return (
         <>
-            <div className='bg-themeColor p-3 sticky top-16'>
+            <aside className='bg-themeColor p-3 h-full'>
                 {/* User Info */}
                 <div className='text-center'>
                     <img className='bg-white h-20 w-auto rounded-full m-auto mb-5' src="/favicon.webp" alt="User profile Photo" />
@@ -27,7 +27,8 @@ const Sidebar = () => {
                     </div>)
                     }
                 </div>
-            </div>
+            </aside>
+
         </>
     );
 };

@@ -1,0 +1,39 @@
+import { PencilSquareIcon, TrashIcon } from '@heroicons/react/24/outline';
+import { Link, useLoaderData } from 'react-router-dom';
+
+const ManagePortfolio = () => {
+    const portfoliosData = useLoaderData()
+    return (
+        <>
+            <div className=" bg-swiper-lazy-preloader-white p-5">
+              
+                <ul role="list" className="divide-y divide-gray-200">
+                {portfoliosData.slice(0).reverse().map((portfolio) => (
+                    <li key={portfolio._id} className="md:flex justify-between items-center gap-x-6 py-5 rounded hover:shadow-md hover:bg-[#ffff00] px-5 bg-gray-100 my-2 cursor-pointer">
+                        <div className="flex items-center min-w-0 gap-x-4">
+                            <img className="h-20 w-20 rounded-full ring-2 ring-themeColor flex-none object-cover bg-gray-50" src={portfolio.portfolioThumbnail} alt="Portfolio Image" loading="lazy" />
+                            <div className="min-w-0 flex-auto">
+                                <p className="border w-fit px-3 py-0.5 text-xs bg-themeColor/10 rounded-md">{ portfolio.portfolioCategory}</p>
+                                <Link to={`/portfolio/${portfolio._id}`} className=" font-semibold leading-6 text-themeColor">{portfolio.portfolioName}</Link>
+                                
+                                <p className="mt-1 truncate text-xs leading-5 text-gray-500">{portfolio?.portfolioShortDescription}</p>
+                            </div>
+                        </div>
+                        <div className="shrink-0 sm:flex sm:flex-col sm:items-end">
+                            <div className="">
+                                <button  className="inline-flex w-full justify-center items-center rounded bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto">Delete <TrashIcon className="ml-2 w-5 h-5"></TrashIcon></button>
+
+                                <Link to={`/portfolio/update/${portfolio._id}`}><button className="inline-flex w-full justify-center items-center rounded bg-themeColor px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 sm:ml-3 sm:w-auto">Edit <PencilSquareIcon className="ml-2 w-5 h-5"></PencilSquareIcon></button></Link>
+                                
+                            </div>
+                            
+                        </div>
+                    </li>
+                ))}
+                </ul>
+      </div> 
+        </>
+    );
+};
+
+export default ManagePortfolio;

@@ -36,14 +36,8 @@ export default function AddCustomerReview() {
 
   return (
     <>
-      <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 lg:w-10/12 m-auto">
+      <div className="p-5">
         <div className="">
-          <h2 className="text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-            {" "}
-            Add Customer Review{" "}
-          </h2>
-        </div>
-        <div className="mt-10">
           <form className="space-y-6" onSubmit={handleReviewForm} method="POST">
             {/* Customer Name */}
             <div>
