@@ -19,6 +19,7 @@ import Seo from './Pages/Services/Seo/Seo.jsx'
 import Dashboard from './Pages/Dashboard/Dashboard.jsx'
 import DashHome from './Pages/Dashboard/DashHome.jsx'
 import ManagePortfolio from './Pages/ManagePortfolio/ManagePortfolio.jsx'
+import UpdatePortfolio from './Pages/UpdatePortfolio/UpdatePortfolio.jsx'
 
 
 const router = createBrowserRouter([
@@ -87,6 +88,11 @@ const router = createBrowserRouter([
       {
         path: '/dashboard/add-customer-review',
         element: <PrivateRoutes><AddCustomerReview></AddCustomerReview></PrivateRoutes>
+      },
+      {
+        path: '/dashboard/update-portfolio/:id',
+        element: <PrivateRoutes><UpdatePortfolio></UpdatePortfolio></PrivateRoutes>,
+        loader: ({params}) => fetch(`https://cubitose-backend-production.up.railway.app/portfolio/${params.id}`)
       },
     ]
   }
