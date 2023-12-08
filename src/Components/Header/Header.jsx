@@ -22,19 +22,19 @@ import { AuthContext } from "../../providers/AuthProvider";
 const services = [
   {
     name: "Web Development",
-    description: "Get a better understanding of your traffic",
+    description: "The Ultimate Web Development Service for Digital Agencies",
     href: "/services/web-development",
     icon: CodeBracketIcon,
   },
   {
     name: "Graphics Design",
-    description: "Speak directly to your customers",
+    description: "We Bring Your Brand to Life with Stunning Visuals",
     href: "/services/graphics-design",
     icon: PaintBrushIcon,
   },
   {
     name: "Search Engine Optimization",
-    description: "Your customers’ data will be safe and secure",
+    description: "We Optimize Your Site for Your Goals and Audience",
     href: "/services/search-engine-optimization",
     icon: MegaphoneIcon,
   },

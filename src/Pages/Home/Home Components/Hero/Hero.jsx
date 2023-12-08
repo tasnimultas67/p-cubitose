@@ -1,7 +1,7 @@
 export default function Hero() {
 
   return (
-    <div className="bg-themeColor">
+    <div className="bg-themeColor h-screen">
       <div className="relative isolate pt-5 px-6 lg:px-8 ">
         {/* <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -21,8 +21,7 @@ export default function Hero() {
               We turn ideas into extraordinary digital products & experiences
             </h1>
             <p className="mt-6 text-lg text-gray-100">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-              fugiat veniam occaecat fugiat aliqua.
+              We design, build and ship world-class digital products for forward-thinking brands.
             </p>
           </div>
         </div>

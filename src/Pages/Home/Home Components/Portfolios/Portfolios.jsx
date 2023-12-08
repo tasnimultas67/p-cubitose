@@ -4,15 +4,17 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import './Portfolios.css'
-
-const portfolios = [
-    {"id": 1, "img": "https://i.ibb.co/0tnQW7S/process2.webp", "title": "Dhaka Startup", "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, deserunt!"},
-    {"id": 2,"img": "https://i.ibb.co/0tnQW7S/process2.webp", "title": "Beign Hero", "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, deserunt!"},
-    {"id": 3,"img": "https://i.ibb.co/0tnQW7S/process2.webp", "title": "Being Human", "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, deserunt!"},
-    {"id": 4,"img": "https://i.ibb.co/0tnQW7S/process2.webp", "title": "Hello Bangla", "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, deserunt!"},
-]
+import { useEffect, useState } from "react";
 
 const Portfolios = () => {
+
+    const [portfolios, setPortfolios] = useState([])
+    useEffect(() => {
+        fetch('https://cubitose-backend-production.up.railway.app/portfolio/')
+            .then(res => res.json())
+            .then(data => setPortfolios(data))
+        
+    },[])
     return (
         <>
             <div className="bg-white py-28">
@@ -24,7 +26,7 @@ const Portfolios = () => {
                         </div>
                         {/* Explore more Button */}
                         <div className="text-left mt-5 lg:mt-0 lg:text-right ">
-                            <Link to="#"><button className="py-2 px-5 bg-themeColor text-white rounded-md">Explore More</button></Link>
+                            <Link to="/portfolios"><button className="py-2 px-5 bg-themeColor text-white rounded-md">Explore More</button></Link>
                         </div>
                     </div>
                 </div>
@@ -41,13 +43,13 @@ const Portfolios = () => {
                         className="mySwiper"
                     >
                         {
-                            portfolios.map(portfolio => <SwiperSlide key={portfolio.id}>
+                            portfolios.map(portfolio => <SwiperSlide key={portfolio._id}>
                             <div className='relative overflow-hidden w-full h-[22rem] lg:h-[30rem] rounded-md bg-white bg-clip-border group/p1 cursor-pointer shadow-2xl'>
-                                    <img alt="Portfolio Cover Image" src={portfolio.img} className="absolute inset-0 h-full w-full object-cover group-hover/p1:scale-125 duration-300 ease-in-out" loading="lazy" />
+                                    <img alt="Portfolio Cover Image" src="https://i.ibb.co/0tnQW7S/process2.webp" className="absolute inset-0 h-full w-full object-cover group-hover/p1:scale-125 duration-300 ease-in-out" loading="lazy" />
                                     <div className="absolute to-bg-black-10 bg-gradient-to-t from-black/80 via-black/10 pt-32  sm:pt-48  lg:pt-64  h-full w-full flex items-end ">
                                         <div className="p-5">
-                                            <h3 className="text-2xl font-semibold text-white pb-1">{portfolio.title}</h3>
-                                            <p className="text-white text-sm">{portfolio.description}</p>
+                                            <h3 className="text-2xl font-semibold text-white pb-1">{portfolio.portfolioName}</h3>
+                                            <p className="text-white text-sm">{portfolio.portfolioShortDescription}</p>
                                         </div>
                                     </div>
                             </div>
