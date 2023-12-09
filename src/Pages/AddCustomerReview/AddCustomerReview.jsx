@@ -36,7 +36,7 @@ export default function AddCustomerReview() {
 
   return (
     <>
-      <div className="p-5 mr-3 rounded bg-gray-200">
+      <div className="p-5 mr-3 rounded bg-white shadow">
         <div className="">
           <form className="space-y-6" onSubmit={handleReviewForm} method="POST">
             {/* Customer Name */}

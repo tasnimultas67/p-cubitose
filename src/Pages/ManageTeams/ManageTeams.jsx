@@ -44,13 +44,13 @@ const ManageTeams = () => {
 
     return (
         <>
-          <div className="bg-gray-200 p-3 rounded-md mr-3">
+          <div className="bg-white p-4 rounded-md mr-3 shadow">
               
                 <ul role="list" className="divide-y divide-gray-200">
                 {teams.slice(0).reverse().map((team) => (
-                    <li key={team._id} className="md:flex justify-between items-center gap-x-6 rounded hover:shadow-md hover:bg-themeColor/10 pr-5 bg-gray-100 my-2 cursor-pointer">
+                    <li key={team._id} className="md:flex justify-between items-center gap-x-6 rounded hover:shadow-md  py-3 px-4 cursor-pointer">
                         <div className="flex items-center min-w-0 gap-x-4">
-                            <img className="h-28 w-28  flex-none object-cover bg-gray-50" src={team.teamImg} alt="Portfolio Image" loading="lazy" />
+                            <img className="h-16 w-16 rounded-full flex-none object-cover bg-gray-50" src={team.teamImg} alt="Portfolio Image" loading="lazy" />
                             <div className="min-w-0 flex-auto">
                                 <h2 className=" font-semibold leading-6 text-themeColor">{team.teamName}</h2>
                                 <p className="mt-1 truncate text-xs leading-5 text-gray-500">{team?.teamRole}</p>
@@ -84,9 +84,9 @@ const ManageTeams = () => {
                         {/* Buttons */}
                         <div className="shrink-0 sm:flex sm:flex-col sm:items-end">
                             <div className="">
-                                <button onClick={()=> handleTeamDelete(team._id)} className="inline-flex w-full justify-center items-center rounded bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto">Delete <TrashIcon className="ml-2 w-5 h-5"></TrashIcon></button>
+                                <button onClick={()=> handleTeamDelete(team._id)} className="inline-flex w-full justify-center items-center rounded bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto"><TrashIcon className=" w-5 h-5"></TrashIcon></button>
 
-                                <Link to={`/dashboard/update-team/${team._id}`}><button className="inline-flex w-full justify-center items-center rounded bg-themeColor px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 sm:ml-3 sm:w-auto">Edit <PencilSquareIcon className="ml-2 w-5 h-5"></PencilSquareIcon></button></Link>
+                                <Link to={`/dashboard/update-team/${team._id}`}><button className="inline-flex w-full justify-center items-center rounded bg-themeColor px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 sm:ml-3 sm:w-auto"><PencilSquareIcon className="w-5 h-5"></PencilSquareIcon></button></Link>
                                 
                             </div>
                             

@@ -1,11 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
-::selection{
+::selection {
   background-color: #1954ed;
   color: white;
+}
+
+body,
+html {
+  background-color: #F9F9F9;
 }

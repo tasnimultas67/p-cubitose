@@ -39,7 +39,7 @@ const ManagePortfolio = () => {
     }
     return (
         <>
-            <div className="bg-gray-200 p-3 rounded-md mr-3">
+            <div className="bg-white p-3 rounded-md mr-3 shadow">
               
                 <ul role="list" className="divide-y divide-gray-200">
                 {portfolios.slice(0).reverse().map((portfolio) => (

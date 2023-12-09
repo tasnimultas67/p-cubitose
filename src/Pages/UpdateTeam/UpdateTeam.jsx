@@ -57,7 +57,7 @@ const UpdateTeam = () => {
     }
     return (
         <>
-            <div className="bg-gray-200 p-5 rounded-md mr-3">
+            <div className="bg-white shadow p-5 rounded-md mr-3">
                 <form onSubmit={handleSubmitTeam} className="space-y-3">
                     <div>
                         {/* Team Name*/}
