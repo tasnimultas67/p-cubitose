@@ -7,7 +7,7 @@ const Dashboard = () => {
         <>
             <Header></Header>
             <div className='grid grid-cols-5 mt-3 gap-4'>
-                <div className=''>
+                <div className='relative top-0'>
                     <Sidebar></Sidebar>
                 </div>
                 <div className='col-span-4'>

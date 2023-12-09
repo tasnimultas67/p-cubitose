@@ -15,10 +15,10 @@ const Sidebar = () => {
 
     return (
         <>
-            <aside className='bg-white rounded-md p-3 ml-3 mb-3 shadow'>
+            <aside className='bg-white rounded-md p-3 ml-3 mb-3 shadow sticky top-0'>
                 {/* User Info */}
                 <div className='text-center pt-5 pb-5'>
-                    <img className='bg-white h-20 w-auto rounded-full m-auto mb-5 ring-themeColor ring-2' src="/favicon.webp" alt="User profile Photo" />
+                    <img className='bg-white h-16 w-auto rounded-full m-auto mb-5 ring-themeColor ring-2' src="/favicon.webp" alt="User profile Photo" />
                     <h3 className='text-black font-semibold'>Cubitose</h3>
                     {user && <p className='text-gray-700 text-sm'>{ user.email}</p>}
                 </div>
