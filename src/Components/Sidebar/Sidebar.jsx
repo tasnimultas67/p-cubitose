@@ -11,7 +11,7 @@ const menus = [
     {name: "Add Review", href: "/dashboard/add-customer-review", icon: HeartIcon},
 ]
 const Sidebar = () => {
-    const {user} = useContext(AuthContext)
+    const { user } = useContext(AuthContext)
     return (
         <>
             <aside className='bg-gray-200 rounded-md p-3 ml-3 mb-3'>

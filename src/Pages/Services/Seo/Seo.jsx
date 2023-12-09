@@ -1,11 +1,4 @@
 import { ArrowUpRightIcon } from '@heroicons/react/24/solid'
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {  } from '@fortawesome/free-regular-svg-icons'
-// import { faFacebook, faInstagram, faLinkedinIn, faYoutube, faTiktok } from '@fortawesome/free-brands-svg-icons'
-
-
-
-// &#8599;
 
 const offers = [
     { "offerTitle": "Earn page one on Google", "offerDescription": "Achieve top visibility with our expert SEO agency services. We optimize your website to secure top positions on Google, driving higher organic traffic and quality exposure. Our SEO experts help to set up the framework for a successful campaign launch, ensuring that every element, from keyword research to on-page optimization and off-page, is designed to maximize your visibility on the world's most popular search engine." },
@@ -26,7 +19,7 @@ const Seo = () => {
                     {/* Content */}
                     <div>
                         <div className=''>
-                            <h1 className="text-black text-6xl  leading-tight flex">Claim the top spot and be your customers’ first choice on search engines &#8599;</h1>
+                            <h1 className="text-black text-3xl lg:text-6xl  leading-tight flex">Claim the top spot and be your customers’ first choice on search engines &#8599;</h1>
                         </div>
                         <div className="grid grid-cols-1 lg:grid-cols-3 mt-5">
                             <div></div>
@@ -36,8 +29,8 @@ const Seo = () => {
                         </div>
                     </div>
                     {/* Banner */}
-                    <div className='mt-20'>
-                        <img className='rounded-lg h-[30rem] object-cover object-bottom w-full shadow-lg' src="https://i.ibb.co/09FVNky/SEO-Banner.webp" alt="" srcSet="" loading='lazy' />
+                    <div className='mt-10 lg:mt-20'>
+                        <img className='rounded-lg h-[20rem] lg:h-[30rem] 2xl:h-[35rem] object-cover object-bottom w-full shadow-lg' src="https://i.ibb.co/09FVNky/SEO-Banner.webp" alt="" srcSet="" loading='lazy' />
                     </div>
                     <div className=' grid grid-cols-1 lg:grid-cols-3 mt-20'>
                         

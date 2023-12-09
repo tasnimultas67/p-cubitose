@@ -45,11 +45,11 @@ const Portfolios = () => {
                         {
                             portfolios.map(portfolio => <SwiperSlide key={portfolio._id}>
                             <div className='relative overflow-hidden w-full h-[22rem] lg:h-[30rem] rounded-md bg-white bg-clip-border group/p1 cursor-pointer shadow-2xl'>
-                                    <img alt="Portfolio Cover Image" src="https://i.ibb.co/0tnQW7S/process2.webp" className="absolute inset-0 h-full w-full object-cover group-hover/p1:scale-125 duration-300 ease-in-out" loading="lazy" />
+                                    <img alt="Portfolio Cover Image" src={portfolio.portfolioThumbnail} className="absolute inset-0 h-full w-full object-cover group-hover/p1:scale-125 duration-300 ease-in-out" loading="lazy" />
                                     <div className="absolute to-bg-black-10 bg-gradient-to-t from-black/80 via-black/10 pt-32  sm:pt-48  lg:pt-64  h-full w-full flex items-end ">
                                         <div className="p-5">
                                             <h3 className="text-2xl font-semibold text-white pb-1">{portfolio.portfolioName}</h3>
-                                            <p className="text-white text-sm">{portfolio.portfolioShortDescription}</p>
+                                            <p className="text-white text-sm">{ portfolio.portfolioShortDescription.length > 80? portfolio.portfolioShortDescription.substring(0, 80 -3) + "..." : portfolio.portfolioShortDescription}</p>
                                         </div>
                                     </div>
                             </div>

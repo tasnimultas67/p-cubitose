@@ -24,10 +24,10 @@ const WebDevelopment = () => {
         <div className="bg-white py-28">
             <div className="w-11/12 m-auto">
                 <div>
-                    <h1 className="text-6xl text-black leading-tight">A solid, well-planned and well-executed website can set you apart from your competition, drive bottom line value, and make you the star of the show</h1>
+                    <h1 className="text-3xl lg:text-6xl text-black leading-tight">A solid, well-planned and well-executed website can set you apart from your competition, drive bottom line value, and make you the star of the show</h1>
                 </div>
-                <div className="grid grid-cols-4 mt-20">
-                    <div></div>
+                <div className="grid grid-cols-1 lg:grid-cols-4 mt-10 lg:mt-20">
+                    <div className='hidden lg:block'></div>
                     <div className="col-span-3 flex flex-col gap-2">
                         <p>Your website is the heart of your digital identity: it should be dynamic, interactive and bring visitors back to engage with your brand.</p>
                         <p>At Cubitose, we pride ourselves on building bespoke websites that weave your business needs into the back-end, enabling your teams to manage your site and create engaging content.</p>
@@ -38,15 +38,15 @@ const WebDevelopment = () => {
 
                 </div>
                 {/* Banner Image */}
-                <div className="mt-20">
+                <div className="mt-10 lg:mt-20">
                     <img loading='lazy'
-                        className=" h-[30rem] 2xl:h-[35rem] w-full object-cover object-bottom rounded-lg shadow-lg"
+                        className="h-[20rem] lg:h-[30rem] 2xl:h-[35rem] w-full object-cover object-bottom rounded-lg shadow-lg"
                         src="https://i.ibb.co/HptGPFn/Banner-1.webp" alt="Web Development Banner" srcSet=""/>
                 </div>
                 {/* Feature process*/}
-                <div className="pt-36 pb-20">
-                    <h2 className="text-5xl font-medium text-black">How come we are so proficient at this</h2>
-                    <div className="grid grid-cols-4 gap-10 mt-28 mb-10">
+                <div className="pt-20 lg:pt-36 pb-10 lg:pb-20">
+                    <h2 className="text-3xl lg:text-5xl font-medium text-black">How come we are so proficient at this</h2>
+                    <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 mt-16 lg:mt-28 mb-10">
                         <div>
                             <h2 className="text-2xl font-semibold text-black mb-3 flex items-center uppercase">Reliable <ArrowUpRightIcon className='h-5 w-5 ml-2'></ArrowUpRightIcon></h2>
                             <p>Cubitose develops websites with custom functionality to meet your needs. We take pride in coding back-end solutions that act as the unseen backbone to your website.</p>
@@ -69,9 +69,9 @@ const WebDevelopment = () => {
                 
             </div>
             {/* Development Process */}
-                <div className="bg-themeColor lg:py-28">
+                <div className="bg-themeColor lg:py-28 py-24">
                     <div className='w-11/12 m-auto'>
-                        <h1 className="text-5xl text-white">Our Development Process</h1>
+                        <h1 className="text-3xl lg:text-5xl text-white">Our Development Process</h1>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-20 gap-10">
                             {
                                 processes.map(process => (

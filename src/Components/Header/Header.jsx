@@ -73,8 +73,66 @@ export default function Header() {
             />
           </Link>
         </div>
+
         {/* Website Mobile Menu bar */}
-        <div className="flex lg:hidden">
+        <div className="flex lg:hidden gap-5">
+                  {/* User Info */}
+            {user && (
+            <Menu as="div" className="relative">
+              <div>
+                <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                  <span className="absolute -inset-1.5" />
+                  <span className="sr-only">Open user menu</span>
+                  <img
+                    className="h-8 w-8 rounded-full bg-white"
+                    src="/favicon.webp"
+                    alt="User Profile Image"
+                  />
+                </Menu.Button>
+              </div>
+              <Transition
+                as={Fragment}
+                enter="transition ease-out duration-100"
+                enterFrom="transform opacity-0 scale-95"
+                enterTo="transform opacity-100 scale-100"
+                leave="transition ease-in duration-75"
+                leaveFrom="transform opacity-100 scale-100"
+                leaveTo="transform opacity-0 scale-95"
+              >
+                <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                  {/* Dashboard */}
+                  <Menu.Item>
+                    {({ active }) => (
+                      <Link
+                        to="/dashboard"
+                        className={classNames(
+                          active ? "bg-gray-100" : "",
+                          "block px-4 py-2 text-sm text-gray-700"
+                        )}
+                      >
+                        Dashboard
+                      </Link>
+                    )}
+                  </Menu.Item>
+                  
+                  <Menu.Item>
+                    {({ active }) => (
+                      <button
+                        onClick={handleLogOut}
+                        className={classNames(
+                          active ? "bg-gray-100" : "",
+                          " px-4 py-2 text-sm text-gray-700 w-full text-left flex items-center gap-2"
+                        )}
+                      >
+                        Sign out{" "}
+                        <ArrowRightOnRectangleIcon className="h-4 w-4 text-gray-700"></ArrowRightOnRectangleIcon>
+                      </button>
+                    )}
+                  </Menu.Item>
+                </Menu.Items>
+              </Transition>
+            </Menu>
+          )}
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
@@ -84,6 +142,7 @@ export default function Header() {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
+
         {/* Website Menu  */}
         <div className="hidden lg:flex gap-10 items-center">
           {/* Menu */}
@@ -234,27 +293,35 @@ export default function Header() {
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
+            <Link href="/" className="-m-1.5 p-1.5">
+              <span className="sr-only">Cubitose</span>
               <img className="h-8 w-auto" src="/public/white-logo.png" alt="" />
-            </a>
+            </Link>
+
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
-              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+              <XMarkIcon className="h-6 w-6 " aria-hidden="true" />
             </button>
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
+                <NavLink
+                  onClick={()=> setMobileMenuOpen(false)}
+                  to="/"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Home
+                </NavLink>
                 <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
                       <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                        Product
+                        Services
                         <ChevronDownIcon
                           className={classNames(
                             open ? "rotate-180" : "",
@@ -265,45 +332,42 @@ export default function Header() {
                       </Disclosure.Button>
                       <Disclosure.Panel className="mt-2 space-y-2">
                         {[...services].map((item) => (
-                          <Disclosure.Button
+                          <Link
                             key={item.name}
-                            as="a"
-                            href={item.href}
+                            to={item.href}
+                            onClick={()=> setMobileMenuOpen(false)}
                             className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                           >
                             {item.name}
-                          </Disclosure.Button>
+                          </Link>
                         ))}
                       </Disclosure.Panel>
                     </>
                   )}
                 </Disclosure>
-                <a
-                  href="#"
+                <NavLink
+                  onClick={()=> setMobileMenuOpen(false)}
+                  to="/about-us"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Features
-                </a>
-                <a
-                  href="#"
+                  About Us
+                </NavLink>
+                <NavLink
+                  to="/portfolios"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  onClick={()=> setMobileMenuOpen(false)}
                 >
-                  Marketplace
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Company
-                </a>
+                  Portfolios
+                </NavLink>
               </div>
               <div className="py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                <Link
+                  onClick={()=> setMobileMenuOpen(false)}
+                  to="/contact-us"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white bg-themeColor text-center"
                 >
-                  Log in
-                </a>
+                  Contact Us
+                </Link>
               </div>
             </div>
           </div>

@@ -33,16 +33,16 @@ const GraphicsDesign = () => {
                     </div>
                     {/* Banner */}
                     <div className="mt-10 lg:mt-20">
-                        <img className="h-96 2xl:h-[35rem] w-full object-cover object-center rounded-lg shadow-lg" src="https://i.ibb.co/GQ2v1Xb/Graphics-Design-Banner3.webp" alt="Graphics Design Banner" loading="lazy" srcSet="" />
+                        <img className="h-[20rem] lg:h-[30rem] 2xl:h-[35rem] w-full object-cover object-center rounded-lg shadow-lg" src="https://i.ibb.co/GQ2v1Xb/Graphics-Design-Banner3.webp" alt="Graphics Design Banner" loading="lazy" srcSet="" />
                     </div>
                     {/* About section */}
-                    <div  className="py-20 space-y-10">
-                        <h1 className=" text-5xl">Game-Changing Graphic Design Services</h1>
-                        <p className="w-7/12">With Cubitose, you can literally do more, save more, be more. Rebrand your business with the most effective and creative graphic designs, made by the top 1% of graphic designers in the industry.</p>
+                    <div  className="pt-20 space-y-10">
+                        <h1 className="text-3xl lg:text-5xl">Game-Changing Graphic Design Services</h1>
+                        <p className=" w-full lg:w-7/12">With Cubitose, you can literally do more, save more, be more. Rebrand your business with the most effective and creative graphic designs, made by the top 1% of graphic designers in the industry.</p>
                     </div>
-                    <div className="py-20 space-y-8 mb-14">
+                    <div className="pt-20 space-y-8 lg:mb-14">
                         <h1 className="text-4xl">Trusted By</h1>
-                        <p className="w-6/12">Trusted by thousands of clients throughout the country, Cubitose’s highly-skilled designers are dedicated to upgrading your design game to its fullest potential.</p>
+                        <p className="w-full lg:w-6/12">Trusted by thousands of clients throughout the country, Cubitose’s highly-skilled designers are dedicated to upgrading your design game to its fullest potential.</p>
                         <img className="w" src="https://www.graphicszoo.com/public/assets/frontend/gz-new/img/logo-client.png" alt="Trusted Companies logo" srcSet="" />
                     </div>
                     <div className="py-32">
@@ -58,15 +58,15 @@ const GraphicsDesign = () => {
                 <div className="bg-themeColor py-28">
                     <div className="w-11/12 m-auto">
                         <div className="space-y-8"> 
-                            <h2 className="text-white text-5xl">How Cubitose Helps You</h2>
-                            <p className="text-base text-white w-8/12">From branding and web design, to advertising and artworks, we’ve got you covered. Improve the edge of all your graphics with the Cubitose standard of quality.</p>
+                            <h2 className="text-white text-3xl lg:text-5xl">How Cubitose Helps You</h2>
+                            <p className="text-base text-white w-full lg:w-8/12">From branding and web design, to advertising and artworks, we’ve got you covered. Improve the edge of all your graphics with the Cubitose standard of quality.</p>
                         </div>
                         {/* keys */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-20 gap-20">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-20 gap-10 lg:gap-20">
                             {
                                 keys.map(key => (
                         <div key={key.id}>
-                            <h2 className="mb-5 text-xl text-white font-semibold uppercase flex items-center">{key.keyTitle} <ArrowUpRightIcon className='h-5 w-5 ml-2'></ArrowUpRightIcon></h2>
+                            <h2 className="mb-3 lg:mb-5 text-xl text-white font-semibold uppercase flex items-center">{key.keyTitle} <ArrowUpRightIcon className='h-5 w-5 ml-2'></ArrowUpRightIcon></h2>
                                         <p className="text-white text-base">{ key.keyDescription}</p>
                         </div>
                                 ))
