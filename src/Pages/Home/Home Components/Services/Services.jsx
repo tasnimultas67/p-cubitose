@@ -9,7 +9,7 @@ const services = [
 const Services = () => {
     return (
         <>
-            <div className="bg-white py-28">
+            <div className="bg-white pb-28 lg:py-28">
                 <div className="w-11/12 m-auto">
                     <div>
                         <h1 className="text-3xl lg:text-6xl text-black font-semibold text-center">So what do we do exactly?</h1>

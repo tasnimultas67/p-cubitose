@@ -17,7 +17,7 @@ const Portfolios = () => {
     },[])
     return (
         <>
-            <div className="bg-white py-28">
+            <div className="bg-white py-16 lg:py-28">
                 <div className="w-11/12 m-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-3 items-center pb-20">
                         {/* Section Title */}
@@ -31,11 +31,25 @@ const Portfolios = () => {
                     </div>
                 </div>
                 {/* Portfolio Card Slider */}
-                <div>
+                <div className="m-3 lg:m-0">
                     <Swiper
-                        slidesPerView={4}
+                        slidesPerView={1}
                         spaceBetween={15}
                         centeredSlides={true}
+                        breakpoints={{
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 30,
+                        },
+                        1024: {
+                            slidesPerView: 4,
+                            spaceBetween: 30,
+                        },
+                        }}
                         pagination={{
                         clickable: true,
                         }}
