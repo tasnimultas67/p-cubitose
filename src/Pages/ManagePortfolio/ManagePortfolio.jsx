@@ -47,7 +47,7 @@ const ManagePortfolio = () => {
                         <div className="flex items-center min-w-0 gap-x-4">
                             <img className="h-20 w-20 rounded-full ring-2 ring-themeColor flex-none object-cover bg-gray-50" src={portfolio.portfolioThumbnail} alt="Portfolio Image" loading="lazy" />
                             <div className="min-w-0 flex-auto">
-                                <p className="border w-fit px-3 py-0.5 text-xs bg-themeColor/10 rounded-md">{ portfolio.portfolioCategory}</p>
+                                <p className="border w-fit px-3 py-0.5 text-xs bg-themeColor/10 rounded-md">{ portfolio.portfolioServiceCategory}</p>
                                 <Link to={`/portfolio/${portfolio._id}`} className=" font-semibold leading-6 text-themeColor">{portfolio.portfolioName}</Link>
                                 
                                 <p className="mt-1 truncate text-xs leading-5 text-gray-500">{portfolio?.portfolioShortDescription}</p>

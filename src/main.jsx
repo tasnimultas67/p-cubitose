@@ -23,6 +23,7 @@ import UpdatePortfolio from './Pages/UpdatePortfolio/UpdatePortfolio.jsx'
 import AddTeam from './Pages/AddTeam/AddTeam.jsx'
 import ManageTeams from './Pages/ManageTeams/ManageTeams.jsx'
 import UpdateTeam from './Pages/UpdateTeam/UpdateTeam.jsx'
+import SinglePortfolio from './Pages/SinglePortfolio/SinglePortfolio.jsx'
 
 
 const router = createBrowserRouter([
@@ -69,6 +70,11 @@ const router = createBrowserRouter([
         path: '/portfolios',
         element: <PPortfolios></PPortfolios>,
         loader: () => fetch('https://cubitose-backend-production.up.railway.app/portfolio')
+      },
+      {
+        path: '/portfolios/portfolio/:id',
+        element: <SinglePortfolio></SinglePortfolio>,
+        loader: ({params}) => fetch(`https://cubitose-backend-production.up.railway.app/portfolio/${params.id}`)
       },
       
     ]
