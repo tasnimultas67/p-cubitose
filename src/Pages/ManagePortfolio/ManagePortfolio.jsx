@@ -27,7 +27,7 @@ const ManagePortfolio = () => {
                         if (data.deletedCount>0) {
                         Swal.fire({
                             title: 'Deleted',
-                            text: "YYour Portfolio has been deleted.",
+                            text: "Your Portfolio has been deleted.",
                             icon: 'success',
                         })
                         const remaining = portfolios.filter(port => port._id !== _id)
@@ -39,11 +39,11 @@ const ManagePortfolio = () => {
     }
     return (
         <>
-            <div className=" bg-swiper-lazy-preloader-white p-5">
+            <div className="bg-gray-200 p-3 rounded-md mr-3">
               
                 <ul role="list" className="divide-y divide-gray-200">
                 {portfolios.slice(0).reverse().map((portfolio) => (
-                    <li key={portfolio._id} className="md:flex justify-between items-center gap-x-6 py-5 rounded hover:shadow-md hover:bg-[#ffff00] px-5 bg-gray-100 my-2 cursor-pointer">
+                    <li key={portfolio._id} className="md:flex justify-between items-center gap-x-6 py-5 rounded hover:shadow-md hover:bg-themeColor/10 px-5 bg-gray-100 my-2 cursor-pointer">
                         <div className="flex items-center min-w-0 gap-x-4">
                             <img className="h-20 w-20 rounded-full ring-2 ring-themeColor flex-none object-cover bg-gray-50" src={portfolio.portfolioThumbnail} alt="Portfolio Image" loading="lazy" />
                             <div className="min-w-0 flex-auto">

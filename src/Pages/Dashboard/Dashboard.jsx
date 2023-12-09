@@ -6,11 +6,11 @@ const Dashboard = () => {
     return (
         <>
             <Header></Header>
-            <div className='grid grid-cols-4'>
-                <div className='sticky top-0'>
+            <div className='grid grid-cols-5 mt-3 gap-4'>
+                <div className=''>
                     <Sidebar></Sidebar>
                 </div>
-                <div className='col-span-3'>
+                <div className='col-span-4'>
                     <Outlet></Outlet>
                 </div>
             </div>  

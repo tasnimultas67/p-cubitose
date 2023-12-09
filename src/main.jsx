@@ -20,6 +20,9 @@ import Dashboard from './Pages/Dashboard/Dashboard.jsx'
 import DashHome from './Pages/Dashboard/DashHome.jsx'
 import ManagePortfolio from './Pages/ManagePortfolio/ManagePortfolio.jsx'
 import UpdatePortfolio from './Pages/UpdatePortfolio/UpdatePortfolio.jsx'
+import AddTeam from './Pages/AddTeam/AddTeam.jsx'
+import ManageTeams from './Pages/ManageTeams/ManageTeams.jsx'
+import UpdateTeam from './Pages/UpdateTeam/UpdateTeam.jsx'
 
 
 const router = createBrowserRouter([
@@ -93,6 +96,19 @@ const router = createBrowserRouter([
         path: '/dashboard/update-portfolio/:id',
         element: <PrivateRoutes><UpdatePortfolio></UpdatePortfolio></PrivateRoutes>,
         loader: ({params}) => fetch(`https://cubitose-backend-production.up.railway.app/portfolio/${params.id}`)
+      },
+      {
+        path: '/dashboard/add-team',
+        element: <PrivateRoutes><AddTeam></AddTeam></PrivateRoutes>
+      },
+      {
+        path: '/dashboard/manage-teams',
+        element: <PrivateRoutes><ManageTeams></ManageTeams></PrivateRoutes>
+      },
+      {
+        path: '/dashboard/update-team/:id',
+        element: <PrivateRoutes><UpdateTeam></UpdateTeam></PrivateRoutes>,
+        loader: ({params}) => fetch(`https://cubitose-backend-production.up.railway.app/teams/${params.id}`)
       },
     ]
   }

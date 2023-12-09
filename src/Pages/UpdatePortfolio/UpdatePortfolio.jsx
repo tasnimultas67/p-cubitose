@@ -40,7 +40,7 @@ const UpdatePortfolio = () => {
                 if (data.modifiedCount > 0) {
                     Swal.fire(
                     'Good job!',
-                    `Successfully added ${portfolioName} portfolio`,
+                    `Successfully Updated ${portfolioName} portfolio`,
                     'success'
                     )
                     form.reset()
@@ -54,7 +54,7 @@ const UpdatePortfolio = () => {
     
     
     return (
-        <div className="bg-white p-5">
+        <div className="bg-gray-200 rounded-md mr-3 p-5">
             <div className="">
                 <div className="flex min-h-full flex-1 flex-col justify-center">
 

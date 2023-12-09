@@ -10,7 +10,7 @@ const PPortfolios = () => {
                 {/* Portfolio Card */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-7">
                     {
-                        loadedPortfolios.map(portfolio => <PortfolioCard loadedPortfolios={loadedPortfolios} key={portfolio._id}>
+                        loadedPortfolios.map(portfolio => <PortfolioCard portfolio={portfolio} key={portfolio._id}>
 
                         </PortfolioCard>)
                     }

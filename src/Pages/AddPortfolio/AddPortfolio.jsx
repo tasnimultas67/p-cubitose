@@ -45,7 +45,7 @@ const AddPortfolio = () => {
     }
 
     return (
-        <div className="bg-white p-5">
+        <div className="bg-gray-200 rounded-md p-5 mr-3">
             <div className="">
                 <div className="flex min-h-full flex-1 flex-col justify-center">
 
