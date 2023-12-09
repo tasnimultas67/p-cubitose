@@ -1,4 +1,9 @@
+import { useState } from "react";
+
 const ContactUs = () => {
+    const [msgDelivery, setMsgDelivery] = useState(null)
+    const [error, setError] = useState(null)
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
     const submitForm = (e) => {
         e.preventDefault()
@@ -9,6 +14,27 @@ const ContactUs = () => {
         let form_url = form.url.value;
         let form_message = form.message.value;
         const formInfo = { form_name, form_email, form_subject, form_url, form_message }
+        setIsSubmitted(true)
+        fetch("https://formsubmit.co/ajax/info.cubitose@gmail.com", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                name: form_name,
+                email: form_email,
+                website_url: form_url,
+                message: form_message,
+                _subject: form_subject
+            })
+        })
+            .then(res => res.json())
+            .then(data => {
+                setMsgDelivery(data)
+                setIsSubmitted(false)
+            })
+            .catch(error => setError(error));
         form.reset()
     }
 
@@ -29,7 +55,9 @@ const ContactUs = () => {
                         </div>
                         {/* Contact Form */}
                         <div>
-                            <form className="lg:px-20 pt-10 lg:pt-0" onSubmit={submitForm}>
+                            {isSubmitted ? <p className="text-center">Loading..</p> : 
+                        <div>
+                            {msgDelivery? "": <form className="lg:px-20 pt-10 lg:pt-0" onSubmit={submitForm}>
                                 <div className="mb-4 flex flex-col gap-6">
                                     {/* Name */}
                                     <div className="relative h-11 w-full">
@@ -100,7 +128,8 @@ const ContactUs = () => {
                                         Message<span className="text-red-800">*</span>
                                         </label>
                                     </div>
-                                </div>
+                                    </div>
+                                    {error && <p className="text-red-700 text-center" >{ error}</p>}
                                 <button
                                 className="bg-themeColor w-full text-white py-2 px-4 rounded-md hover:shadow-lg focus:ring"
                                 type="submit"
@@ -108,7 +137,11 @@ const ContactUs = () => {
                                 >
                                 Submit 
                                 </button>
-                            </form>
+                            </form>}
+                            </div>}
+                            {msgDelivery && <div className="flex items-center justify-center w-8/12 m-auto">
+                                <p className="text-green-700 text-center ">{msgDelivery.message}</p>
+                            </div>}
                         </div>
                     </div>
                 </div>
