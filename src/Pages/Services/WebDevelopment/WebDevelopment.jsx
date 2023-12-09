@@ -4,6 +4,7 @@ import {
 import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from "swiper/modules";
+import { useLoaderData } from 'react-router-dom';
 
 
 const processes = [
@@ -22,13 +23,9 @@ const processes = [
 
 const WebDevelopment = () => {
 
-    const [reviews, setReviews] = useState([])
-    useEffect(() => {
-        fetch('https://cubitose-backend-production.up.railway.app/review/web-development')
-            .then(res => res.json())
-            .then(data => setReviews(data))
-        
-    },[])
+    const reviewsData = useLoaderData()
+    const [reviews, setReviews] = useState(reviewsData)
+
 
     return (
         <div className="bg-white py-28">

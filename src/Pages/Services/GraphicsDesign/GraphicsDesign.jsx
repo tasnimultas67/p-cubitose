@@ -2,6 +2,7 @@ import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from "swiper/modules";
+import { useLoaderData } from "react-router-dom";
 
 
 const keys = [
@@ -20,13 +21,9 @@ const keys = [
 
 
 const GraphicsDesign = () => {
-            const [reviews, setReviews] = useState([])
-    useEffect(() => {
-        fetch('https://cubitose-backend-production.up.railway.app/review/graphics-design')
-            .then(res => res.json())
-            .then(data => setReviews(data))
-        
-    },[])
+    const reviewsData = useLoaderData()
+    const [reviews, setReviews] = useState(reviewsData)
+
     return (
         <div>
             <div className="bg-white py-28">

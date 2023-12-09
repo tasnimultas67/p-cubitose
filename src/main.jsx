@@ -46,15 +46,18 @@ const router = createBrowserRouter([
       // Services Page
       {
         path: '/services/web-development',
-        element: <WebDevelopment></WebDevelopment>
+        element: <WebDevelopment></WebDevelopment>,
+        loader: ()=> fetch('https://cubitose-backend-production.up.railway.app/review/web-development')
       },
       {
         path: '/services/graphics-design',
-        element: <GraphicsDesign></GraphicsDesign>
+        element: <GraphicsDesign></GraphicsDesign>,
+        loader: () => fetch("https://cubitose-backend-production.up.railway.app/review/graphics-design")
       },
       {
         path: '/services/search-engine-optimization',
-        element: <Seo></Seo>
+        element: <Seo></Seo>,
+        loader: ()=> fetch("https://cubitose-backend-production.up.railway.app/review/digital-marketing")
       },
       // Services page end
       {

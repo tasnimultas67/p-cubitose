@@ -27,7 +27,8 @@ const Sidebar = () => {
                     <NavLink style={({ isActive, isPending }) => {
                         return {
                           color: isActive ? "white" : "",
-                        backgroundColor: isActive ? "#1954ed" : ""}
+                          backgroundColor: isActive ? "#1954ed" : "",
+                        boxShadow: isActive? "rgba(0, 0, 0, 0.24) 0px 3px 8px": ""}
                 }} className="flex items-center gap-3 hover:bg-gray-50 p-2 rounded-md pl-3 pr-3.5 font-medium" to="/dashboard" end><Squares2X2Icon className='h-5 w-5'></Squares2X2Icon>Dashboard</NavLink>
                     {/* Teams Menus */}
                 <Disclosure as="div" className="">
@@ -48,7 +49,8 @@ const Sidebar = () => {
                       style={({ isActive, isPending }) => {
                         return {
                           color: isActive ? "white" : "",
-                        backgroundColor: isActive ? "#1954ed" : ""}
+                          backgroundColor: isActive ? "#1954ed" : "",
+                        boxShadow: isActive? "rgba(0, 0, 0, 0.24) 0px 3px 8px": ""}
                 }}
                             to="/dashboard/add-team"
                             className="flex items-center gap-3 hover:bg-gray-50 p-2 pl-6 rounded-md pr-3.5 font-medium text-sm"
@@ -57,7 +59,8 @@ const Sidebar = () => {
                       style={({ isActive, isPending }) => {
                         return {
                           color: isActive ? "white" : "",
-                        backgroundColor: isActive ? "#1954ed" : ""}
+                          backgroundColor: isActive ? "#1954ed" : "",
+                        boxShadow: isActive? "rgba(0, 0, 0, 0.24) 0px 3px 8px": ""}
                 }}
                             to="/dashboard/manage-teams"
                             className="flex items-center gap-3 hover:bg-gray-50 p-2 pl-6 rounded-md pr-3.5 font-medium text-sm"
@@ -87,7 +90,8 @@ const Sidebar = () => {
                       style={({ isActive, isPending }) => {
                         return {
                           color: isActive ? "white" : "",
-                        backgroundColor: isActive ? "#1954ed" : ""}
+                          backgroundColor: isActive ? "#1954ed" : "",
+                        boxShadow: isActive? "rgba(0, 0, 0, 0.24) 0px 3px 8px": ""}
                 }}
                             to="/dashboard/add-portfolio"
                             className="flex items-center gap-3 hover:bg-gray-50 p-2 pl-6 rounded-md pr-3.5 font-medium text-sm"
@@ -96,7 +100,8 @@ const Sidebar = () => {
                       style={({ isActive, isPending }) => {
                         return {
                           color: isActive ? "white" : "",
-                        backgroundColor: isActive ? "#1954ed" : ""}
+                          backgroundColor: isActive ? "#1954ed" : "",
+                        boxShadow: isActive? "rgba(0, 0, 0, 0.24) 0px 3px 8px": ""}
                 }}
                             to="/dashboard/manage-portfolio"
                             className="flex items-center gap-3 hover:bg-gray-50 p-2 pl-6 rounded-md pr-3.5 font-medium text-sm"
@@ -110,7 +115,8 @@ const Sidebar = () => {
               style={({ isActive, isPending }) => {
                         return {
                           color: isActive ? "white" : "",
-                        backgroundColor: isActive ? "#1954ed" : ""}
+                          backgroundColor: isActive ? "#1954ed" : "",
+                        boxShadow: isActive? "rgba(0, 0, 0, 0.24) 0px 3px 8px": ""}
                 }}
               className="flex items-center gap-3 hover:bg-gray-50 p-2 rounded-md pl-3 pr-3.5 font-medium"
                to="/dashboard/add-customer-review"><HeartIcon className='h-5 w-5'></HeartIcon>Add Review</NavLink>
@@ -118,8 +124,7 @@ const Sidebar = () => {
                 <div className='border-t-2 py-5 '>
                     <button onClick={signOutUser} className='hover:bg-themeColor py-2 hover:text-white flex items-center gap-3 w-full rounded-md pl-3 pr-3 text-sm font-medium'><ArrowRightOnRectangleIcon className='h-5 w-5'></ArrowRightOnRectangleIcon> Log Out</button>
                 </div>
-            </aside>
-
+        </aside>
         </>
     );
 };

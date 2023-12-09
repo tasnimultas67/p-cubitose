@@ -2,6 +2,7 @@ import { ArrowUpRightIcon } from '@heroicons/react/24/solid'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from "swiper/modules";
 import { useEffect, useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 const offers = [
     { "offerTitle": "Earn page one on Google", "offerDescription": "Achieve top visibility with our expert SEO agency services. We optimize your website to secure top positions on Google, driving higher organic traffic and quality exposure. Our SEO experts help to set up the framework for a successful campaign launch, ensuring that every element, from keyword research to on-page optimization and off-page, is designed to maximize your visibility on the world's most popular search engine." },
@@ -15,13 +16,9 @@ const offers = [
 
 
 const Seo = () => {
-        const [reviews, setReviews] = useState([])
-    useEffect(() => {
-        fetch('https://cubitose-backend-production.up.railway.app/review/digital-marketing')
-            .then(res => res.json())
-            .then(data => setReviews(data))
-        
-    },[])
+    const reviewsData = useLoaderData()
+    const [reviews, setReviews] = useState(reviewsData)
+
     return (
         <>
             <div className="bg-white py-28">
