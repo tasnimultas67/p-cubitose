@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
-
+import {  motion } from 'framer-motion'
 import {CursorArrowRaysIcon, PencilSquareIcon, HeartIcon, UserPlusIcon, UserGroupIcon, Squares2X2Icon, ChevronDownIcon, UserCircleIcon, BriefcaseIcon, ArrowRightOnRectangleIcon} from "@heroicons/react/24/outline";
 import { Link, NavLink, useNavigate} from 'react-router-dom';
 import { Disclosure } from '@headlessui/react';
@@ -35,7 +35,8 @@ const Sidebar = () => {
                 </div>
                 {/* Sidebar Menu */}
                 <div className='my-4 space-y-3'>
-                    <NavLink style={({ isActive, isPending }) => {
+            <NavLink
+              style={({ isActive, isPending }) => {
                         return {
                           color: isActive ? "white" : "",
                           backgroundColor: isActive ? "#1954ed" : "",

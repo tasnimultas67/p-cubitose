@@ -18,6 +18,7 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -167,14 +168,14 @@ export default function Header() {
 
               <Transition
                 as={Fragment}
-                enter="transition ease-out duration-200"
+                enter="transition ease-in duration-300"
                 enterFrom="opacity-0 translate-y-1"
                 enterTo="opacity-100 translate-y-0"
                 leave="transition ease-in duration-150"
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 translate-y-1"
               >
-                <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ">
+                <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-xl bg-white shadow-2xl ">
                   {({ close }) => (
                     <div className="p-4">
                       {services.map((item) => (
@@ -184,7 +185,7 @@ export default function Header() {
                         >
                           <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                             <item.icon
-                              className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+                              className="h-6 w-6 text-gray-600 group-hover:text-themeColor"
                               aria-hidden="true"
                             />
                           </div>
