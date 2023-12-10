@@ -1,4 +1,6 @@
 import { useState } from "react";
+import {  motion } from 'framer-motion'
+
 
 const ContactUs = () => {
     const [msgDelivery, setMsgDelivery] = useState(null)
@@ -43,18 +45,46 @@ const ContactUs = () => {
             <div className="bg-white py-28">
                 <div className="w-11/12 m-auto">
                     <div>
-                        <h1 className="text-3xl lg:text-6xl font-semibold text-black">We’d love to hear from you.</h1>
+                        <motion.h1
+                            initial={{ opacity: 0, y: 100 }}
+                            whileInView={{opacity: 1, y: 0}}
+                            transition={{
+                                duration: 0.5,
+                            }}
+                            viewport={{ once: true }}
+                            className="text-3xl lg:text-6xl font-semibold text-black">We’d love to hear from you.</motion.h1>
                     </div>
-                    <div className="lg:w-9/12 lg:pl-28 mt-8">
+                    <motion.div
+                        initial={{ opacity: 0, y: 100 }}
+                        whileInView={{opacity: 1, y: 0}}
+                        transition={{
+                            duration: 0.8,
+                        }}
+                        viewport={{ once: true }}
+                        className="lg:w-9/12 lg:pl-28 mt-8">
                         <p>We’ll reach out to schedule time to understand your challenges and how we can start to overcome them together. And if we’re not the right agency for you, we will do our best to refer you to someone who is.</p>
-                    </div>
+                    </motion.div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 mt-20">
-                        <div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 100 }}
+                            whileInView={{opacity: 1, y: 0}}
+                            transition={{
+                                duration: 1,
+                            }}
+                            viewport={{ once: true }}
+                        >
                             <img src="https://i.ibb.co/nQRq55Z/contact-us.webp" alt="Contact Us Image" srcSet="" loading='lazy'/>
-                        </div>
+                        </motion.div>
                         {/* Contact Form */}
-                        <div>
+                        <motion.div
+                        initial={{ opacity: 0, y: 100 }}
+                        whileInView={{opacity: 1, y: 0}}
+                        transition={{
+                            duration: 1,
+                        }}
+                        viewport={{ once: true }}
+                        >
                             {isSubmitted ? <p className="text-center">Loading..</p> : 
                         <div>
                             {msgDelivery? "": <form className="lg:px-20 pt-10 lg:pt-0" onSubmit={submitForm}>
@@ -142,7 +172,7 @@ const ContactUs = () => {
                             {msgDelivery && <div className="flex items-center justify-center w-8/12 m-auto">
                                 <p className="text-green-700 text-center ">{msgDelivery.message}</p>
                             </div>}
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>  
