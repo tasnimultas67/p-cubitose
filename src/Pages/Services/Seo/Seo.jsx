@@ -3,6 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from "swiper/modules";
 import { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import {  motion } from 'framer-motion'
+
 
 const offers = [
     { "offerTitle": "Earn page one on Google", "offerDescription": "Achieve top visibility with our expert SEO agency services. We optimize your website to secure top positions on Google, driving higher organic traffic and quality exposure. Our SEO experts help to set up the framework for a successful campaign launch, ensuring that every element, from keyword research to on-page optimization and off-page, is designed to maximize your visibility on the world's most popular search engine." },
@@ -26,40 +28,82 @@ const Seo = () => {
                     {/* Content */}
                     <div>
                         <div className=''>
-                            <h1 className="text-black text-3xl lg:text-6xl lg:leading-tight">Claim the top spot and be your customers’ first choice on search engines &#8599;</h1>
+                            <motion.h1
+                            initial={{ opacity: 0, y: 100 }}
+                            whileInView={{opacity: 1, y: 0}}
+                            transition={{
+                                duration: 0.5,
+                            }}
+                            viewport={{ once: true }}
+                            className="text-black text-3xl lg:text-6xl lg:leading-tight">Claim the top spot and be your customers’ first choice on search engines &#8599;</motion.h1>
                         </div>
                         <div className="grid grid-cols-1 lg:grid-cols-3 mt-5">
                             <div></div>
-                            <div className="col-span-2">
+                            <motion.div
+                            initial={{ opacity: 0, y: 100 }}
+                            whileInView={{opacity: 1, y: 0}}
+                            transition={{
+                                duration: 0.8,
+                            }}
+                            viewport={{ once: true }}
+                            className="col-span-2">
                                 <p className="text-black">We help companies build resilient and sustainable marketing programs. A unique combination of data, advisory, and execution that drives profitability success and empowers online growth.</p>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                     {/* Banner */}
-                    <div className='mt-10 lg:mt-20'>
+                    <motion.div
+                        initial={{ opacity: 0, y: 100 }}
+                        whileInView={{opacity: 1, y: 0}}
+                        transition={{
+                            duration: 1,
+                        }}
+                        viewport={{ once: true }}
+                        className='mt-10 lg:mt-20'>
                         <img className='rounded-lg h-[20rem] lg:h-[30rem] 2xl:h-[35rem] object-cover object-bottom w-full shadow-lg' src="https://i.ibb.co/09FVNky/SEO-Banner.webp" alt="" srcSet="" loading='lazy' />
-                    </div>
+                    </motion.div>
                     <div className=' grid grid-cols-1 lg:grid-cols-3 mt-20'>
                         
-                        <div className='col-span-2 space-y-3 text-black'>
+                        <motion.div
+                            initial={{ opacity: 0, y: 100 }}
+                            whileInView={{opacity: 1, y: 0}}
+                            transition={{
+                                duration: 0.5,
+                            }}
+                            viewport={{ once: true }}
+                            className='col-span-2 space-y-3 text-black'>
                             <p>Become an industry leader for your product/service in the organic SERPs. Prospects are looking for the best options when they use a search engine like Google—making the competition fierce in most markets. A well thought-out SEO strategy targets your ideal customers and helps you outrank your competitors.</p>
                             <p>The average CTR for position 1 on Google is 43.32% in most markets. Position 1 holds the most value out of every other position in the SERPs. Start ranking within the top positions on Google for your most valuable keywords.</p>
-                        </div>
+                        </motion.div>
                         <div></div>
                     </div>
                     <div className='grid grid-cols-1 lg:grid-cols-3 gap-7 mt-20'>
                         {
-                            offers.map(offer => <div key={offer.offerTitle}>
+                            offers.map(offer => <motion.div
+                            initial={{ opacity: 0, y: 100 }}
+                                whileInView={{opacity: 1, y: 0}}
+                                transition={{
+                                    duration: 0.8,
+                                }}
+                                viewport={{ once: true }}
+                                key={offer.offerTitle}>
                                 <div className='space-y-3'>
                                     <h2 className='text-black text-xl font-semibold uppercase flex items-center gap-3'>{offer.offerTitle} <ArrowUpRightIcon className='h-5 w-5 text-black'></ArrowUpRightIcon></h2>
                                     <p className='text-black'>{ offer.offerDescription}</p>
                                 </div>
-                            </div>)
+                            </motion.div>)
                         }
                     </div>
                     
                     {/* Reviews Section */}
-                    <div className='mt-28'>
+                    <motion.div
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{opacity: 1, y: 0}}
+                    transition={{
+                        duration: 1,
+                    }}
+                    viewport={{ once: true }}
+                        className='mt-28'>
                             <Swiper
                             modules={[Autoplay,]}
                             autoplay={{
@@ -87,7 +131,7 @@ const Seo = () => {
                         </SwiperSlide>)}
                             </Swiper>
                         
-                    </div>
+                    </motion.div>
                 </div>
             </div>   
         </>
