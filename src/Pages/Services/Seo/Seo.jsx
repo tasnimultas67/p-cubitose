@@ -26,7 +26,7 @@ const Seo = () => {
                     {/* Content */}
                     <div>
                         <div className=''>
-                            <h1 className="text-black text-3xl lg:text-6xl  leading-tight flex">Claim the top spot and be your customers’ first choice on search engines &#8599;</h1>
+                            <h1 className="text-black text-3xl lg:text-6xl lg:leading-tight">Claim the top spot and be your customers’ first choice on search engines &#8599;</h1>
                         </div>
                         <div className="grid grid-cols-1 lg:grid-cols-3 mt-5">
                             <div></div>

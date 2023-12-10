@@ -31,7 +31,7 @@ const WebDevelopment = () => {
         <div className="bg-white py-28">
             <div className="w-11/12 m-auto">
                 <div>
-                    <h1 className="text-3xl lg:text-6xl text-black leading-tight">A solid, well-planned and well-executed website can set you apart from your competition, drive bottom line value, and make you the star of the show</h1>
+                    <h1 className="text-3xl lg:text-5xl text-black lg:leading-tight">A solid, well-planned and well-executed website can set you apart from your competition, drive bottom line value, and make you the star of the show</h1>
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-4 mt-10 lg:mt-20">
                     <div className='hidden lg:block'></div>
