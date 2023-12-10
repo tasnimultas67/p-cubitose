@@ -225,7 +225,7 @@ export default function Header() {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Link
               to="/contact-us"
-              className="text-sm leading-6 text-themeColor bg-white py-2 px-4 rounded-md uppercase"
+              className="text-sm leading-6 text-themeColor bg-white py-2 px-4 rounded uppercase"
             >
               Contact Us <span aria-hidden="true"></span>
             </Link>
@@ -374,7 +374,7 @@ export default function Header() {
                 <Link
                   onClick={()=> setMobileMenuOpen(false)}
                   to="/contact-us"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white bg-themeColor text-center"
+                  className="-mx-3 block rounded px-3 py-2.5 text-base font-semibold leading-7 text-white bg-themeColor text-center"
                 >
                   Contact Us
                 </Link>
