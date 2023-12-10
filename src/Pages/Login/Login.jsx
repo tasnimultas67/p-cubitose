@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Login() {
-  const { signInUser } = useContext(AuthContext);
+  const { signInUser,signInGoogle } = useContext(AuthContext);
   const [error, setError] = useState();
   const location = useLocation();
   const navigate = useNavigate();
@@ -43,15 +43,24 @@ export default function Login() {
       });
   };
 
+  const handleGoogleLogin = () => {
+    signInGoogle()
+      .then(result => {
+        const user = result.user;
+        console.log(user);
+        navigate(from, { replace: true });
+      })
+      .catch(error => {
+        console.log(error.message);
+        setError(error.message)
+      })
+    
+  }
+
   return (
     <>
-      <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:py-28 lg:px-8">
+      <div className="flex min-h-full flex-col justify-center px-6 py-12 pb-20">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <img
-            className="mx-auto h-10 w-auto"
-            src="/favicon.webp"
-            alt="Your Company"
-          />
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
             Cubitose Team Login
           </h2>
@@ -119,6 +128,10 @@ export default function Login() {
               </button>
             </div>
           </form>
+        </div>
+        {/* Google Login */}
+        <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+              <button onClick={handleGoogleLogin} className="flex items-center justify-center gap-3 w-full m-auto text-center bg-white p-2 rounded-md shadow font-medium"><img className="h-5 w-5" src="https://th.bing.com/th/id/R.0dd54f853a1bffb0e9979f8146268af3?rik=qTQlRtQRV5AliQ&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fgoogle-logo-png-google-logo-icon-png-transparent-background-1000.png&ehk=VlcCHZ7jyV%2fCI7dZfbUl8Qb9%2f7uibkF6I6MBoqTtpRU%3d&risl=&pid=ImgRaw&r=0" alt="Google Login" /> Google</button>
         </div>
       </div>
     </>

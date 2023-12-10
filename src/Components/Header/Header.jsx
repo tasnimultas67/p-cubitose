@@ -15,7 +15,7 @@ import {
   ArrowRightOnRectangleIcon,
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 
@@ -47,11 +47,13 @@ function classNames(...classes) {
 export default function Header() {
   const { user, signOutUser } = useContext(AuthContext);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  const navigate = useNavigate();
+  
   const handleLogOut = () => {
     signOutUser()
       .then(() => {
         localStorage.removeItem("cubitose-access-token");
+        navigate('/');
       })
       .then((error) => console.log(error));
   };
@@ -83,11 +85,15 @@ export default function Header() {
                 <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">Open user menu</span>
-                  <img
+                  {user.photoURL? <img
+                    className="h-8 w-8 rounded-full bg-white"
+                    src={user.photoURL}
+                    alt="User Profile Image"
+                  />: <img
                     className="h-8 w-8 rounded-full bg-white"
                     src="/favicon.webp"
                     alt="User Profile Image"
-                  />
+                  />}
                 </Menu.Button>
               </div>
               <Transition
@@ -231,11 +237,15 @@ export default function Header() {
                 <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">Open user menu</span>
-                  <img
+                  {user.photoURL? <img
+                    className="h-8 w-8 rounded-full bg-white"
+                    src={user.photoURL}
+                    alt="User Profile Image"
+                  />: <img
                     className="h-8 w-8 rounded-full bg-white"
                     src="/favicon.webp"
                     alt="User Profile Image"
-                  />
+                  />}
                 </Menu.Button>
               </div>
               <Transition

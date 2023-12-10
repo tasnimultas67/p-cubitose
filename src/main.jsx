@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './Pages/Home/Home.jsx'
 import AboutUs from './Pages/AboutUs/AboutUs.jsx'
 import ContactUs from './Pages/ContactUs/ContactUs.jsx'
@@ -24,6 +24,8 @@ import AddTeam from './Pages/AddTeam/AddTeam.jsx'
 import ManageTeams from './Pages/ManageTeams/ManageTeams.jsx'
 import UpdateTeam from './Pages/UpdateTeam/UpdateTeam.jsx'
 import SinglePortfolio from './Pages/SinglePortfolio/SinglePortfolio.jsx'
+import SignUpCaptcha from './Pages/SignUpCaptcha/SignUpCaptcha.jsx'
+import CaptchaRoutes from './Routes/CaptchaRoutes.jsx'
 
 
 const router = createBrowserRouter([
@@ -61,6 +63,11 @@ const router = createBrowserRouter([
         loader: ()=> fetch("https://cubitose-backend-production.up.railway.app/review/digital-marketing")
       },
       // Services page end
+      
+      {
+        path: '/login-captcha',
+        element: <SignUpCaptcha></SignUpCaptcha>
+      },
       {
         path: '/team-login',
         element: <Login></Login>

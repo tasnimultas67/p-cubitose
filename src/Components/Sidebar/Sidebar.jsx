@@ -2,7 +2,7 @@ import { useContext, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 
 import {CursorArrowRaysIcon, PencilSquareIcon, HeartIcon, UserPlusIcon, UserGroupIcon, Squares2X2Icon, ChevronDownIcon, UserCircleIcon, BriefcaseIcon, ArrowRightOnRectangleIcon} from "@heroicons/react/24/outline";
-import { Link, NavLink} from 'react-router-dom';
+import { Link, NavLink, useNavigate} from 'react-router-dom';
 import { Disclosure } from '@headlessui/react';
 
 function classNames(...classes) {
@@ -11,15 +11,26 @@ function classNames(...classes) {
 
 const Sidebar = () => {
     const { user,signOutUser } = useContext(AuthContext)
-      const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const navigate = useNavigate();
+  
+    const handleLogOut = () => {
+    signOutUser()
+      .then(() => {
+        localStorage.removeItem("cubitose-access-token");
+        navigate('/');
+      })
+      .then((error) => console.log(error));
+  };
 
     return (
         <>
             <aside className='bg-white rounded-md p-3 ml-3 mb-3 shadow sticky top-0'>
                 {/* User Info */}
-                <div className='text-center pt-5 pb-5'>
-                    <img className='bg-white h-16 w-auto rounded-full m-auto mb-5 ring-themeColor ring-2' src="/favicon.webp" alt="User profile Photo" />
-                    <h3 className='text-black font-semibold'>Cubitose</h3>
+          <div className='text-center pt-5 pb-5'>
+            {user.photoURL ? <img className='bg-white h-16 w-auto rounded-full m-auto mb-5 ring-themeColor ring-2' src={user.photoURL} alt="User profile Photo" /> : <img className='bg-white h-16 w-auto rounded-full m-auto mb-5 ring-themeColor ring-2' src="/favicon.webp" alt="User profile Photo" />}
+                    
+            {user.displayName ? <h3 className='text-black font-semibold'>{ user.displayName}</h3>: <h3 className='text-black font-semibold'>Cubitose</h3>}
                     {user && <p className='text-gray-700 text-sm'>{ user.email}</p>}
                 </div>
                 {/* Sidebar Menu */}
@@ -122,7 +133,7 @@ const Sidebar = () => {
                to="/dashboard/add-customer-review"><HeartIcon className='h-5 w-5'></HeartIcon>Add Review</NavLink>
                 </div>
                 <div className='border-t-2 py-5 '>
-                    <button onClick={signOutUser} className='hover:bg-themeColor py-2 hover:text-white flex items-center gap-3 w-full rounded-md pl-3 pr-3 text-sm font-medium'><ArrowRightOnRectangleIcon className='h-5 w-5'></ArrowRightOnRectangleIcon> Log Out</button>
+                    <button onClick={handleLogOut} className='hover:bg-themeColor py-2 hover:text-white flex items-center gap-3 w-full rounded-md pl-3 pr-3 text-sm font-medium'><ArrowRightOnRectangleIcon className='h-5 w-5'></ArrowRightOnRectangleIcon> Log Out</button>
                 </div>
         </aside>
         </>

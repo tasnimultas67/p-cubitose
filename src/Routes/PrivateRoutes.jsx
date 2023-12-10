@@ -15,7 +15,7 @@ const PrivateRoutes = ({ children }) => {
   }
   return (
     <Navigate
-      to="/team-login"
+      to="/login-captcha"
       replace={true}
       state={{ from: location }}
     ></Navigate>
