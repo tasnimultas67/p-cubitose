@@ -54,7 +54,7 @@ const AddTeam = () => {
     }
     return (
         <>
-            <div className="bg-white shadow p-5 rounded-md mr-3">
+            <div className="backdrop-blur-2xl bg-white/40 shadow p-5 rounded-md">
                 <form onSubmit={handleSubmitTeam} className="space-y-3">
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
                         <div className="col-span-2 space-y-3">
@@ -64,7 +64,7 @@ const AddTeam = () => {
                                 <h2>Preview Team</h2>
                                 <div className="group/team overflow-hidden w-7/12 m-auto">
                             <div className="overflow-hidden rounded-md">
-                                {team.teamImg ?<img className="h-[25rem] w-full object-cover object-top rounded-md group-hover/team:scale-125 duration-300 ease-in-out" src={team?.teamImg} alt={`${team?.teamName} image`} srcSet="" title={`${team?.teamName} Image`} /> : <img className="h-[25rem] w-full object-cover object-top rounded-md " src="https://freerishtapakistan.com/wp-content/uploads/2021/11/photo-not-available-1.jpg" />}
+                                {team.teamImg ?<img className="h-[25rem] w-full object-cover object-top rounded-md group-hover/team:scale-125 duration-300 ease-in-out" src={team?.teamImg} alt={`${team?.teamName} image`} srcSet="" title={`${team?.teamName} Image`} /> : <img className="h-[25rem] w-full object-cover object-top rounded-md border" src="https://freerishtapakistan.com/wp-content/uploads/2021/11/photo-not-available-1.jpg" />}
                             </div>
                             <h2 className="text-lg font-semibold mt-5 ">{team?.teamName}</h2>
                             <p>{team?.teamRole}</p>
@@ -109,7 +109,7 @@ const AddTeam = () => {
                                         placeholder='example: John Doe'
                                     required
                                     onInput={(e)=>setTeam({...team, teamName:e.target.value})}
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3"
+                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                     />
                                 </div>
                             </div>
@@ -126,7 +126,7 @@ const AddTeam = () => {
                                         placeholder='example: Web Developer'
                                         required
                                         onInput={(e)=>setTeam({...team, teamRole:e.target.value})}
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3"
+                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                     />
                                 </div>
                             </div>
@@ -143,7 +143,7 @@ const AddTeam = () => {
                                         placeholder='Image Link'
                                         required
                                         onInput={(e)=>setTeam({...team, teamImg:e.target.value})}
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3"
+                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                     />
                                 </div>
                             </div>
@@ -159,7 +159,7 @@ const AddTeam = () => {
                                         type="text"
                                         placeholder='Facebook Link'
                                         onInput={(e)=>setTeam({...team, teamFacebook:e.target.value})}
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3"
+                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                     />
                                 </div>
                             </div>
@@ -175,7 +175,7 @@ const AddTeam = () => {
                                         type="text"
                                         placeholder='Instagram Link'
                                         onInput={(e)=>setTeam({...team, teamInstagram:e.target.value})}
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3"
+                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                     />
                                 </div>
                             </div>
@@ -191,7 +191,7 @@ const AddTeam = () => {
                                         type="text"
                                         placeholder='Twitter Link'
                                         onInput={(e)=>setTeam({...team, teamTwitter:e.target.value})}
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3"
+                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                     />
                                 </div>
                             </div>
@@ -207,7 +207,7 @@ const AddTeam = () => {
                                         type="text"
                                         placeholder='LinkedIn Link'
                                         onInput={(e)=>setTeam({...team, teamLinkedIn:e.target.value})}
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3"
+                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                     />
                                 </div>
                             </div>
@@ -223,7 +223,7 @@ const AddTeam = () => {
                                         type="text"
                                         placeholder='Website Link'
                                         onInput={(e)=>setTeam({...team, teamWebsite:e.target.value})}
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3"
+                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                     />
                                 </div>
                             </div>

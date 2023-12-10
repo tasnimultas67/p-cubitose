@@ -39,11 +39,11 @@ const ManagePortfolio = () => {
     }
     return (
         <>
-            <div className="bg-white p-3 rounded-md mr-3 shadow">
+            <div className="backdrop-blur-2xl bg-white/40 p-3 rounded-md shadow">
               
-                <ul role="list" className="divide-y divide-gray-200">
+                <ul role="list" className="divide-y divide-gray-50/30">
                 {portfolios.slice(0).reverse().map((portfolio) => (
-                    <li key={portfolio._id} className="md:flex justify-between items-center gap-x-6 py-5 rounded hover:shadow-md hover:bg-themeColor/10 px-5 bg-gray-100 my-2 cursor-pointer">
+                    <li key={portfolio._id} className="md:flex justify-between items-center gap-x-6 py-5 rounded hover:shadow-md hover:bg-white px-5 bg-gray-50/40 my-2 cursor-pointer">
                         <div className="flex items-center min-w-0 gap-x-4">
                             <img className="h-20 w-20 rounded-full ring-2 ring-themeColor flex-none object-cover bg-gray-50" src={portfolio.portfolioThumbnail} alt="Portfolio Image" loading="lazy" />
                             <div className="min-w-0 flex-auto">

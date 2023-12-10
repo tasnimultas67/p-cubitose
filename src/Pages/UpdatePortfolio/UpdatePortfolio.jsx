@@ -54,7 +54,7 @@ const UpdatePortfolio = () => {
     
     
     return (
-        <div className="bg-gray-200 rounded-md mr-3 p-5">
+        <div className="backdrop-blur-2xl bg-white/40 rounded-md p-5">
             <div className="">
                 <div className="flex min-h-full flex-1 flex-col justify-center">
 
@@ -73,7 +73,7 @@ const UpdatePortfolio = () => {
                                         placeholder='example: Cubitose Limited'
                                         defaultValue={portfolioName}
                                     required
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3"
+                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                     />
                                 </div>
                             </div>
@@ -95,7 +95,7 @@ const UpdatePortfolio = () => {
                                                 type="text"
                                                 defaultValue={portfolioShortDescription}
                                             required
-                                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3"
+                                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                             />
                                         </div>
                                     </div>
@@ -125,7 +125,7 @@ const UpdatePortfolio = () => {
                                                 defaultValue={portfolioThumbnail}
                                                 placeholder='example: www.img.com/imgLink'
                                             required
-                                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3"
+                                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                             />
                                         </div>
                                         <p className='text-xs italic mt-1 text-gray-500'>Before giving the picture link, you must upload the picture optimized</p>
@@ -145,7 +145,7 @@ const UpdatePortfolio = () => {
                                                 defaultValue={portfolioLink}
                                                 placeholder='example: www.cubitose.com'
                                             required
-                                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3"
+                                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                             />
                                         </div>
                                     </div>
@@ -164,7 +164,7 @@ const UpdatePortfolio = () => {
                                                 defaultValue={portfolioCategory}
                                                 placeholder='example - e-commerce'
                                             required
-                                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3"
+                                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                             />
                                         </div>
                                     </div>
@@ -183,7 +183,7 @@ const UpdatePortfolio = () => {
                                                 type="text"
                                                 defaultValue={portfolioYear}
                                             required
-                                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3"
+                                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                             />
                                         </div>
                                     </div>
@@ -202,7 +202,7 @@ const UpdatePortfolio = () => {
                                                 defaultValue={portfolioCountry}
                                             type="text"
                                             required
-                                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3"
+                                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                             />
                                         </div>
                                     </div>
@@ -220,14 +220,14 @@ const UpdatePortfolio = () => {
                                                 type="text"
                                                 defaultValue={portfolioClientName}
                                                 placeholder='exaple: John Doe'
-                                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3"
+                                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                             />
                                         </div>
                                     </div>
                                     {/* Project Role */}
                                     <div>
                                         <label htmlFor="project-role" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Service Category</label>
-                                        <select id="project-role" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" name="service_category" required defaultValue={portfolioServiceCategory}>
+                                        <select id="project-role" className="bg-white/50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" name="service_category" required defaultValue={portfolioServiceCategory}>
                                             <option>Select</option>
                                             <option defaultValue="Web-Development">Web Development</option>
                                             <option defaultValue="Web-Design">Web Design</option>

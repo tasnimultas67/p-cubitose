@@ -57,7 +57,7 @@ const UpdateTeam = () => {
     }
     return (
         <>
-            <div className="bg-white shadow p-5 rounded-md mr-3">
+            <div className="backdrop-blur-2xl bg-white/40 shadow p-5 rounded-md">
                 <form onSubmit={handleSubmitTeam} className="space-y-3">
                     <div>
                         {/* Team Name*/}
@@ -73,7 +73,7 @@ const UpdateTeam = () => {
                                     placeholder='example: John Doe'
                                     defaultValue={teamName}
                                 required
-                                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3"
+                                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                 />
                             </div>
                         </div>
@@ -93,7 +93,7 @@ const UpdateTeam = () => {
                                     placeholder='example: Web Developer'
                                     required
                                     defaultValue={teamRole}
-                                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3"
+                                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                 />
                             </div>
                         </div>
@@ -110,7 +110,7 @@ const UpdateTeam = () => {
                                     placeholder='Image Link'
                                     defaultValue={teamImg}
                                     required
-                                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3"
+                                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                 />
                             </div>
                         </div>
@@ -131,7 +131,7 @@ const UpdateTeam = () => {
                                         type="text"
                                         defaultValue={teamFacebook}
                                         placeholder='Facebook Link'
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3"
+                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                     />
                                 </div>
                             </div>
@@ -147,7 +147,7 @@ const UpdateTeam = () => {
                                         type="text"
                                         defaultValue={teamInstagram}
                                         placeholder='Instagram Link'
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3"
+                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                     />
                                 </div>
                             </div>
@@ -163,7 +163,7 @@ const UpdateTeam = () => {
                                         type="text"
                                         defaultValue={teamTwitter}
                                         placeholder='Twitter Link'
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3"
+                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                     />
                                 </div>
                             </div>
@@ -179,7 +179,7 @@ const UpdateTeam = () => {
                                         type="text"
                                         defaultValue={teamLinkedIn}
                                         placeholder='LinkedIn Link'
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3"
+                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                     />
                                 </div>
                             </div>
@@ -195,7 +195,7 @@ const UpdateTeam = () => {
                                         type="text"
                                         defaultValue={teamWebsite}
                                         placeholder='Website Link'
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3"
+                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                     />
                                 </div>
                             </div>

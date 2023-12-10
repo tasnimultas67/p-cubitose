@@ -44,16 +44,16 @@ const ManageTeams = () => {
 
     return (
         <>
-          <div className="bg-white p-4 rounded-md mr-3 shadow">
+          <div className="backdrop-blur-2xl bg-white/40 p-4 rounded-md shadow">
               
-                <ul role="list" className="divide-y divide-gray-200">
+                <ul role="list" className="divide-y divide-gray-50/30">
                 {teams.slice(0).reverse().map((team) => (
                     <li key={team._id} className="md:flex justify-between items-center gap-x-6 rounded hover:shadow-md  py-3 px-4 cursor-pointer">
                         <div className="flex items-center min-w-0 gap-x-4">
-                            <img className="h-16 w-16 rounded-full flex-none object-cover bg-gray-50" src={team.teamImg} alt="Portfolio Image" loading="lazy" />
+                            <img className="h-16 w-16 rounded-full flex-none object-cover ring-2 border border-transparent ring-themeColor bg-gray-50" src={team.teamImg} alt="Portfolio Image" loading="lazy" />
                             <div className="min-w-0 flex-auto">
-                                <h2 className=" font-semibold leading-6 text-themeColor">{team.teamName}</h2>
-                                <p className="mt-1 truncate text-xs leading-5 text-gray-500">{team?.teamRole}</p>
+                                <h2 className=" font-semibold leading-6 text-black">{team.teamName}</h2>
+                                <p className="mt-1 truncate text-xs leading-5 text-gray-700">{team?.teamRole}</p>
                             </div>
                         </div>
                         <div>
