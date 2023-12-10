@@ -1,42 +1,53 @@
+import { MinusIcon } from '@heroicons/react/24/outline'
+import {  motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
+
+
 export default function Hero() {
 
+
+
   return (
-    <div className="bg-themeColor lg:h-screen">
+    <div className="bg-themeColor lg:h-[100dvh] flex 2xl:items-center">
       <div className="relative isolate pt-5 px-6 lg:px-8 ">
-        {/* <div
-          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-          aria-hidden="true"
-        >
-          <div
-            className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-            style={{
-              clipPath:
-                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-            }}
-          />
-        </div> */}
-        <div className="mx-auto pt-32 pb-20">
-          <div className="lg:w-8/12">
-            <h1 className="text-4xl uppercase font-semibold text-white sm:text-7xl">
-              We turn ideas into extraordinary digital products & experiences
-            </h1>
-            <p className="mt-6 text-lg text-gray-100">
+        
+        <div className="mx-auto pt-32 pb-16">
+          <div className="lg:w-9/12 xl:w-8/12 2xl:w-7/12">
+              <motion.h1
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{opacity: 1, y: 0}}
+              transition={{
+                  duration: 0.5,
+              }}
+              viewport={{ once: true }}
+              className="overflow-hidden text-4xl font-semibold text-white/60 sm:text-[4.7rem] 2xl:text-[5.2rem] sm:leading-none tracking-tight">
+              We turn ideas into extraordinary <span className="text-white">digital products</span> & <span className="text-white">experiences</span>
+            </motion.h1>
+
+            <motion.div
+            initial={{ opacity: 0, y: 100 }}
+              whileInView={{opacity: 1, y: 0}}
+              transition={{
+                  duration: 0.8,
+              }}
+              viewport={{ once: true }}>
+              <p className="mt-6 text-lg text-gray-100">
               We design, build and ship world-class digital products for forward-thinking brands.
             </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{opacity: 1, y: 0}}
+              transition={{
+                  duration: 1,
+              }}
+              viewport={{ once: true }}
+            >
+              <Link className="bg-white text-black py-3 px-4 rounded shadow-md hover:shadow-2xl font-medium flex items-center gap-1 mt-5 w-fit" to="/contact-us">Get Started <MinusIcon className='h-5 w-5'></MinusIcon>contact us</Link>
+              </motion.div>
           </div>
         </div>
-        {/* <div
-          className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-          aria-hidden="true"
-        >
-          <div
-            className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-            style={{
-              clipPath:
-                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-            }}
-          />
-        </div> */}
+        
       </div>
     </div>
   )

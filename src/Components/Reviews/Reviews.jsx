@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import {  motion } from 'framer-motion'
+
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([])
@@ -13,8 +15,22 @@ const Reviews = () => {
     return (
         <div className='bg-white pb-10 lg:py-20'>
             <div className='w-11/12 m-auto'>
-                <h1 className='text-center text-3xl lg:text-5xl font-semibold text-black'>Thoughts from our clients</h1>
-                <div className='mt-10'>
+                <motion.h1
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{opacity: 1, y: 0}}
+                    transition={{
+                        duration: 0.5,
+                    }}
+                    viewport={{ once: true }}
+                    className='text-center text-3xl lg:text-5xl font-semibold text-black'>Thoughts from our clients</motion.h1>
+                <motion.div
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{opacity: 1, y: 0}}
+                    transition={{
+                        duration: 0.8,
+                    }}
+                    viewport={{ once: true }}
+                    className='mt-10'>
                     <Swiper
                         modules={[Autoplay,]}
                         autoplay={{
@@ -43,7 +59,7 @@ const Reviews = () => {
                     </SwiperSlide>)}
                     </Swiper>
                     
-                </div>
+                </motion.div>
             </div>
         </div>
     );

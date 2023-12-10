@@ -1,3 +1,4 @@
+import {  motion } from 'framer-motion'
 
 const partners = [
     {"id":1, "img": "https://kota.co.uk/static/6604c2bf33b9d8e07c716b366f6fc5fd/Jamie-oliver.svg", "title": "company"},
@@ -21,14 +22,28 @@ const Partners = () => {
                 <div className="w-11/12 m-auto">
                     {/* Section Title */}
                     <div>
-                        <h1 className="text-black text-2xl lg:text-5xl font-semibold max-w-2xl m-auto text-center">Proud to partner with industry-leading companies</h1>
+                        <motion.h1
+                        initial={{ opacity: 0, y: 100 }}
+                            whileInView={{opacity: 1, y: 0}}
+                            transition={{
+                                duration: 0.5,
+                            }}
+                            viewport={{ once: true }}
+                            className="text-black text-2xl lg:text-5xl font-semibold max-w-2xl m-auto text-center">Proud to partner with industry-leading companies</motion.h1>
                     </div>
                     {/* Partners Image */}
                     <div className="grid grid-cols-3 lg:grid-cols-6 items-center gap-10 mt-24">
                         {
-                            partners.map(partner => <div key={partner.id} className={`${partner.title}`}>
+                            partners.map(partner => <motion.div
+                            initial={{ opacity: 0, y: 100 }}
+                                whileInView={{opacity: 1, y: 0}}
+                                transition={{
+                                    duration: 0.5,
+                                }}
+                                viewport={{ once: true }}
+                                key={partner.id} className={`${partner.title}`}>
                                 <img className="my-auto mx-auto" src={partner.img} alt="Partner Image" srcSet="" loading='lazy'/>
-                            </div>)
+                            </motion.div>)
                         }
                     </div>
                 </div>

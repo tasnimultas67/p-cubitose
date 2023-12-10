@@ -5,6 +5,8 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import './Portfolios.css'
 import { useEffect, useState } from "react";
+import {  motion } from 'framer-motion'
+
 
 const Portfolios = () => {
 
@@ -22,12 +24,26 @@ const Portfolios = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-3 items-center pb-20">
                         {/* Section Title */}
                         <div className="col-span-2">
-                            <h1 className="text-black text-3xl lg:text-6xl font-semibold ">We are experts in bringing brands to life digitally.</h1>
+                            <motion.h1
+                                initial={{ opacity: 0, y: 100 }}
+                                whileInView={{opacity: 1, y: 0}}
+                                transition={{
+                                    duration: 0.5,
+                                }}
+                                viewport={{ once: true }}
+                                className="text-black text-3xl lg:text-6xl lg:leading-tight font-semibold ">We are experts in bringing brands to life digitally.</motion.h1>
                         </div>
                         {/* Explore more Button */}
-                        <div className="text-left mt-5 lg:mt-0 lg:text-right ">
+                        <motion.div
+                            initial={{ opacity: 0, y: 100 }}
+                            whileInView={{opacity: 1, y: 0}}
+                            transition={{
+                                duration: 0.5,
+                            }}
+                            viewport={{ once: true }}
+                            className="text-left mt-5 lg:mt-0 lg:text-right ">
                             <Link to="/portfolios"><button className="py-2 px-5 bg-themeColor text-white rounded-md">Explore More</button></Link>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
                 {/* Portfolio Card Slider */}
