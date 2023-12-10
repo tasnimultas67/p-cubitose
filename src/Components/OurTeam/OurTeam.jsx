@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import {  motion } from 'framer-motion'
 
 
 
@@ -14,15 +15,29 @@ const OurTeam = () => {
         <div>
             <div className="grid grid-cols-1 lg:grid-cols-3">
                 
-                <div className="col-span-2 mt-20">
+                <motion.div
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{opacity: 1, y: 0}}
+                    transition={{
+                        duration: 0.5,
+                    }}
+                    viewport={{ once: true }}
+                    className="col-span-2 mt-20">
                     <p className="text-lg">We believe the best solutions lay at the intersection of intelligent design and strong engineering. Our team works continually to protect and instill this vision in every process, project and team member.</p>
-                </div>
+                </motion.div>
                 <div className="hidden lg:block"></div>
             </div>
             {/* Team */}
             <div className="grid grid-cols-1 lg:grid-cols-3 2xl:grid-cols-4 gap-14 mt-14">
                 {
-                    teams.map(team => <div key={team._id}>
+                    teams.map(team => <motion.div
+                        initial={{ opacity: 0, y: 100 }}
+                        whileInView={{opacity: 1, y: 0}}
+                        transition={{
+                            duration: 0.5,
+                        }}
+                        viewport={{ once: true }}
+                        key={team._id}>
                         <div className="group/team overflow-hidden">
                             <div className="overflow-hidden rounded-md">
                                 <img className="h-[25rem] w-full object-cover object-top rounded-md group-hover/team:scale-125 duration-300 ease-in-out" src={team.teamImg} alt={`${team.teamName} image`} srcSet="" title={`${team.teamName} Image`} />
@@ -55,7 +70,7 @@ const OurTeam = () => {
                                 }
                             </div>
                         </div>
-                    </div>)
+                    </motion.div>)
                 }
             </div>
         </div>
