@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { motion } from "framer-motion";
 import { Link, useLoaderData } from "react-router-dom";
 import {ArrowTopRightOnSquareIcon} from "@heroicons/react/24/outline";

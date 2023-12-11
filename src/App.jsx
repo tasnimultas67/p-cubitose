@@ -5,6 +5,8 @@ import Header from './Components/Header/Header'
 import Footer from './Components/Footer/Footer'
 import { useEffect, useState } from 'react'
 
+import MessengerCustomerChat from 'react-messenger-customer-chat';
+
 const titleMap = [
     {path: '/', title:'Cubitose - Next Generation Tech Solutions'},
     {path: '/about-us', title:'About Us - Cubitose'},
@@ -38,6 +40,10 @@ function App() {
       }}/>
       <Header></Header>
       <Outlet></Outlet>
+      <MessengerCustomerChat
+          pageId={import.meta.env.VITE_FACEBOOK_PAGE_ID}
+          appId={import.meta.env.VITE_FACEBOOK_APP_ID}
+        />
       <Footer></Footer>
     </>
   )
