@@ -10,6 +10,9 @@ export default {
       colors: {
         'themeColor': '#1954ed',
         'grayColor': '#767676',
+        'dashBg': '#ffffff',
+        'activeDashBg': '#F8F9F9',
+        'hoverLinkDash': '#F4F6F6',
       }
     },
   },

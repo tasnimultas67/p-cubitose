@@ -54,7 +54,7 @@ const UpdatePortfolio = () => {
     
     
     return (
-        <div className="backdrop-blur-2xl bg-white/40 rounded-md p-5">
+        <div className="backdrop-blur-2xl bg-dashBg rounded-md p-5 shadow-md">
             <div className="">
                 <div className="flex min-h-full flex-1 flex-col justify-center">
 

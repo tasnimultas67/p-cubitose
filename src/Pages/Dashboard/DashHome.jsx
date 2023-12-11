@@ -29,7 +29,7 @@ const DashHome = () => {
     return (
         <div className="">
             <div>
-                <div className="space-y-1 backdrop-blur-2xl bg-white/40 p-5 w-fit rounded-lg shadow-lg">
+                <div className="space-y-1 backdrop-blur-2xl bg-dashBg p-5 w-fit rounded-lg shadow-md">
                     <p className="text-sm flex items-center gap-3"><ClockIcon className="h-4 w-4"></ClockIcon>{currentTime}</p>
                     <h2 className="text-xl font-semibold">Good {greet}, {user.displayName ? <span>{ user.displayName}</span>: <span>Cubitose</span>}</h2>   
                 </div>

@@ -44,7 +44,7 @@ const ManageTeams = () => {
 
     return (
         <>
-          <div className="backdrop-blur-2xl bg-white/40 p-4 rounded-md shadow">
+          <div className="backdrop-blur-2xl bg-dashBg p-4 rounded-md shadow-md">
               
                 <ul role="list" className="divide-y divide-gray-50/30">
                 {teams.slice(0).reverse().map((team) => (

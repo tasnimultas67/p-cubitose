@@ -54,7 +54,7 @@ const AddTeam = () => {
     }
     return (
         <>
-            <div className="backdrop-blur-2xl bg-white/40 shadow p-5 rounded-md">
+            <div className="backdrop-blur-2xl bg-dashBg shadow-md p-5 rounded-md">
                 <form onSubmit={handleSubmitTeam} className="space-y-3">
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
                         <div className="col-span-2 space-y-3">
