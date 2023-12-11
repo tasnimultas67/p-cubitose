@@ -229,10 +229,10 @@ const UpdatePortfolio = () => {
                                         <label htmlFor="project-role" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Service Category</label>
                                         <select id="project-role" className="bg-white/50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" name="service_category" required defaultValue={portfolioServiceCategory}>
                                             <option>Select</option>
-                                            <option defaultValue="Web-Development">Web Development</option>
-                                            <option defaultValue="Web-Design">Web Design</option>
-                                            <option defaultValue="Graphics-Design">Graphics Design</option>
-                                            <option defaultValue="Digital-Marketing">Digital Marketing</option>
+                                            <option>Web Development</option>
+                                            <option >Web Design</option>
+                                            <option>Graphics Design</option>
+                                            <option>Digital Marketing</option>
                                         </select>
                                     </div>
                                     {/* Update Button */}

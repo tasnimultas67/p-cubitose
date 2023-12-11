@@ -1,7 +1,6 @@
-import { Outlet, ScrollRestoration } from 'react-router-dom';
+import { Outlet} from 'react-router-dom';
 import Header from '../../Components/Header/Header';
 import Sidebar from '../../Components/Sidebar/Sidebar';
-import './Dashboard.css'
 
 const Dashboard = () => {
     return (

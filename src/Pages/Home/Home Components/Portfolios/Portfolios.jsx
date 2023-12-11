@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
-import './Portfolios.css'
+// import { Pagination } from 'swiper/modules';
 import { useEffect, useState } from "react";
 import {  motion } from 'framer-motion'
+import {ArrowUpRightIcon} from "@heroicons/react/24/solid";
 
 
 const Portfolios = () => {
@@ -66,23 +66,30 @@ const Portfolios = () => {
                             spaceBetween: 30,
                         },
                         }}
-                        pagination={{
-                        clickable: true,
-                        }}
-                        modules={[Pagination]}
+                        
                         className="mySwiper"
                     >
                         {
                             portfolios.map(portfolio => <SwiperSlide key={portfolio._id}>
-                            <div className='relative overflow-hidden w-full h-[22rem] lg:h-[30rem] rounded-md bg-white bg-clip-border group/p1 cursor-pointer shadow-2xl'>
-                                    <img alt="Portfolio Cover Image" src={portfolio.portfolioThumbnail} className="absolute inset-0 h-full w-full object-cover group-hover/p1:scale-125 duration-300 ease-in-out" loading="lazy" />
-                                    <div className="absolute to-bg-black-10 bg-gradient-to-t from-black/80 via-black/10 pt-32  sm:pt-48  lg:pt-64  h-full w-full flex items-end ">
-                                        <div className="p-5">
-                                            <h3 className="text-2xl font-semibold text-white pb-1">{portfolio.portfolioName}</h3>
-                                            <p className="text-white text-sm">{ portfolio.portfolioShortDescription.length > 80? portfolio.portfolioShortDescription.substring(0, 80 -3) + "..." : portfolio.portfolioShortDescription}</p>
+                                <motion.div
+                                    initial={{ opacity: 0, y: 100 }}
+                                    whileInView={{opacity: 1, y: 0}}
+                                    transition={{
+                                        duration: 0.8,
+                                    }}
+                                    viewport={{ once: true }}
+                                    className='relative overflow-hidden w-full h-[22rem] lg:h-[30rem] rounded-md bg-white bg-clip-border group/p1 cursor-pointer shadow-2xl'>
+                                    <Link to={`/portfolios/portfolio/${portfolio._id}`}>
+                                        <img alt="Portfolio Cover Image" src={portfolio.portfolioThumbnail} className="absolute inset-0 h-full w-full object-cover group-hover/p1:scale-125 duration-300 ease-in-out" loading="lazy" />
+                                        <div className="absolute to-bg-black-10 bg-gradient-to-t from-black/80 via-black/40 pt-32  sm:pt-48  lg:pt-64  h-full w-full flex items-end ">
+                                            <div className="p-5 space-y-3">
+                                                <p className="block text-sm text-white/90 backdrop-blur-lg bg-white/10 w-fit px-2 py-1 rounded-md">{ portfolio.portfolioCategory}</p>
+                                                <h3 className="text-2xl font-semibold text-white flex items-center gap-3">{portfolio.portfolioName} <ArrowUpRightIcon className="h-6 w-6"></ArrowUpRightIcon></h3>
+                                                <p className="text-white text-sm">{ portfolio.portfolioShortDescription.length > 80? portfolio.portfolioShortDescription.substring(0, 80 -3) + "..." : portfolio.portfolioShortDescription}</p>
+                                            </div>
                                         </div>
-                                    </div>
-                            </div>
+                                    </Link>
+                            </motion.div>
                         </SwiperSlide>
                             )
                         }

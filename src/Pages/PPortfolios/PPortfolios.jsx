@@ -5,7 +5,7 @@ const PPortfolios = () => {
     const loadedPortfolios = useLoaderData()
 
     return (
-        <div className="bg-white py-24">
+        <div className="bg-white py-16">
             <div className="w-11/12 m-auto">
                 {/* Portfolio Card */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-7">
