@@ -1,4 +1,5 @@
 import {  motion } from 'framer-motion'
+import Marquee from 'react-fast-marquee';
 
 const partners = [
     {"id":1, "img": "https://kota.co.uk/static/6604c2bf33b9d8e07c716b366f6fc5fd/Jamie-oliver.svg", "title": "company"},
@@ -19,7 +20,7 @@ const Partners = () => {
     return (
         <>
             <div className="bg-white py-28">
-                <div className="w-11/12 m-auto">
+                <div className="">
                     {/* Section Title */}
                     <div>
                         <motion.h1
@@ -32,20 +33,20 @@ const Partners = () => {
                             className="text-black text-2xl lg:text-5xl font-semibold max-w-2xl m-auto text-center">Proud to partner with industry-leading companies</motion.h1>
                     </div>
                     {/* Partners Image */}
-                    <div className="grid grid-cols-3 lg:grid-cols-6 items-center gap-10 mt-24">
-                        {
-                            partners.map(partner => <motion.div
-                            initial={{ opacity: 0, y: 100 }}
-                                whileInView={{opacity: 1, y: 0}}
-                                transition={{
-                                    duration: 0.5,
-                                }}
-                                viewport={{ once: true }}
-                                key={partner.id} className={`${partner.title}`}>
-                                <img className="my-auto mx-auto" src={partner.img} alt="Partner Image" srcSet="" loading='lazy'/>
-                            </motion.div>)
-                        }
-                    </div>
+                    <Marquee speed={50} direction='left' gradient={false} pauseOnHover={false} className='mt-16 lg:mt-24'>
+                        <div className="flex items-center gap-x-20 justify-center">
+                            {partners.map(partner => <div key={partner.id} className={`${partner.title}`}>
+                                <img className="m-auto" src={partner.img} alt="Partner Image" srcSet="" loading='lazy'/>
+                            </div>)}
+                        </div>
+                    </Marquee>
+                    <Marquee speed={50} direction='right' gradient={false} pauseOnHover={false} className='mt-8'>
+                        <div className="flex items-center gap-x-20 justify-center">
+                            {partners.map(partner => <div key={partner.id} className={`${partner.title}`}>
+                                <img className="m-auto" src={partner.img} alt="Partner Image" title={partner.title} srcSet="" loading='lazy'/>
+                            </div>)}
+                        </div>
+                    </Marquee>
                 </div>
             </div>  
         </>

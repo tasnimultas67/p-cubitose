@@ -1,3 +1,5 @@
+
+import MarqueeCom from "../../Components/Marquee/MarqueeCom";
 import Reviews from "../../Components/Reviews/Reviews";
 import About from "./Home Components/About/About";
 import Hero from "./Home Components/Hero/Hero";
@@ -10,6 +12,7 @@ const Home = () => {
         <div>
             <Hero></Hero>
             <Portfolios></Portfolios>
+            <MarqueeCom></MarqueeCom>
             <Services></Services>
             <About></About>
             <Partners></Partners>

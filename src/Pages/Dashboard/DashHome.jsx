@@ -29,9 +29,9 @@ const DashHome = () => {
     return (
         <div className="">
             <div>
-                <div className="space-y-1 backdrop-blur-2xl bg-dashBg p-5 w-fit rounded-lg shadow-md">
+                <div className="space-y-3 backdrop-blur-2xl bg-dashBg p-5 w-fit rounded-md shadow-md">
                     <p className="text-sm flex items-center gap-3"><ClockIcon className="h-4 w-4"></ClockIcon>{currentTime}</p>
-                    <h2 className="text-xl font-semibold">Good {greet}, {user.displayName ? <span>{ user.displayName}</span>: <span>Cubitose</span>}</h2>   
+                    <h2 className=" text-black"><span className="text-lg">Good {greet}</span>, {user.displayName ? <span className="text-2xl font-semibold">{ user.displayName}</span>: <span className="text-2xl font-semibold">Cubitose</span>}</h2>   
                 </div>
             </div>
         </div>
