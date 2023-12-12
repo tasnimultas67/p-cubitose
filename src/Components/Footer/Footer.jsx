@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import './Footer.css'
+import {EnvelopeIcon} from "@heroicons/react/24/outline";
 
 const pages = [
     {"_id": "page1", "pageTitle":"Home", "pageUrl": "/"},
@@ -21,8 +22,8 @@ const Footer = () => {
                     {/* First Column */}
                     <div>
                         <img className="h-14 mb-5" src="/white-logo.png" alt="Footer Logo" srcSet="" />
-                        <p className=" text-white mb-3">We turn ideas into extraordinary digital products & experiences</p>
-                        <Link className="text-white" to="mailto:info.cubitose@gmail.com">info.cubitose@gmail.com</Link>
+                        <p className=" text-white mb-4">We turn ideas into extraordinary digital products & experiences</p>
+                        <Link className="text-white flex items-center gap-2" to="mailto:info.cubitose@gmail.com"><EnvelopeIcon className="h-5 w-5"></EnvelopeIcon>info.cubitose@gmail.com</Link>
                     </div>
                     {/* Second Column */}
                     <div>

@@ -226,7 +226,7 @@ export default function Header() {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Link
               to="/contact-us"
-              className="text-sm leading-6 text-themeColor bg-white py-2 px-4 rounded uppercase"
+              className="text-sm leading-6 text-black bg-white py-2 px-4 rounded uppercase hover:shadow-2xl"
             >
               Contact Us <span aria-hidden="true"></span>
             </Link>

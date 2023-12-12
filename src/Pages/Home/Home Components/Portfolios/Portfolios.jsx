@@ -42,7 +42,7 @@ const Portfolios = () => {
                             }}
                             viewport={{ once: true }}
                             className="text-left mt-5 lg:mt-0 lg:text-right ">
-                            <Link to="/portfolios"><button className="py-2 px-5 bg-themeColor text-white rounded-md">Explore More</button></Link>
+                            <Link to="/portfolios"><button className="py-2 px-5 bg-themeColor text-white rounded hover:shadow-2xl">Explore More</button></Link>
                         </motion.div>
                     </div>
                 </div>
