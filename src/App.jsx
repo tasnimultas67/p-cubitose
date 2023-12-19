@@ -93,7 +93,7 @@ function App() {
       <div>
         {" "}
             {showTopBtn && (
-          <div className='bg-white rounded drop-shadow-2xl shadow fixed bottom-5 right-5 p-3 z-[1000] cursor-pointer transition-all duration-300 animate-bounce'>
+          <div className='bg-white rounded drop-shadow-2xl shadow fixed bottom-3 right-5 p-3 z-[1000] cursor-pointer transition-all duration-300 animate-bounce'>
             <ArrowUpIcon 
                     className="text-black h-5 w-5 "
                     onClick={goToTop}

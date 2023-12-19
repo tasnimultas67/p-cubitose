@@ -18,3 +18,7 @@
   background-repeat: no-repeat;
   background-position: center; */
 }
+
+.fb_iframe_widget iframe {
+  right: 0px !important;
+}
