@@ -4,6 +4,7 @@ import './App.css'
 import Header from './Components/Header/Header'
 import Footer from './Components/Footer/Footer'
 import { useEffect, useState } from 'react'
+import { ArrowUpIcon } from '@heroicons/react/24/solid'
 
 import MessengerCustomerChat from 'react-messenger-customer-chat';
 
@@ -23,6 +24,7 @@ const titleMap = [
 
 function App() {
   const [pageTitle, setPageTitle] = useState('Cubitose - Next Generation Tech Solutions');
+  const [showTopBtn, setShowTopBtn] = useState(false);
   let pageLocation = useLocation()
    useEffect(() => {
     const pageTitle = titleMap.find(item => item.path === pageLocation.pathname)
@@ -57,8 +59,25 @@ function App() {
       }
         }
     
-}, [ ])
+  }, [])
+  useEffect(() => {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 400) {
+                setShowTopBtn(true);
+            } else {
+                setShowTopBtn(false);
+            }
+        });
+    }, []);
+
+    const goToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
   return (
+
     <>
       <ScrollRestoration
         getKey={(location, matches) => {
@@ -69,7 +88,19 @@ function App() {
       <MessengerCustomerChat
           pageId={import.meta.env.VITE_FACEBOOK_PAGE_ID}
           appId={import.meta.env.VITE_FACEBOOK_APP_ID}
-        />
+      />
+      {/* Top button */}
+      <div>
+        {" "}
+            {showTopBtn && (
+          <div className='bg-white rounded drop-shadow-2xl shadow fixed bottom-5 right-5 p-3 z-[1000] cursor-pointer transition-all duration-300 animate-bounce'>
+            <ArrowUpIcon 
+                    className="text-black h-5 w-5 "
+                    onClick={goToTop}
+                />
+                </div>
+            )}{" "}
+      </div>
       <Footer></Footer>
     </>
   )
