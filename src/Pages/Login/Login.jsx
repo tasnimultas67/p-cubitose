@@ -107,10 +107,7 @@ export default function Login() {
                                         Incorrect Code
                                     </Dialog.Title>
                                     <div className="mt-2">
-                                        <p className="text-sm text-gray-500">
-                                        Are you sure you want to deactivate your account? All of your data will be permanently
-                                        removed. This action cannot be undone.
-                                        </p>
+                                        <p className="text-sm text-gray-500">Are you sure your secret code is correct? If not correct, contact the company or try again with the correct code.</p>
                                     </div>
                                     </div>
                                 </div>
