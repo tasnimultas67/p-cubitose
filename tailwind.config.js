@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        'themeColor': '#1954ed',
+        'themeColor': 'rgb(var(--theme-color) / <alpha-value>)',
         'grayColor': '#767676',
         'dashBg': '#ffffff',
         'activeDashBg': '#F8F9F9',

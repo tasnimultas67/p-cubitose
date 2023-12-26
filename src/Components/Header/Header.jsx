@@ -2,6 +2,7 @@ import { Fragment, useState } from "react";
 import {
   Dialog,
   Disclosure,
+  Listbox,
   Menu,
   Popover,
   Transition,
@@ -13,12 +14,12 @@ import {
   XMarkIcon,
   PaintBrushIcon,
   ArrowRightOnRectangleIcon,
+  CheckIcon,
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
-import { motion } from "framer-motion";
 
 const services = [
   {
@@ -40,7 +41,15 @@ const services = [
     icon: MegaphoneIcon,
   },
 ];
-
+const colors = [
+  { "name": "Palatinate Blue", "colorCode":  "25 84 237", "hexCol": "#1954ed"},
+  { "name": "Neon Blue", "colorCode":  "17 0 154", "hexCol": "#11009E"},
+  { "name": "Chocolate", "colorCode":  "135 54 0", "hexCol": "#873600"},
+  { "name": "Lincoln Green", "colorCode":  "27 89 14", "hexCol": "#1B590E"},
+  { "name": "Violet", "colorCode":  "152 0 163", "hexCol": "#9800A3"},
+  { "name": "Blue-Violet", "colorCode":  "126 48 225", "hexCol": "#7E30E1"},
+  { "name": "Metallic Violet", "colorCode":  "91 8 136", "hexCol": "#5B0888"},
+]
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
@@ -48,6 +57,8 @@ function classNames(...classes) {
 export default function Header() {
   const { user, signOutUser } = useContext(AuthContext);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [selectedColor, setSelectedColor] = useState(colors[0])
+  document.documentElement.style.setProperty("--theme-color", `${selectedColor.colorCode}`)
   const navigate = useNavigate();
   
   const handleLogOut = () => {
@@ -151,7 +162,7 @@ export default function Header() {
         </div>
 
         {/* Website Menu  */}
-        <div className="hidden lg:flex gap-10 items-center">
+        <div className="hidden lg:flex gap-10 items-center relative">
           {/* Menu */}
           <Popover.Group className="hidden lg:flex lg:gap-x-12">
             <NavLink to="/" className="text-sm leading-6 text-white uppercase">
@@ -181,7 +192,7 @@ export default function Header() {
                       {services.map((item) => (
                         <div
                           key={item.name}
-                          className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                          className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-themeColor/5"
                         >
                           <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                             <item.icon
@@ -231,6 +242,45 @@ export default function Header() {
               Contact Us <span aria-hidden="true"></span>
             </Link>
           </div>
+          {/* Color Palette */}
+                          <Listbox
+                  as="div"
+                  className=" p-0.5 rounded-full flex items-center"
+                  value={selectedColor}
+                  onChange={setSelectedColor}>
+                  
+                  <Listbox.Button className=" flex items-center" title='Color Palette'><div className={`w-5 h-5 rounded-full outline outline-2 outline-offset-2 outline-white bg-themeColor`} ></div></Listbox.Button>
+                  
+                    <Transition
+                      as={Fragment}
+                      enter="transition ease-in duration-300"
+                      enterFrom="opacity-0 translate-y-1"
+                      enterTo="opacity-100 translate-y-0"
+                      leave="transition ease-in duration-150"
+                      leaveFrom="opacity-100 translate-y-0"
+                      leaveTo="opacity-0 translate-y-1"
+                    >
+                      <Listbox.Options className="absolute right-0 top-10 z-10 mt-3 w-[230px] overflow-hidden rounded-xl bg-white shadow-2xl py-3 px-2">
+                        {colors.map((color) => (
+                          <Listbox.Option
+                            key={color.name}
+                            value={color}
+                            as={Fragment}>
+                            {({ active, selected }) => (
+                              <li
+                                className={`${
+                                  active ? 'bg-themeColor text-white' : 'bg-white text-black'
+                                } flex items-center justify-start gap-1 px-2 py-1 rounded-md cursor-pointer`}
+                              >
+                                {selected && <CheckIcon className="h-4 w-4" />}
+                                <div className="w-5 h-5 rounded-full" style={{backgroundColor: `${color.hexCol}`}}></div>{color.name}
+                              </li>
+                            )}
+                          </Listbox.Option>
+                        ))}
+                      </Listbox.Options>
+                      </Transition>
+                    </Listbox>
           {/* Profile Dropdown */}
           {user && (
             <Menu as="div" className="relative">

@@ -31,7 +31,7 @@ const Footer = () => {
                             {
                                 pages.map(page => <li
                                     key={page._id}
-                                    className=" text-white"><Link to={page.pageUrl}>{page.pageTitle}</Link></li>)
+                                    className=" text-white"><Link className="hover:underline" to={page.pageUrl}>{page.pageTitle}</Link></li>)
                             }
                             
                         </ul>
@@ -43,7 +43,7 @@ const Footer = () => {
                             {
                                 servicesPages.map(servicePage => <li
                                     key={servicePage._id}
-                                    className=" text-white"><Link to={servicePage.pageUrl}>{ servicePage.pageTitle}</Link></li>)
+                                    className=" text-white"><Link className="hover:underline" to={servicePage.pageUrl}>{ servicePage.pageTitle}</Link></li>)
                             }
                             
                         </ul>

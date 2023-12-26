@@ -4,6 +4,11 @@
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --theme-color: 25 84 237;
+}
+
+.start-fil path {
+  filter: invert(48%) sepia(100%) saturate(2163%) hue-rotate(160deg) brightness(93%) contrast(101%);
 }
 
 ::selection {

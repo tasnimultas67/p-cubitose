@@ -17,7 +17,7 @@ const AboutUs = () => {
                             viewport={{ once: true }}
                             className="text-grayColor text-3xl lg:text-5xl lg:leading-tight">We are the <span className="text-black ">first call</span> for every outrageous, unthinkable and unknown <span className="text-black">possibility</span> in the field of digitally immersive experiences — <span className="text-black">all with highly competitive rates.</span></motion.h1>
                     </div>
-                    <div className="grid grid-cols-1 lg:grid-cols-3 mt-10 lg:mt-0">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 mt-10">
                         <div className="hidden lg:block"></div>
                         <motion.div
                             initial={{ opacity: 0, y: 100 }}
