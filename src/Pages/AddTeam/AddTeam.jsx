@@ -61,13 +61,13 @@ const AddTeam = () => {
                             
                             {/* Preview */}
                             <div className="bg-white p-5 space-y-3 rounded-md">
-                                <h2>Preview Team</h2>
+                                <h2 className="2xl:text-xl">Preview Team</h2>
                                 <div className="group/team overflow-hidden w-7/12 m-auto">
                             <div className="overflow-hidden rounded-md">
                                 {team.teamImg ?<img className="h-[25rem] w-full object-cover object-top rounded-md group-hover/team:scale-125 duration-300 ease-in-out" src={team?.teamImg} alt={`${team?.teamName} image`} srcSet="" title={`${team?.teamName} Image`} /> : <img className="h-[25rem] w-full object-cover object-top rounded-md border" src="https://freerishtapakistan.com/wp-content/uploads/2021/11/photo-not-available-1.jpg" />}
                             </div>
-                            <h2 className="text-lg font-semibold mt-5 ">{team?.teamName}</h2>
-                            <p>{team?.teamRole}</p>
+                            <h2 className="text-lg font-semibold mt-5 2xl:text-2xl">{team?.teamName}</h2>
+                            <p className="2xl:text-xl">{team?.teamRole}</p>
                             {/* Social Links */}
                             <div className="flex gap-4 mt-3">
                                 {/* Facebook */}
@@ -98,7 +98,7 @@ const AddTeam = () => {
                         <div className="space-y-3">
                             {/* Team Name*/}
                             <div>
-                                <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900">
+                                <label htmlFor="Portfolio" className="block text-sm 2xl:text-lg font-medium leading-6 text-gray-900">
                                     Full Name <span className="text-red-500">*</span>
                                 </label>
                                 <div className="mt-2">
@@ -109,13 +109,13 @@ const AddTeam = () => {
                                         placeholder='example: John Doe'
                                     required
                                     onInput={(e)=>setTeam({...team, teamName:e.target.value})}
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
+                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50 2xl:text-lg"
                                     />
                                 </div>
                             </div>
                             {/* Team Role*/}
                             <div>
-                                <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900">
+                                <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900 2xl:text-lg">
                                     Role <span className="text-red-500">*</span>
                                 </label>
                                 <div className="mt-2">
@@ -126,13 +126,13 @@ const AddTeam = () => {
                                         placeholder='example: Web Developer'
                                         required
                                         onInput={(e)=>setTeam({...team, teamRole:e.target.value})}
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
+                                    className="2xl:text-lg block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                     />
                                 </div>
                             </div>
                             {/* Team Image*/}
                             <div className="">
-                                <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900">
+                                <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900 2xl:text-lg">
                                     Image <span className="text-red-500">*</span>
                                 </label>
                                 <div className="mt-2">
@@ -143,13 +143,13 @@ const AddTeam = () => {
                                         placeholder='Image Link'
                                         required
                                         onInput={(e)=>setTeam({...team, teamImg:e.target.value})}
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
+                                    className="2xl:text-lg block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                     />
                                 </div>
                             </div>
                             {/* Facebook Link*/}
                             <div>
-                                <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900">
+                                <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900 2xl:text-lg">
                                     Facebook
                                 </label>
                                 <div className="mt-2">
@@ -159,13 +159,13 @@ const AddTeam = () => {
                                         type="text"
                                         placeholder='Facebook Link'
                                         onInput={(e)=>setTeam({...team, teamFacebook:e.target.value})}
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
+                                    className="2xl:text-lg block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                     />
                                 </div>
                             </div>
                             {/* Instagram Link*/}
                             <div>
-                                <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900">
+                                <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900 2xl:text-lg">
                                     Instagram
                                 </label>
                                 <div className="mt-2">
@@ -175,13 +175,13 @@ const AddTeam = () => {
                                         type="text"
                                         placeholder='Instagram Link'
                                         onInput={(e)=>setTeam({...team, teamInstagram:e.target.value})}
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
+                                    className="2xl:text-lg block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                     />
                                 </div>
                             </div>
                             {/* Twitter Link*/}
                             <div>
-                                <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900">
+                                <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900 2xl:text-lg">
                                     Twitter
                                 </label>
                                 <div className="mt-2">
@@ -191,13 +191,13 @@ const AddTeam = () => {
                                         type="text"
                                         placeholder='Twitter Link'
                                         onInput={(e)=>setTeam({...team, teamTwitter:e.target.value})}
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
+                                    className="2xl:text-lg block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                     />
                                 </div>
                             </div>
                             {/* LinkedIn Link*/}
                             <div>
-                                <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900">
+                                <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900 2xl:text-lg">
                                     LinkedIn
                                 </label>
                                 <div className="mt-2">
@@ -207,13 +207,13 @@ const AddTeam = () => {
                                         type="text"
                                         placeholder='LinkedIn Link'
                                         onInput={(e)=>setTeam({...team, teamLinkedIn:e.target.value})}
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
+                                    className="2xl:text-lg block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                     />
                                 </div>
                             </div>
                             {/* Website Link*/}
                             <div>
-                                <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900">
+                                <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900 2xl:text-lg">
                                     Website
                                 </label>
                                 <div className="mt-2">
@@ -223,11 +223,11 @@ const AddTeam = () => {
                                         type="text"
                                         placeholder='Website Link'
                                         onInput={(e)=>setTeam({...team, teamWebsite:e.target.value})}
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
+                                    className="2xl:text-lg block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                     />
                                 </div>
                             </div>
-                            <button className="text-center bg-themeColor w-full text-white rounded py-1.5" type="submit">Submit Team</button>
+                            <button className="text-center bg-themeColor w-full text-white rounded py-1.5 2xl:py-2 2xl:text-lg" type="submit">Submit Team</button>
                         </div>
                     </div>
                     

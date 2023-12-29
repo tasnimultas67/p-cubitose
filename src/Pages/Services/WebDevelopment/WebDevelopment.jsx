@@ -39,7 +39,7 @@ const WebDevelopment = () => {
                             duration: 0.5,
                         }}
                         viewport={{ once: true }}
-                        className="text-3xl lg:text-5xl text-black lg:leading-tight">A solid, well-planned and well-executed website can set you apart from your competition, drive bottom line value, and make you the star of the show</motion.h1>
+                        className="text-3xl lg:text-5xl 2xl:text-6xl 2xl:leading-tight text-black lg:leading-tight">A solid, well-planned and well-executed website can set you apart from your competition, drive bottom line value, and make you the star of the show</motion.h1>
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-4 mt-10 lg:mt-20">
                     <div className='hidden lg:block'></div>
@@ -50,7 +50,7 @@ const WebDevelopment = () => {
                             duration: 0.8,
                         }}
                         viewport={{ once: true }}
-                        className="col-span-3 flex flex-col gap-2">
+                        className="col-span-3 flex flex-col gap-2 2xl:text-xl">
                         <p>Your website is the heart of your digital identity: it should be dynamic, interactive and bring visitors back to engage with your brand.</p>
                         <p>At Cubitose, we pride ourselves on building bespoke websites that weave your business needs into the back-end, enabling your teams to manage your site and create engaging content.</p>
                         <p>Guided by your vision, our development team will develop the custom features you need to achieve your goals.</p>
@@ -69,7 +69,7 @@ const WebDevelopment = () => {
                     viewport={{ once: true }}
                     className="mt-10 lg:mt-20">
                     <img loading='lazy'
-                        className="h-[20rem] lg:h-[30rem] 2xl:h-[35rem] w-full object-cover object-bottom rounded-lg shadow-lg"
+                        className="h-[20rem] lg:h-[30rem] 2xl:h-[40rem]  w-full object-cover object-bottom rounded-lg shadow-lg"
                         src="https://i.ibb.co/HptGPFn/Banner-1.webp" alt="Web Development Banner" srcSet=""/>
                 </motion.div>
                 {/* Feature process*/}
@@ -81,7 +81,7 @@ const WebDevelopment = () => {
                             duration: 0.5,
                         }}
                         viewport={{ once: true }}
-                        className="text-3xl lg:text-5xl font-medium text-black">How come we are so proficient at this</motion.h2>
+                        className="text-3xl lg:text-5xl 2xl:text-6xl font-medium text-black">How come we are so proficient at this</motion.h2>
                     <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 mt-16 lg:mt-28 mb-10">
                         <motion.div
                         initial={{ opacity: 0, y: 100 }}
@@ -91,8 +91,8 @@ const WebDevelopment = () => {
                         }}
                         viewport={{ once: true }}
                                     >
-                            <h2 className="text-2xl font-semibold text-black mb-3 flex items-center uppercase">Reliable <ArrowUpRightIcon className='h-5 w-5 ml-2'></ArrowUpRightIcon></h2>
-                            <p>Cubitose develops websites with custom functionality to meet your needs. We take pride in coding back-end solutions that act as the unseen backbone to your website.</p>
+                            <h2 className="text-2xl 2xl:text-3xl font-semibold text-black mb-3 flex items-center uppercase">Reliable <ArrowUpRightIcon className='h-5 w-5 ml-2'></ArrowUpRightIcon></h2>
+                            <p className='2xl:text-xl'>Cubitose develops websites with custom functionality to meet your needs. We take pride in coding back-end solutions that act as the unseen backbone to your website.</p>
                         </motion.div>
                         <motion.div
                         initial={{ opacity: 0, y: 100 }}
@@ -102,8 +102,8 @@ const WebDevelopment = () => {
                         }}
                         viewport={{ once: true }}
                                     >
-                            <h2 className="text-2xl font-semibold text-black mb-3 flex items-center uppercase">Lightweight <ArrowUpRightIcon className='h-5 w-5 ml-2'></ArrowUpRightIcon></h2>
-                            <p>We make use of the latest technologies and rely on high-speed HTML, JavaScript and CSS to deliver best-practice website code, often using a headless approach to the CMS.</p>
+                            <h2 className="text-2xl font-semibold text-black mb-3 flex items-center uppercase 2xl:text-3xl">Lightweight <ArrowUpRightIcon className='h-5 w-5 ml-2'></ArrowUpRightIcon></h2>
+                            <p className='2xl:text-xl'>We make use of the latest technologies and rely on high-speed HTML, JavaScript and CSS to deliver best-practice website code, often using a headless approach to the CMS.</p>
                         </motion.div>
                         <motion.div
                         initial={{ opacity: 0, y: 100 }}
@@ -113,8 +113,8 @@ const WebDevelopment = () => {
                         }}
                         viewport={{ once: true }}
                                     >
-                            <h2 className="text-2xl font-semibold text-black mb-3 flex items-center uppercase">Responsive <ArrowUpRightIcon className='h-5 w-5 ml-2'></ArrowUpRightIcon></h2>
-                            <p>We test, tweak and optimise websites to ensure the most seamless experience, regardless of the user’s device.</p>
+                            <h2 className="text-2xl 2xl:text-3xl font-semibold text-black mb-3 flex items-center uppercase">Responsive <ArrowUpRightIcon className='h-5 w-5 ml-2'></ArrowUpRightIcon></h2>
+                            <p className='2xl:text-xl'>We test, tweak and optimise websites to ensure the most seamless experience, regardless of the user’s device.</p>
                         </motion.div>
                         <motion.div
                         initial={{ opacity: 0, y: 100 }}
@@ -124,8 +124,8 @@ const WebDevelopment = () => {
                         }}
                         viewport={{ once: true }}
                                     >
-                            <h2 className="text-2xl font-semibold text-black mb-3 flex items-center uppercase">Optimised <ArrowUpRightIcon className='h-5 w-5 ml-2'></ArrowUpRightIcon></h2>
-                            <p>Our team’s technical expertise allows us to deliver high-performing websites that are fully optimised in line with SEO best practice.</p>
+                            <h2 className="text-2xl 2xl:text-3xl font-semibold text-black mb-3 flex items-center uppercase">Optimised <ArrowUpRightIcon className='h-5 w-5 ml-2'></ArrowUpRightIcon></h2>
+                            <p className='2xl:text-xl'>Our team’s technical expertise allows us to deliver high-performing websites that are fully optimised in line with SEO best practice.</p>
                         </motion.div>
                         
                     </div>
@@ -142,7 +142,7 @@ const WebDevelopment = () => {
                             duration: 0.5,
                         }}
                         viewport={{ once: true }}
-                        className="text-3xl lg:text-5xl text-white">Our Development Process</motion.h1>
+                        className="text-3xl 2xl:text-6xl lg:text-5xl text-white">Our Development Process</motion.h1>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-20 gap-10">
                             {
                                 processes.map(process => (
@@ -154,8 +154,8 @@ const WebDevelopment = () => {
                                         }}
                                         viewport={{ once: true }}
                                         key={process.id}>
-                                        <h2 className="mb-5 text-xl text-white font-semibold uppercase flex items-center">{ process.title}<ArrowUpRightIcon className='h-5 w-5 ml-2'></ArrowUpRightIcon></h2>
-                                        <p className='text-white'>{ process.description}</p>
+                                        <h2 className="mb-5 text-xl 2xl:text-2xl text-white font-semibold uppercase flex items-center">{ process.title}<ArrowUpRightIcon className='h-5 w-5 ml-2'></ArrowUpRightIcon></h2>
+                                        <p className='text-white 2xl:text-xl'>{ process.description}</p>
                                     </motion.div>
                                 ))
                             }
@@ -186,13 +186,13 @@ const WebDevelopment = () => {
                     <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
                 </svg>
                 <blockquote>
-                    <p className="text-base lg:text-xl italic text-gray-900 dark:text-white">&quot;{review.customerReview}&quot;</p>
+                    <p className="text-base lg:text-xl 2xl:text-2xl italic text-gray-900 dark:text-white">&quot;{review.customerReview}&quot;</p>
                 </blockquote>
                 <figcaption className="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse">
                     
                     <div className="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-500 dark:divide-gray-700">
-                        <cite className="pe-3 font-medium text-gray-900 dark:text-white">{ review.customerName}</cite>
-                        <cite className="ps-3 text-sm text-gray-500 dark:text-gray-400">{ review.customerPosition}</cite>
+                        <cite className="pe-3 font-medium text-gray-900 dark:text-white 2xl:text-xl">{ review.customerName}</cite>
+                        <cite className="ps-3 text-sm text-gray-500 dark:text-gray-400 2xl:text-xl">{ review.customerPosition}</cite>
                     </div>
                 </figcaption>
             </figure>

@@ -35,7 +35,7 @@ const Seo = () => {
                                 duration: 0.5,
                             }}
                             viewport={{ once: true }}
-                            className="text-black text-3xl lg:text-6xl lg:leading-tight">Claim the top spot and be your customers’ first choice on search engines &#8599;</motion.h1>
+                            className="text-black text-3xl lg:text-6xl 2xl:text-7xl 2xl:leading-tight lg:leading-tight">Claim the top spot and be your customers’ first choice on search engines &#8599;</motion.h1>
                         </div>
                         <div className="grid grid-cols-1 lg:grid-cols-3 mt-5">
                             <div></div>
@@ -47,7 +47,7 @@ const Seo = () => {
                             }}
                             viewport={{ once: true }}
                             className="col-span-2">
-                                <p className="text-black">We help companies build resilient and sustainable marketing programs. A unique combination of data, advisory, and execution that drives profitability success and empowers online growth.</p>
+                                <p className="text-black 2xl:text-xl mt-3">We help companies build resilient and sustainable marketing programs. A unique combination of data, advisory, and execution that drives profitability success and empowers online growth.</p>
                             </motion.div>
                         </div>
                     </div>
@@ -60,7 +60,7 @@ const Seo = () => {
                         }}
                         viewport={{ once: true }}
                         className='mt-10 lg:mt-20'>
-                        <img className='rounded-lg h-[20rem] lg:h-[30rem] 2xl:h-[35rem] object-cover object-bottom w-full shadow-lg' src="https://i.ibb.co/09FVNky/SEO-Banner.webp" alt="" srcSet="" loading='lazy' />
+                        <img className='rounded-lg h-[20rem] lg:h-[30rem] 2xl:h-[40rem] object-cover object-bottom w-full shadow-lg' src="https://i.ibb.co/09FVNky/SEO-Banner.webp" alt="" srcSet="" loading='lazy' />
                     </motion.div>
                     <div className=' grid grid-cols-1 lg:grid-cols-3 mt-20'>
                         
@@ -71,7 +71,7 @@ const Seo = () => {
                                 duration: 0.5,
                             }}
                             viewport={{ once: true }}
-                            className='col-span-2 space-y-3 text-black'>
+                            className='col-span-2 space-y-3 text-black 2xl:text-xl'>
                             <p>Become an industry leader for your product/service in the organic SERPs. Prospects are looking for the best options when they use a search engine like Google—making the competition fierce in most markets. A well thought-out SEO strategy targets your ideal customers and helps you outrank your competitors.</p>
                             <p>The average CTR for position 1 on Google is 43.32% in most markets. Position 1 holds the most value out of every other position in the SERPs. Start ranking within the top positions on Google for your most valuable keywords.</p>
                         </motion.div>
@@ -88,8 +88,8 @@ const Seo = () => {
                                 viewport={{ once: true }}
                                 key={offer.offerTitle}>
                                 <div className='space-y-3'>
-                                    <h2 className='text-black text-xl font-semibold uppercase flex items-center gap-3'>{offer.offerTitle} <ArrowUpRightIcon className='h-5 w-5 text-black'></ArrowUpRightIcon></h2>
-                                    <p className='text-black'>{ offer.offerDescription}</p>
+                                    <h2 className='text-black text-xl 2xl:text-2xl font-semibold uppercase flex items-center gap-3'>{offer.offerTitle} <ArrowUpRightIcon className='h-5 w-5 text-black'></ArrowUpRightIcon></h2>
+                                    <p className='text-black 2xl:text-xl'>{ offer.offerDescription}</p>
                                 </div>
                             </motion.div>)
                         }
@@ -117,13 +117,13 @@ const Seo = () => {
                                     <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
                                 </svg>
                                 <blockquote>
-                                    <p className="text-base lg:text-xl italic text-gray-900 dark:text-white">&quot;{review.customerReview}&quot;</p>
+                                    <p className="text-base lg:text-xl italic text-gray-900 dark:text-white 2xl:text-xl">&quot;{review.customerReview}&quot;</p>
                                 </blockquote>
                                 <figcaption className="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse">
                                     
                                     <div className="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-500 dark:divide-gray-700">
-                                        <cite className="pe-3 font-medium text-gray-900 dark:text-white">{ review.customerName}</cite>
-                                        <cite className="ps-3 text-sm text-gray-500 dark:text-gray-400">{ review.customerPosition}</cite>
+                                        <cite className="pe-3 font-medium text-gray-900 dark:text-white 2xl:text-lg">{ review.customerName}</cite>
+                                        <cite className="ps-3 text-sm text-gray-500 dark:text-gray-400 2xl:text-lg">{ review.customerPosition}</cite>
                                     </div>
                                 </figcaption>
                             </figure>

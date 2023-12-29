@@ -45,12 +45,12 @@ const ManagePortfolio = () => {
                 {portfolios.slice(0).reverse().map((portfolio) => (
                     <li key={portfolio._id} className="md:flex justify-between items-center gap-x-6 py-5 rounded hover:shadow-md hover:bg-white px-5 bg-gray-50/40 my-2 cursor-pointer">
                         <div className="flex items-center min-w-0 gap-x-4">
-                            <img className="h-20 w-20 rounded-full ring-2 ring-themeColor flex-none object-cover bg-gray-50" src={portfolio.portfolioThumbnail} alt="Portfolio Image" loading="lazy" />
+                            <img className="h-20 w-20 2xl:h-24 2xl:w-24 rounded-full ring-2 ring-themeColor flex-none object-cover bg-gray-50" src={portfolio.portfolioThumbnail} alt="Portfolio Image" loading="lazy" />
                             <div className="min-w-0 flex-auto">
-                                <p className="border w-fit px-3 py-0.5 text-xs bg-themeColor/10 rounded-md">{ portfolio.portfolioServiceCategory}</p>
-                                <Link to={`/portfolios/portfolio/${portfolio._id}`} className=" font-semibold leading-6 text-themeColor">{portfolio.portfolioName}</Link>
+                                <p className="border w-fit px-3 py-0.5 text-xs bg-themeColor/10 rounded-md 2xl:text-base">{ portfolio.portfolioServiceCategory}</p>
+                                <Link to={`/portfolios/portfolio/${portfolio._id}`} className=" font-semibold leading-6 text-themeColor 2xl:text-2xl">{portfolio.portfolioName}</Link>
                                 
-                                <p className="mt-1 truncate text-xs leading-5 text-gray-500">{portfolio?.portfolioShortDescription}</p>
+                                <p className="mt-1 truncate text-xs leading-5 text-gray-500 2xl:text-lg">{portfolio?.portfolioShortDescription}</p>
                             </div>
                         </div>
                         <div className="shrink-0 sm:flex sm:flex-col sm:items-end">

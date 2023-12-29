@@ -73,7 +73,7 @@ export default function Header() {
   return (
     <header className="bg-themeColor z-[1000] sticky top-0">
       <nav
-        className="mx-auto flex items-center justify-between py-2 w-11/12 z-[1000]"
+        className="mx-auto flex items-center justify-between py-2 2xl:py-3 w-11/12 z-[1000]"
         aria-label="Global"
       >
         {/* Website Logo */}
@@ -81,7 +81,7 @@ export default function Header() {
           <Link to="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Cubitose</span>
             <img
-              className="h-14 w-auto"
+              className="h-14 2xl:h-16 w-auto"
               src="/white-logo.png"
               alt="Cubitose logo"
             />
@@ -161,15 +161,15 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Website Menu  */}
+        {/* Desktop Menu  */}
         <div className="hidden lg:flex gap-10 items-center relative">
           {/* Menu */}
           <Popover.Group className="hidden lg:flex lg:gap-x-12">
-            <NavLink to="/" className="text-sm 2xl:text-base leading-6 text-white uppercase">
+            <NavLink to="/" className="text-sm 2xl:text-lg leading-6 text-white uppercase">
               Home
             </NavLink>
             <Popover className="relative">
-              <Popover.Button className="flex items-center gap-x-1 text-sm 2xl:text-base leading-6 text-white uppercase focus-visible:outline-none">
+              <Popover.Button className="flex items-center gap-x-1 text-sm 2xl:text-lg leading-6 text-white uppercase focus-visible:outline-none">
                 Services
                 <ChevronDownIcon
                   className="h-5 w-5 flex-none text-white"
@@ -186,17 +186,17 @@ export default function Header() {
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 translate-y-1"
               >
-                <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-xl bg-white shadow-2xl ">
+                <Popover.Panel className="absolute -left-8 2xl:-left-80 top-full z-10 mt-3 w-screen max-w-md 2xl:max-w-xl overflow-hidden rounded-xl bg-white shadow-2xl ">
                   {({ close }) => (
                     <div className="p-4">
                       {services.map((item) => (
                         <div
                           key={item.name}
-                          className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-themeColor/5"
+                          className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm 2xl:text-xl leading-6 hover:bg-themeColor/5"
                         >
-                          <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                          <div className="flex h-11 w-11 2xl:h-14 2xl:w-14 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                             <item.icon
-                              className="h-6 w-6 text-gray-600 group-hover:text-themeColor"
+                              className="h-6 w-6 2xl:h-7 2xl:w-7 text-gray-600 group-hover:text-themeColor"
                               aria-hidden="true"
                             />
                           </div>
@@ -209,7 +209,7 @@ export default function Header() {
                               {item.name}
                               <span className="absolute inset-0" />
                             </Link>
-                            <p className="mt-1 text-gray-600">
+                            <p className="mt-1 text-gray-600 2xl:text-lg">
                               {item.description}
                             </p>
                           </div>
@@ -222,13 +222,13 @@ export default function Header() {
             </Popover>
             <NavLink
               to="/about-us"
-              className="text-sm 2xl:text-base leading-6 text-white uppercase"
+              className="text-sm 2xl:text-lg leading-6 text-white uppercase"
             >
               About Us
             </NavLink>
             <NavLink
               to="/portfolios"
-              className="text-sm 2xl:text-base leading-6 text-white uppercase"
+              className="text-sm 2xl:text-lg leading-6 text-white uppercase"
             >
               Portfolios
             </NavLink>
@@ -237,7 +237,7 @@ export default function Header() {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Link
               to="/contact-us"
-              className="text-sm 2xl:text-base leading-6 text-black bg-white py-2 px-4 rounded uppercase hover:shadow-2xl"
+              className="text-sm 2xl:text-lg leading-6 text-black bg-white py-2 px-4 rounded uppercase hover:shadow-2xl"
             >
               Contact Us <span aria-hidden="true"></span>
             </Link>
@@ -249,7 +249,7 @@ export default function Header() {
                   value={selectedColor}
                   onChange={setSelectedColor}>
                   
-                  <Listbox.Button className=" flex items-center" title='Color Palette'><div className={`w-5 h-5 rounded-full outline outline-2 outline-offset-2 outline-white bg-themeColor`} ></div></Listbox.Button>
+                  <Listbox.Button className=" flex items-center" title='Color Palette'><div className={`w-5 h-5 2xl:w-8 2xl:h-8 rounded-full outline outline-2 outline-offset-2 outline-white bg-themeColor`} ></div></Listbox.Button>
                   
                     <Transition
                       as={Fragment}
@@ -260,7 +260,7 @@ export default function Header() {
                       leaveFrom="opacity-100 translate-y-0"
                       leaveTo="opacity-0 translate-y-1"
                     >
-                      <Listbox.Options className="absolute right-0 top-10 z-10 mt-3 w-[230px] overflow-hidden rounded-xl bg-white shadow-2xl py-3 px-2">
+                      <Listbox.Options className="absolute right-0 top-10 z-10 mt-3 w-[230px] 2xl:w-[250px] overflow-hidden rounded-xl bg-white shadow-2xl py-3 px-2">
                         {colors.map((color) => (
                           <Listbox.Option
                             key={color.name}
@@ -270,10 +270,10 @@ export default function Header() {
                               <li
                                 className={`${
                                   active ? 'bg-themeColor text-white' : 'bg-white text-black'
-                                } flex items-center justify-start gap-1 px-2 py-1 rounded-md cursor-pointer`}
+                                } flex items-center justify-start gap-1 2xl:text-xl px-2 py-1 rounded-md cursor-pointer`}
                               >
-                                {selected && <CheckIcon className="h-4 w-4" />}
-                                <div className="w-5 h-5 rounded-full" style={{backgroundColor: `${color.hexCol}`}}></div>{color.name}
+                                {selected && <CheckIcon className="h-4 w-4 2xl:h-6 2xl:w-6" />}
+                                <div className="w-5 h-5 2xl:w-8 2xl:h-8 rounded-full" style={{backgroundColor: `${color.hexCol}`}}></div>{color.name}
                               </li>
                             )}
                           </Listbox.Option>
@@ -289,7 +289,7 @@ export default function Header() {
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">Open user menu</span>
                   {user.photoURL? <img
-                    className="h-8 w-8 rounded-full bg-white"
+                    className="h-8 w-8 2xl:h-12 2xl:w-12 rounded-full bg-white"
                     src={user.photoURL}
                     alt="User Profile Image"
                   />: <img
@@ -316,7 +316,7 @@ export default function Header() {
                         to="/dashboard"
                         className={classNames(
                           active ? "bg-gray-100" : "",
-                          "block px-4 py-2 text-sm 2xl:text-base text-gray-700"
+                          "block px-4 py-2 text-sm 2xl:text-lg text-gray-700"
                         )}
                       >
                         Dashboard
@@ -330,7 +330,7 @@ export default function Header() {
                         onClick={handleLogOut}
                         className={classNames(
                           active ? "bg-gray-100" : "",
-                          " px-4 py-2 text-sm 2xl:text-base text-gray-700 w-full text-left flex items-center gap-2"
+                          " px-4 py-2 text-sm 2xl:text-lg text-gray-700 w-full text-left flex items-center gap-2"
                         )}
                       >
                         Sign out{" "}

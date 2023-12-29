@@ -62,7 +62,7 @@ const UpdateTeam = () => {
                     <div>
                         {/* Team Name*/}
                         <div>
-                            <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900">
+                            <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900 2xl:text-lg">
                                 Full Name <span className="text-red-500">*</span>
                             </label>
                             <div className="mt-2">
@@ -73,7 +73,7 @@ const UpdateTeam = () => {
                                     placeholder='example: John Doe'
                                     defaultValue={teamName}
                                 required
-                                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
+                                className="2xl:text-lg block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                 />
                             </div>
                         </div>
@@ -82,7 +82,7 @@ const UpdateTeam = () => {
                         <div className="col-span-2 space-y-3">
                         {/* Team Role*/}
                         <div>
-                            <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900">
+                            <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900 2xl:text-lg">
                                 Role <span className="text-red-500">*</span>
                             </label>
                             <div className="mt-2">
@@ -93,13 +93,13 @@ const UpdateTeam = () => {
                                     placeholder='example: Web Developer'
                                     required
                                     defaultValue={teamRole}
-                                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
+                                className="2xl:text-lg block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                 />
                             </div>
                         </div>
                         {/* Team Image*/}
                         <div className="">
-                            <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900">
+                            <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900 2xl:text-lg">
                                 Image <span className="text-red-500">*</span>
                             </label>
                             <div className="mt-2">
@@ -110,7 +110,7 @@ const UpdateTeam = () => {
                                     placeholder='Image Link'
                                     defaultValue={teamImg}
                                     required
-                                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
+                                className="2xl:text-lg block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                 />
                             </div>
                         </div>
@@ -121,7 +121,7 @@ const UpdateTeam = () => {
                             
                             {/* Facebook Link*/}
                             <div>
-                                <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900">
+                                <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900 2xl:text-lg">
                                     Facebook
                                 </label>
                                 <div className="mt-2">
@@ -131,13 +131,13 @@ const UpdateTeam = () => {
                                         type="text"
                                         defaultValue={teamFacebook}
                                         placeholder='Facebook Link'
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
+                                    className="2xl:text-lg block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                     />
                                 </div>
                             </div>
                             {/* Instagram Link*/}
                             <div>
-                                <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900">
+                                <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900 2xl:text-lg">
                                     Instagram
                                 </label>
                                 <div className="mt-2">
@@ -147,13 +147,13 @@ const UpdateTeam = () => {
                                         type="text"
                                         defaultValue={teamInstagram}
                                         placeholder='Instagram Link'
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
+                                    className="2xl:text-lg block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                     />
                                 </div>
                             </div>
                             {/* Twitter Link*/}
                             <div>
-                                <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900">
+                                <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900 2xl:text-lg">
                                     Twitter
                                 </label>
                                 <div className="mt-2">
@@ -163,13 +163,13 @@ const UpdateTeam = () => {
                                         type="text"
                                         defaultValue={teamTwitter}
                                         placeholder='Twitter Link'
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
+                                    className="2xl:text-lg block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                     />
                                 </div>
                             </div>
                             {/* LinkedIn Link*/}
                             <div>
-                                <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900">
+                                <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900 2xl:text-lg">
                                     LinkedIn
                                 </label>
                                 <div className="mt-2">
@@ -179,13 +179,13 @@ const UpdateTeam = () => {
                                         type="text"
                                         defaultValue={teamLinkedIn}
                                         placeholder='LinkedIn Link'
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
+                                    className="2xl:text-lg block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                     />
                                 </div>
                             </div>
                             {/* Website Link*/}
                             <div>
-                                <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900">
+                                <label htmlFor="Portfolio" className="block text-sm font-medium leading-6 text-gray-900 2xl:text-lg">
                                     Website
                                 </label>
                                 <div className="mt-2">
@@ -195,11 +195,11 @@ const UpdateTeam = () => {
                                         type="text"
                                         defaultValue={teamWebsite}
                                         placeholder='Website Link'
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
+                                    className="2xl:text-lg block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-themeColor sm:text-sm sm:leading-6 px-3 bg-white/50"
                                     />
                                 </div>
                             </div>
-                            <button className="text-center bg-themeColor w-full text-white rounded py-1.5" type="submit">Submit Team</button>
+                            <button className="2xl:text-lg 2xl:py-2 text-center bg-themeColor w-full text-white rounded py-1.5" type="submit">Submit Team</button>
                         </div>
                     </div>
                     
