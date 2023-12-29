@@ -16,12 +16,12 @@ const PortfolioCard = ({ portfolio }) => {
                 viewport={{ once: true }}
                 className='bg-white border p-4 rounded-lg group hover:border-themeColor hover:cursor-default overflow-hidden !cursor-pointer'>
                     <div className="overflow-hidden rounded-lg">
-                        <img className="rounded-lg group-hover:scale-125 duration-300 h-[14rem] w-full object-cover" src={portfolioThumbnail} alt="Portfolio Thumnail" /> 
+                        <img className="rounded-lg group-hover:scale-125 duration-300 h-[14rem] 2xl:h-[20rem] w-full object-cover object-top border" src={portfolioThumbnail} alt="Portfolio Thumnail" /> 
                     </div>
                     <div className="mt-5 space-y-2">
-                        {portfolioServiceCategory == "Web-Development" ? <p className="border w-fit px-3 py-0.5 text-xs bg-themeColor/10 rounded-md">Web Development</p> : portfolioServiceCategory == "Web-Design" ? <p className="border w-fit px-3 py-0.5 text-xs bg-themeColor/10 rounded-md">Web Design</p> : <p className="border w-fit px-3 py-0.5 text-xs bg-themeColor/10 rounded-md">{ portfolioServiceCategory}</p>}
-                        <h2 className="font-semibold text-xl text-black">{portfolioName}</h2>
-                        <p className="text-base">{ portfolioShortDescription.length > 80? portfolioShortDescription.substring(0, 80 -3) + "..." : portfolioShortDescription}</p>
+                        {portfolioServiceCategory == "Web-Development" ? <p className="border w-fit px-3 py-0.5 text-xs 2xl:text-base bg-themeColor/10 rounded-md">Web Development</p> : portfolioServiceCategory == "Web-Design" ? <p className="border w-fit px-3 py-0.5 text-xs 2xl:text-base bg-themeColor/10 rounded-md">Web Design</p> : <p className="border w-fit px-3 py-0.5 text-xs 2xl:text-base bg-themeColor/10 rounded-md">{ portfolioServiceCategory}</p>}
+                        <h2 className="font-semibold text-xl 2xl:text-3xl text-black">{portfolioName}</h2>
+                        <p className="text-base 2xl:text-lg">{ portfolioShortDescription.length > 80? portfolioShortDescription.substring(0, 80 -3) + "..." : portfolioShortDescription}</p>
                     </div>
             </motion.div>
         </Link>
