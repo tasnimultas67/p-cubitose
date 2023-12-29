@@ -23,7 +23,7 @@ const OurTeam = () => {
                     }}
                     viewport={{ once: true }}
                     className="col-span-2 mt-20">
-                    <p className="text-lg">We believe the best solutions lay at the intersection of intelligent design and strong engineering. Our team works continually to protect and instill this vision in every process, project and team member.</p>
+                    <p className="text-lg 2xl:text-xl">We believe the best solutions lay at the intersection of intelligent design and strong engineering. Our team works continually to protect and instill this vision in every process, project and team member.</p>
                 </motion.div>
                 <div className="hidden lg:block"></div>
             </div>
@@ -42,12 +42,12 @@ const OurTeam = () => {
                             <div className="overflow-hidden rounded-md">
                                 <img className="h-[25rem] w-full object-cover object-top rounded-md group-hover/team:scale-125 duration-300 ease-in-out" src={team.teamImg} alt={`${team.teamName} image`} srcSet="" title={`${team.teamName} Image`} />
                             </div>
-                            <h2 className="text-lg font-semibold mt-5">{team.teamName}</h2>
-                            <p>{team.teamRole}</p>
+                            <h2 className="text-lg 2xl:text-2xl font-semibold mt-5 text-black">{team.teamName}</h2>
+                            <p className="2xl:text-xl">{team.teamRole}</p>
                             {/* Social Links */}
                             <div className="flex gap-4 mt-3">
                                 {/* Facebook */}
-                                {team?.teamFacebook.length>5 && <Link to={`https://www.facebook.com/${team.teamFacebook}`} target="_blank" title="FaceBook">
+                                {team?.teamFacebook.length>5 && <Link to={`https://www.facebook.com/${team.teamFacebook}`} target="_blank" title="FaceBook" className="">
                                     <svg xmlns="http://www.w3.org/2000/svg" style={{fill:"black"}} height="1em" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" /></svg>
                                 </Link>}
                                 {/* Instagram */}
