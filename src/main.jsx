@@ -61,12 +61,6 @@ const router = createBrowserRouter([
         element: <Seo></Seo>,
         loader: ()=> fetch("https://cubitose-backend-production.up.railway.app/review/digital-marketing")
       },
-      // Services page end
-      
-      // {
-      //   path: '/login-captcha',
-      //   element: <SignUpCaptcha></SignUpCaptcha>
-      // },
       {
         path: '/team-login',
         element: <Login></Login>

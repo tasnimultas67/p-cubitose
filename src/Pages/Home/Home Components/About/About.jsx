@@ -14,7 +14,7 @@ const About = () => {
                                 duration: 0.5,
                             }}
                             viewport={{ once: true }}
-                            className="text-4xl lg:text-6xl font-semibold text-[#767676] mb-10">We&apos;re a collective of craftspeople creating lasting value for <span className="text-black">brands</span>, <span className="text-black">destinations</span> & <span className="text-black">places</span>.</motion.h1>
+                            className="text-4xl lg:text-6xl 2xl:text-7xl font-semibold text-[#767676] mb-10">We&apos;re a collective of craftspeople creating lasting value for <span className="text-black">brands</span>, <span className="text-black">destinations</span> & <span className="text-black">places</span>.</motion.h1>
                         
                         <motion.div
                             initial={{ opacity: 0, y: 100 }}
@@ -24,7 +24,7 @@ const About = () => {
                             }}
                             viewport={{ once: true }}
                         >
-                            <p className="text-lg text-black lg:w-8/12">We are the first call for every outrageous, unthinkable and unknown possibility in the field of digitally immersive experiences — all with highly competitive rates.</p>
+                            <p className="text-lg 2xl:text-2xl text-black lg:w-8/12 2xl:w-9/12">We are the first call for every outrageous, unthinkable and unknown possibility in the field of digitally immersive experiences — all with highly competitive rates.</p>
                         </motion.div>
                     </div>
                     {/* Section Image */}

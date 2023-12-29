@@ -31,7 +31,7 @@ const Portfolios = () => {
                                     duration: 0.5,
                                 }}
                                 viewport={{ once: true }}
-                                className="text-black text-3xl lg:text-6xl lg:leading-tight font-semibold ">We are experts in bringing brands to life digitally.</motion.h1>
+                                className="text-black text-3xl 2xl:text-7xl lg:text-6xl lg:leading-tight 2xl:leading-snug font-semibold ">We are experts in bringing brands to life digitally.</motion.h1>
                         </div>
                         {/* Explore more Button */}
                         <motion.div
@@ -42,7 +42,7 @@ const Portfolios = () => {
                             }}
                             viewport={{ once: true }}
                             className="text-left mt-5 lg:mt-0 lg:text-right ">
-                            <Link to="/portfolios"><button className="py-2 px-5 bg-themeColor text-white rounded hover:shadow-2xl">Explore More</button></Link>
+                            <Link to="/portfolios"><button className="py-2 px-5 2xl:px-6 bg-themeColor text-white rounded-md hover:shadow-2xl 2xl:text-xl">Explore More</button></Link>
                         </motion.div>
                     </div>
                 </div>
@@ -83,9 +83,9 @@ const Portfolios = () => {
                                         <img alt="Portfolio Cover Image" src={portfolio.portfolioThumbnail} className="absolute inset-0 h-full w-full object-cover group-hover/p1:scale-125 duration-300 ease-in-out" loading="lazy" />
                                         <div className="absolute to-bg-black-10 bg-gradient-to-t from-black/80 via-black/40 pt-32  sm:pt-48  lg:pt-64  h-full w-full flex items-end ">
                                             <div className="p-5 space-y-3">
-                                                <p className="block text-sm text-white/90 backdrop-blur-lg bg-white/10 w-fit px-2 py-1 rounded-md">{ portfolio.portfolioCategory}</p>
-                                                <h3 className="text-2xl font-semibold text-white flex items-center gap-3">{portfolio.portfolioName} <ArrowUpRightIcon className="h-6 w-6"></ArrowUpRightIcon></h3>
-                                                <p className="text-white text-sm">{ portfolio.portfolioShortDescription.length > 80? portfolio.portfolioShortDescription.substring(0, 80 -3) + "..." : portfolio.portfolioShortDescription}</p>
+                                                <p className="block text-sm 2xl:text-lg text-white/90 backdrop-blur-lg bg-white/10 w-fit px-2 py-1 rounded-md">{ portfolio.portfolioCategory}</p>
+                                                <h3 className="text-2xl 2xl:text-3xl font-semibold text-white flex items-center gap-3">{portfolio.portfolioName} <ArrowUpRightIcon className="h-6 w-6"></ArrowUpRightIcon></h3>
+                                                <p className="text-white text-sm 2xl:text-lg">{ portfolio.portfolioShortDescription.length > 80? portfolio.portfolioShortDescription.substring(0, 80 -3) + "..." : portfolio.portfolioShortDescription}</p>
                                             </div>
                                         </div>
                                     </Link>

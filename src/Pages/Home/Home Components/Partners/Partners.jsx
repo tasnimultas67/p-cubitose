@@ -30,7 +30,7 @@ const Partners = () => {
                                 duration: 0.5,
                             }}
                             viewport={{ once: true }}
-                            className="text-black text-2xl lg:text-5xl font-semibold max-w-2xl m-auto text-center">Proud to partner with industry-leading companies</motion.h1>
+                            className="text-black text-2xl lg:text-5xl 2xl:text-6xl font-semibold max-w-2xl 2xl:max-w-4xl m-auto text-center">Proud to partner with industry-leading companies</motion.h1>
                     </div>
                     {/* Partners Image */}
                     <Marquee speed={50} direction='left' gradient={false} pauseOnHover={false} className='mt-16 lg:mt-24'>

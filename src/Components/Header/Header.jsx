@@ -165,11 +165,11 @@ export default function Header() {
         <div className="hidden lg:flex gap-10 items-center relative">
           {/* Menu */}
           <Popover.Group className="hidden lg:flex lg:gap-x-12">
-            <NavLink to="/" className="text-sm leading-6 text-white uppercase">
+            <NavLink to="/" className="text-sm 2xl:text-base leading-6 text-white uppercase">
               Home
             </NavLink>
             <Popover className="relative">
-              <Popover.Button className="flex items-center gap-x-1 text-sm leading-6 text-white uppercase focus-visible:outline-none">
+              <Popover.Button className="flex items-center gap-x-1 text-sm 2xl:text-base leading-6 text-white uppercase focus-visible:outline-none">
                 Services
                 <ChevronDownIcon
                   className="h-5 w-5 flex-none text-white"
@@ -222,13 +222,13 @@ export default function Header() {
             </Popover>
             <NavLink
               to="/about-us"
-              className="text-sm leading-6 text-white uppercase"
+              className="text-sm 2xl:text-base leading-6 text-white uppercase"
             >
               About Us
             </NavLink>
             <NavLink
               to="/portfolios"
-              className="text-sm leading-6 text-white uppercase"
+              className="text-sm 2xl:text-base leading-6 text-white uppercase"
             >
               Portfolios
             </NavLink>
@@ -237,7 +237,7 @@ export default function Header() {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Link
               to="/contact-us"
-              className="text-sm leading-6 text-black bg-white py-2 px-4 rounded uppercase hover:shadow-2xl"
+              className="text-sm 2xl:text-base leading-6 text-black bg-white py-2 px-4 rounded uppercase hover:shadow-2xl"
             >
               Contact Us <span aria-hidden="true"></span>
             </Link>
@@ -316,7 +316,7 @@ export default function Header() {
                         to="/dashboard"
                         className={classNames(
                           active ? "bg-gray-100" : "",
-                          "block px-4 py-2 text-sm text-gray-700"
+                          "block px-4 py-2 text-sm 2xl:text-base text-gray-700"
                         )}
                       >
                         Dashboard
@@ -330,7 +330,7 @@ export default function Header() {
                         onClick={handleLogOut}
                         className={classNames(
                           active ? "bg-gray-100" : "",
-                          " px-4 py-2 text-sm text-gray-700 w-full text-left flex items-center gap-2"
+                          " px-4 py-2 text-sm 2xl:text-base text-gray-700 w-full text-left flex items-center gap-2"
                         )}
                       >
                         Sign out{" "}

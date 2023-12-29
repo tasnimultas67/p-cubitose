@@ -17,7 +17,7 @@ const Services = () => {
                     <div>
                         <motion.h1
                             
-                            className="text-3xl lg:text-6xl text-black font-semibold text-center">So what do we do exactly?</motion.h1>
+                            className="text-3xl lg:text-6xl 2xl:text-7xl text-black font-semibold text-center">So what do we do exactly?</motion.h1>
                     </div>
                     {/* Service Cards */}
                     <div className="mt-20 grid grid-cols-1 lg:grid-cols-3 gap-5">
@@ -51,8 +51,8 @@ const ServiceCard = ({service}) => {
                 <img alt="Service Cover Image" src={service.img} className="absolute inset-0 h-full w-full object-cover group-hover/p1:scale-125 duration-300 ease-in-out" loading="lazy" />
                 <div className="absolute to-bg-black-10 bg-gradient-to-t from-black/100 via-black/10 pt-32  sm:pt-48  lg:pt-64  h-full w-full flex items-end ">
                     <div className="p-5 space-y-4">
-                            <h3 className="text-3xl font-semibold text-white flex items-center gap-x-3">{ service.sTitle} <ArrowUpRightIcon className="h-6 w-6"></ArrowUpRightIcon></h3>
-                            <p className="text-white text-base">{ service.description}</p>
+                            <h3 className="text-3xl 2xl:text-4xl font-semibold text-white flex items-center gap-x-3">{ service.sTitle} <ArrowUpRightIcon className="h-6 w-6"></ArrowUpRightIcon></h3>
+                            <p className="text-white text-base 2xl:text-xl">{ service.description}</p>
                     </div>
                 </div>
         </motion.div>

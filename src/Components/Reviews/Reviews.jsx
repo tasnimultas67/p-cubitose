@@ -22,7 +22,7 @@ const Reviews = () => {
                         duration: 0.5,
                     }}
                     viewport={{ once: true }}
-                    className='text-center text-3xl lg:text-5xl font-semibold text-black'>Thoughts from our clients</motion.h1>
+                    className='text-center text-3xl lg:text-5xl 2xl:text-6xl font-semibold text-black'>Thoughts from our clients</motion.h1>
                 <motion.div
                     initial={{ opacity: 0, y: 100 }}
                     whileInView={{opacity: 1, y: 0}}
