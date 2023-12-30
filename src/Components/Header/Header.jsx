@@ -316,7 +316,7 @@ export default function Header() {
                         to="/dashboard"
                         className={classNames(
                           active ? "bg-gray-100" : "",
-                          "block px-4 py-2 text-sm 2xl:text-lg text-gray-700"
+                          "block px-4 py-2 text-sm 2xl:text-lg text-gray-700 hover:bg-themeColor/10"
                         )}
                       >
                         Dashboard
@@ -330,7 +330,7 @@ export default function Header() {
                         onClick={handleLogOut}
                         className={classNames(
                           active ? "bg-gray-100" : "",
-                          " px-4 py-2 text-sm 2xl:text-lg text-gray-700 w-full text-left flex items-center gap-2"
+                          " px-4 py-2 text-sm 2xl:text-lg text-gray-700 w-full text-left flex items-center gap-2 hover:bg-themeColor/10"
                         )}
                       >
                         Sign out{" "}

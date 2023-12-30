@@ -25,7 +25,8 @@ const Sidebar = () => {
 
     return (
         <>
-            <aside className='backdrop-blur-2xl bg-dashBg rounded-md p-3 shadow-md sticky top-0'>
+        <div className='sticky top-0'>
+            <aside className='backdrop-blur-2xl bg-dashBg rounded-md p-3 shadow-md'>
                 {/* User Info */}
           <div className='text-center pt-5 pb-5'>
             {user.photoURL ? <img className='bg-white h-16 2xl:h-28 w-auto rounded-full m-auto mb-5 ring-themeColor ring-2' src={user.photoURL} alt="User profile Photo" /> : <img className='bg-white h-16 w-auto rounded-full m-auto mb-5 ring-themeColor ring-2' src="/favicon.webp" alt="User profile Photo" />}
@@ -136,7 +137,8 @@ const Sidebar = () => {
                 <div className='border-t-2 py-5 '>
                     <button onClick={handleLogOut} className='hover:bg-themeColor py-2 hover:text-white flex items-center gap-3 w-full rounded-md pl-3 pr-3 text-sm font-medium text-black 2xl:text-xl'><ArrowRightOnRectangleIcon className='h-5 w-5 2xl:h-7 2xl:w-7'></ArrowRightOnRectangleIcon> Log Out</button>
                 </div>
-        </aside>
+            </aside>
+        </div> 
         </>
     );
 };
