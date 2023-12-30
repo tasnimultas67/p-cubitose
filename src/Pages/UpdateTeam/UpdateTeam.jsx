@@ -5,7 +5,6 @@ import Swal from "sweetalert2";
 const UpdateTeam = () => {
     const teamData = useLoaderData()
     const { _id, teamName, teamRole, teamImg, teamFacebook, teamInstagram, teamTwitter, teamLinkedIn, teamWebsite } = teamData
-    console.log(teamData);
     const navigate = useNavigate()
     const from = "/dashboard/manage-teams"
     const [team, setTeam] = useState({
@@ -32,8 +31,6 @@ const UpdateTeam = () => {
         const teamWebsite = form.teamWebsite.value;
 
         const teamInfo = { teamName, teamRole, teamImg, teamFacebook, teamInstagram, teamTwitter, teamLinkedIn, teamWebsite }
-        // setTeam(teamInfo)
-        console.log(teamInfo);
         fetch(`https://cubitose-backend-production.up.railway.app/teams/${_id}`, {
             method: 'PUT',
             headers: {
@@ -43,14 +40,13 @@ const UpdateTeam = () => {
         })
             .then(res => res.json())
             .then(data => {
-                if (data.insertedId) {
+                if (data.modifiedCount > 0) {
                     Swal.fire(
                     'Good job!',
                     `Successfully Updated ${teamName} Information`,
                     'success'
                     )
                     navigate(from, { replace: true })
-                    form.reset()
                 }
             })
 

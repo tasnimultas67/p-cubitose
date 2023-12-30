@@ -44,11 +44,9 @@ export default function Login() {
     signInGoogle()
       .then(result => {
         const user = result.user;
-        console.log(user);
         navigate(from, { replace: true });
       })
       .catch(error => {
-        console.log(error.message);
         setError(error.message)
       })
     

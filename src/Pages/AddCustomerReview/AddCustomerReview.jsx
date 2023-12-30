@@ -43,7 +43,7 @@ export default function AddCustomerReview() {
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6 text-gray-900 2xl:text-xl"
               >
                 Customer Name
               </label>
@@ -54,7 +54,7 @@ export default function AddCustomerReview() {
                   type="text"
                   placeholder="example: John Doe"
                   required
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor  sm:text-sm sm:leading-6 px-3 bg-white/50"
+                  className="2xl:text-xl block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor  sm:text-sm sm:leading-6 px-3 bg-white/50"
                 />
               </div>
             </div>
@@ -63,13 +63,13 @@ export default function AddCustomerReview() {
               {/* Customer Review Editor */}
               <div className="col-span-2">
                 <label
-                  className="block text-sm font-medium leading-6 text-gray-900 mb-2"
+                  className="block text-sm font-medium leading-6 text-gray-900 mb-2 2xl:text-xl"
                   htmlFor="customer_review"
                 >
                   Customer Review
                 </label>
                 <textarea
-                  className="w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor  sm:text-sm sm:leading-6 px-3 bg-white/50"
+                  className="2xl:text-xl w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor  sm:text-sm sm:leading-6 px-3 bg-white/50"
                   name="customer_review"
                   id="customer-review"
                   cols="30"
@@ -83,7 +83,7 @@ export default function AddCustomerReview() {
                   <div className="flex items-center justify-between">
                     <label
                       htmlFor="position"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block text-sm font-medium leading-6 text-gray-900 2xl:text-xl"
                     >
                       Customer Position
                     </label>
@@ -95,7 +95,7 @@ export default function AddCustomerReview() {
                       type="text"
                       placeholder="example: CEO, Google"
                       required
-                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor  sm:text-sm sm:leading-6 px-3 bg-white/50"
+                      className="2xl:text-xl block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-themeColor  sm:text-sm sm:leading-6 px-3 bg-white/50"
                     />
                   </div>
                 </div>
@@ -103,13 +103,13 @@ export default function AddCustomerReview() {
                 <div>
                   <label
                     htmlFor="project-role"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white 2xl:text-xl"
                   >
                     Service Category
                   </label>
                   <select
                     id="project-role"
-                    className="bg-white/50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                    className="2xl:text-xl bg-white/50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                     name="service_category"
                     required
                   >
@@ -124,7 +124,7 @@ export default function AddCustomerReview() {
                 <div className="mt-6">
                   <button
                     type="submit"
-                    className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    className="2xl:text-xl 2xl:py-2 flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
                     Submit Review
                   </button>

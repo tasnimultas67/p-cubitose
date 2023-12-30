@@ -19,7 +19,7 @@ const Portfolios = () => {
     },[])
     return (
         <>
-            <div className="bg-white py-16 lg:py-28">
+            <div className="bg-white py-16 lg:pt-28 lg:pb-20">
                 <div className="w-11/12 m-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-3 items-center pb-20">
                         {/* Section Title */}
@@ -83,7 +83,7 @@ const Portfolios = () => {
                                         <img alt="Portfolio Cover Image" src={portfolio.portfolioThumbnail} className="absolute inset-0 h-full w-full object-cover group-hover/p1:scale-125 duration-300 ease-in-out" loading="lazy" />
                                         <div className="absolute to-bg-black-10 bg-gradient-to-t from-black/80 via-black/40 pt-32  sm:pt-48  lg:pt-64  h-full w-full flex items-end ">
                                             <div className="p-5 space-y-3">
-                                                <p className="block text-sm 2xl:text-lg text-white/90 backdrop-blur-lg bg-white/10 w-fit px-2 py-1 rounded-md">{ portfolio.portfolioCategory}</p>
+                                                <p className="block text-sm 2xl:text-lg text-white/90 backdrop-blur-lg bg-themeColor/10 w-fit px-2 py-1 rounded-md">{ portfolio.portfolioCategory}</p>
                                                 <h3 className="text-2xl 2xl:text-3xl font-semibold text-white flex items-center gap-3">{portfolio.portfolioName} <ArrowUpRightIcon className="h-6 w-6"></ArrowUpRightIcon></h3>
                                                 <p className="text-white text-sm 2xl:text-lg">{ portfolio.portfolioShortDescription.length > 80? portfolio.portfolioShortDescription.substring(0, 80 -3) + "..." : portfolio.portfolioShortDescription}</p>
                                             </div>

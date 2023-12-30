@@ -1,0 +1,7 @@
+.swiper-wrapper {
+    padding-bottom: 50px !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: rgb(var(--theme-color));
+}

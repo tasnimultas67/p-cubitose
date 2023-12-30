@@ -29,8 +29,6 @@ const AddTeam = () => {
         const teamWebsite = form.teamWebsite.value;
 
         const teamInfo = { teamName, teamRole, teamImg, teamFacebook, teamInstagram, teamTwitter, teamLinkedIn, teamWebsite }
-        // setTeam(teamInfo)
-        console.log(teamInfo);
         fetch('https://cubitose-backend-production.up.railway.app/teams', {
             method: 'POST',
             headers: {
