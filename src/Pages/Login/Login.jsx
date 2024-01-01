@@ -5,7 +5,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { Dialog, Transition } from "@headlessui/react";
 import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
 
-const code = import.meta.env.VITE_SIGNUP_CODE
+const code = import.meta.env.VITE_SIGNUP_CODE 
 
 
 export default function Login() {
