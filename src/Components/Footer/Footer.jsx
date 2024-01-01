@@ -15,6 +15,8 @@ const servicesPages = [
 ]
 
 const Footer = () => {
+    const copyrightYear = new Date().getFullYear()
+    
     return (
         <footer className="bg-themeColor pt-28 pb-9">
             <div className="w-10/12 lg:w-11/12 m-auto mb-20">
@@ -62,7 +64,7 @@ const Footer = () => {
             </div>
             {/* Copyright text */}
             <div className="w-10/12 lg:w-11/12 m-auto">
-                <p className="text-white text-center text-sm 2xl:text-base">Copyright © 2023 Cubitose. All Rights Reserved. Made with ❤</p>
+                <p className="text-white text-center text-sm 2xl:text-base">Copyright © {copyrightYear} Cubitose. All Rights Reserved. Made with ❤</p>
             </div>
         </footer>
     );
